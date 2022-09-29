@@ -14,6 +14,8 @@ MainBase::MainBase(e3::Element* pParent)
                 UiDropDownBodyItem* pCustomView3 = new UiDropDownBodyItem();
         mDDBody->AddElement(pCustomView3);
         this->SetOrientation((e3::EOrientation)1);
+        this->SetAlignItemsVer((e3::EAlignment)0);
+        this->SetOverflow((e3::EOverflow)2);
                 UiButton* pCustomView4 = new UiButton();
         AddElement(pCustomView4);
                 UiDropDownButton* pCustomView5 = new UiDropDownButton();
@@ -32,5 +34,8 @@ MainBase::MainBase(e3::Element* pParent)
                 UiSlider* pCustomView9 = new UiSlider();
         AddElement(pCustomView9);
         pCustomView9->SetMarginTop("30dp");
+        mTree = new UiTreeView();
+        AddElement(mTree);
+        mTree->SetMarginTop("30dp");
 
 }

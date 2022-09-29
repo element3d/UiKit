@@ -8,6 +8,7 @@ class E3_EXPORT Main : public MainBase
 {
 public:
 	Main(e3::Element* pParent = nullptr);
+
 };
 
 #endif // Main_H_

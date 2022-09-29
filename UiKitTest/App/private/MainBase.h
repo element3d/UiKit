@@ -11,6 +11,7 @@
 #include <UiRadioButton.h>
 #include <UiSwitch.h>
 #include <UiSlider.h>
+#include <UiTreeView.h>
 
 
 class MainBase : public e3::Element
@@ -31,6 +32,7 @@ public:
  
 protected:
 	UiDropDownBody* mDDBody = nullptr;
+UiTreeView* mTree = nullptr;
 
 
 };
