@@ -45,4 +45,8 @@ endif()
 
 include_directories(UiKit)
 add_subdirectory(UiKit)
+if (NOT ${ELEMENTARY_ENABLED})
+    include_directories(UiKitTest)
+    add_subdirectory(UiKitTest)
+endif()
 

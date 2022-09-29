@@ -1,0 +1,41 @@
+<Element
+    orientation="Vertical">
+
+    <var
+        name="mDDBody">
+        <UiDropDownBody>
+            <UiDropDownBodyItem>
+            </UiDropDownBodyItem>
+            <UiDropDownBodyItem>
+            </UiDropDownBodyItem>
+            <UiDropDownBodyItem>
+            </UiDropDownBodyItem>
+        </UiDropDownBody>
+    </var>
+
+    <UiButton
+        >
+    </UiButton>
+
+    <UiDropDownButton
+        body="mDDBody"
+        marginTop="30dp">
+    </UiDropDownButton>
+
+    <UiCheckBox
+        marginTop="30dp">
+    </UiCheckBox>
+
+    <UiRadioButton
+        marginTop="30dp">
+    </UiRadioButton>
+
+    <UiSwitch
+        marginTop="30dp">
+    </UiSwitch>
+
+    <UiSlider
+        marginTop="30dp">
+    </UiSlider>
+
+</Element>

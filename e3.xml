@@ -1,7 +1,8 @@
-<Projects id="frAQBc8Wsa1xVPfvJcrgRYwTiizs2t">
-	<UiKit type="App">
+<Projects>
+	<UiKit type="Lib"/>
+	<UiKitTest type="App">
 		<Desktop/>
 		<Android/>
-	</UiKit>
+	</UiKitTest>
 </Projects>
 
