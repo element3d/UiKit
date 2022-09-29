@@ -1,0 +1,18 @@
+<Element
+    width="50dp"
+    height="22dp"
+    padding="4dp"
+    borderSize="1dp"
+    borderRadius="0.5"
+    borderColor="glm::vec4(0, 0, 0, 200)"
+    alignItemsHor="Start">
+
+    <Element
+        element="mCircle"
+        height="100%"
+        aspectRatio="1"
+        borderRadius="0.5"
+        backgroundColor="glm::vec4(0, 0, 0, 255)">
+    </Element>
+
+</Element>

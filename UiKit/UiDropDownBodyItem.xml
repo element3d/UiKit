@@ -1,0 +1,10 @@
+<Element
+    paddingTop="7dp"
+    paddingBottom="7dp"
+    paddingLeft="14dp"
+    paddingRight="28dp">
+    <Text
+        text="Medium"
+        fontSize="14dp">
+    </Text>
+</Element>

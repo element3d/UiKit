@@ -1,0 +1,10 @@
+<DropdownBody
+    orientation="Vertical"
+    borderRadius="10"
+    backgroundColor="all: 255">
+    <Shadow
+        blurSize="4"
+        offset="x: 0, y: 4"
+        color="glm::vec4(100, 100, 100, 255)">
+    </Shadow>
+</DropdownBody>

@@ -1,0 +1,31 @@
+<Element
+    width="24dp"
+    height="24dp"
+    borderSize="1dp"
+    borderRadius="4"
+    borderColor="glm::vec4(0, 0, 0, 255)">
+    <include path="UiColor.h" />
+
+    <Element
+        element="mCheck"
+        marginBottom="6dp"
+        marginRight="2dp"
+        width="60%"
+        height="60%"
+        backgroundColor="glm::vec4(255, 0, 0, 0)"
+        orientation="Vertical"
+        alignItemsHor="Start"
+        alignItemsVer="End">
+        <Element
+            width="2dp"
+            height="50%"
+            backgroundColor="UiColor::White">
+        </Element>
+        <Element
+            width="100%"
+            height="2dp"
+            backgroundColor="UiColor::White">
+        </Element>
+    </Element>
+
+</Element>

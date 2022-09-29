@@ -1,12 +1,43 @@
-cmake_minimum_required(VERSION 3.4.1)
+cmake_minimum_required(VERSION 3.0)
 
-include_directories(App)
+set (PROJECT UiKit)
+project(${PROJECT})
 
-add_subdirectory(App)
+file(GLOB SRC_PRIVATE CONFIGURE_DEPENDS
+	private/*.cpp 
+	private/*.h
+)
 
-if ((WIN32 OR (UNIX AND NOT ANDROID)) AND NOT EMSCRIPTEN)
-	add_subdirectory(Desktop)
-    add_subdirectory(MobileSimulator)
+file(GLOB SRC CONFIGURE_DEPENDS
+	*.cpp 
+	*.h
+)
+if (EXISTS ${CMAKE_CURRENT_SOURCE_DIR}/../../cmake/get_elementary_libs.cmake)
+	include(${CMAKE_CURRENT_SOURCE_DIR}/../cmake/get_elementary_libs.cmake)
+	get_elementary_libs()
 endif()
 
+add_library(${PROJECT} SHARED ${SRC_PRIVATE} ${SRC})
 
+target_link_libraries(${PROJECT}
+    element3d
+)
+
+if(ANDROID)
+    target_link_libraries(${PROJECT}
+		EGL
+		GLESv3
+		log
+    )
+elseif(WIN32)
+	add_definitions(-D__E3_EXPORTING__)
+    target_link_libraries(${PROJECT}
+        glew32
+        OpenGL32
+    )
+elseif(UNIX)
+    target_link_libraries(${PROJECT}
+        GL
+        GLEW
+    )
+endif()
