@@ -1,0 +1,34 @@
+<Element
+    width="200dp"
+    alignItemsHor="Start"
+    orientation="Vertical">
+
+    <Element
+        element="mHeader"
+        width="100%"
+        height="30dp"
+        alignItemsHor="SpaceBetween">
+
+        <Text
+            element="mText"
+            marginLeft="10dp"
+            fontSize="14dp"
+            text="Item 1">
+        </Text>
+
+        <Element
+            marginLeft="10dp"
+            marginRight="10dp"
+            width="20dp"
+            height="20dp"
+            backgroundColor="glm::vec4(0, 0, 0, 255)">
+        </Element>
+
+    </Element>
+    <Element
+        element="mBody"
+        orientation="Vertical"
+        width="100%">
+    </Element>
+
+</Element>

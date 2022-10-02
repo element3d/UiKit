@@ -40,6 +40,19 @@
         marginTop="30dp">
     </UiSlider> -->
 
+    <UiExpander
+    
+        marginTop="30dp">
+        <UiExpanderBody
+            width="100%"
+            height="100dp">
+            <Text
+                text="Expander"
+                fontSize="16dp">
+            </Text>
+        </UiExpanderBody>
+    </UiExpander>
+
     <UiTreeView
         element="mTree"
         marginTop="30dp">

@@ -3,6 +3,8 @@
 #define __MainBase_H__
 
 #include <e3/ViewFactory.h>
+#include <UiExpander.h>
+#include <UiExpanderBody.h>
 #include <UiTreeView.h>
 
 
