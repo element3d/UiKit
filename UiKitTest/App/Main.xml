@@ -2,7 +2,7 @@
     orientation="Vertical"
     alignItemsVer="Start"
     overflow="Scroll">
-
+<!-- 
     <var
         name="mDDBody">
         <UiDropDownBody>
@@ -38,7 +38,7 @@
 
     <UiSlider
         marginTop="30dp">
-    </UiSlider>
+    </UiSlider> -->
 
     <UiTreeView
         element="mTree"

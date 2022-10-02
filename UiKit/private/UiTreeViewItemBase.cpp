@@ -7,18 +7,27 @@ UiTreeViewItemBase::UiTreeViewItemBase(e3::Element* pParent)
 	: e3::Element(pParent)
 {
         this->SetWidth("200dp");
-        this->SetHeight("30dp");
         this->SetAlignItemsHor((e3::EAlignment)0);
+        this->SetOrientation((e3::EOrientation)1);
+    mHeader = e3::ViewFactory::CreateShape( e3::EOrientation::Horizontal);
+    AddElement(mHeader);
+        mHeader->SetWidth("100%");
+        mHeader->SetHeight("30dp");
+        mHeader->SetAlignItemsHor((e3::EAlignment)0);
     e3::Element* pElement1 = e3::ViewFactory::CreateShape( e3::EOrientation::Horizontal);
-    AddElement(pElement1);
+    mHeader->AddElement(pElement1);
         pElement1->SetMarginLeft("10dp");
         pElement1->SetMarginRight("10dp");
         pElement1->SetWidth("20dp");
         pElement1->SetHeight("20dp");
         pElement1->SetBackgroundColor(glm::vec4(0, 0, 0, 255));
         mText = e3::ViewFactory::CreateText();
-        AddElement(mText);
+        mHeader->AddElement(mText);
         mText->SetFontSize("14dp");
         mText->SetText("Item 1");
+    mBody = e3::ViewFactory::CreateShape( e3::EOrientation::Horizontal);
+    AddElement(mBody);
+        mBody->SetOrientation((e3::EOrientation)1);
+        mBody->SetWidth("100%");
 
 }

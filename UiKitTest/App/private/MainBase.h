@@ -3,14 +3,6 @@
 #define __MainBase_H__
 
 #include <e3/ViewFactory.h>
-#include <UiDropDownBody.h>
-#include <UiDropDownBodyItem.h>
-#include <UiButton.h>
-#include <UiDropDownButton.h>
-#include <UiCheckBox.h>
-#include <UiRadioButton.h>
-#include <UiSwitch.h>
-#include <UiSlider.h>
 #include <UiTreeView.h>
 
 
@@ -31,8 +23,7 @@ public:
 
  
 protected:
-	UiDropDownBody* mDDBody = nullptr;
-UiTreeView* mTree = nullptr;
+	UiTreeView* mTree = nullptr;
 
 
 };

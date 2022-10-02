@@ -17,10 +17,13 @@ public:
 
 	virtual void AddElement(UiTreeViewItem* pItem);
 
+	virtual bool OnClick(e3::MouseEvent* pEvent) override;
+
 private:
 	int mTreeIndex = 0;
 	UiTreeView* mTree = nullptr;
 	std::vector<UiTreeViewItem*> mItems;
+	bool mExpanded = false;
 };
 
 #endif // UiTreeViewItem_H_
