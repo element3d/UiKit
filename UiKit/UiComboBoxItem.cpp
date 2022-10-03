@@ -10,3 +10,8 @@ void UiComboBoxItem::SetTitle(const std::string& title, bool translate)
 {
 	mText->SetText(title, translate);
 }
+
+std::string UiComboBoxItem::GetTitle()
+{
+	return mText->GetText();
+}
