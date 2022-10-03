@@ -4,6 +4,7 @@
 
 #include <e3/ViewFactory.h>
 #include <UiExpander.h>
+#include <UiExpanderHeaderDefault.h>
 #include <UiExpanderBody.h>
 #include <UiTreeView.h>
 

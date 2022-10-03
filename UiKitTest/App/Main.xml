@@ -43,6 +43,9 @@
     <UiExpander
     
         marginTop="30dp">
+        <UiExpanderHeaderDefault
+            title="_s(Size)">
+        </UiExpanderHeaderDefault>
         <UiExpanderBody
             width="100%"
             height="100dp">
