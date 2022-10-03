@@ -3,6 +3,7 @@
 #define UiTreeViewItem_H_
 
 #include "private/UiTreeViewItemBase.h"
+#include "UiTreeViewItemHeader.h"
 
 class UiTreeView;
 class E3_EXPORT UiTreeViewItem : public UiTreeViewItemBase
@@ -11,11 +12,10 @@ class E3_EXPORT UiTreeViewItem : public UiTreeViewItemBase
 public:
 	UiTreeViewItem(e3::Element* pParent = nullptr);
 
-	void SetText(const std::string& text, bool translate = false);
-
 	void SetTreeIndex(int index);
 
 	virtual void AddElement(UiTreeViewItem* pItem);
+	virtual void AddElement(UiTreeViewItemHeader* pHeader);
 
 	virtual bool OnClick(e3::MouseEvent* pEvent) override;
 
@@ -24,6 +24,8 @@ private:
 	UiTreeView* mTree = nullptr;
 	std::vector<UiTreeViewItem*> mItems;
 	bool mExpanded = false;
+	UiTreeViewItemHeader* mHeaderItem = nullptr;
+
 };
 
 #endif // UiTreeViewItem_H_

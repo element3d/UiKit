@@ -23,7 +23,6 @@ public:
  
 protected:
 	e3::Element* mHeader = nullptr;
-e3::Text* mText = nullptr;
 e3::Element* mBody = nullptr;
 
 

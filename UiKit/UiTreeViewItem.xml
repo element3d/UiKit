@@ -6,21 +6,8 @@
     <Element
         element="mHeader"
         width="100%"
-        height="30dp"
         alignItemsHor="Start">
 
-        <Element
-            marginLeft="10dp"
-            marginRight="10dp"
-            width="20dp"
-            height="20dp"
-            backgroundColor="glm::vec4(0, 0, 0, 255)">
-        </Element>
-        <Text
-            element="mText"
-            fontSize="14dp"
-            text="Item 1">
-        </Text>
     </Element>
     <Element
         element="mBody"

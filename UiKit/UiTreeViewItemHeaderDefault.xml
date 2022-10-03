@@ -1,0 +1,22 @@
+<UiTreeViewItemHeader
+    element="mHeader"
+    width="100%"
+    height="30dp"
+    alignItemsHor="Start">
+
+    <FontIcon
+        element="mIcon"
+        marginLeft="10dp"
+        marginRight="10dp"
+        width="10dp"
+        height="10dp"
+        color="glm::vec4(50, 50, 50, 255)"
+        font="_s(UiKit/icons/Segoe_Fluent_Icons.ttf)"
+        charcode="E011">
+    </FontIcon>
+    <Text
+        element="mText"
+        fontSize="14dp">
+    </Text>
+</UiTreeViewItemHeader>
+  
