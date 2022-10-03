@@ -3,6 +3,10 @@
 #define __MainBase_H__
 
 #include <e3/ViewFactory.h>
+#include <UiComboBox.h>
+#include <UiComboBoxHeaderDefault.h>
+#include <UiComboBoxBody.h>
+#include <UiComboBoxItem.h>
 #include <UiExpander.h>
 #include <UiExpanderHeaderDefault.h>
 #include <UiExpanderBody.h>

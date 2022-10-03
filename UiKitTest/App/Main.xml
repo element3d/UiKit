@@ -40,6 +40,26 @@
         marginTop="30dp">
     </UiSlider> -->
 
+    <UiComboBox
+        width="200"
+        height="30"
+        backgroundColor="glm::vec4(255, 0, 0, 255)">
+        <UiComboBoxHeaderDefault
+            title="_s(Combo Box)">
+        </UiComboBoxHeaderDefault>
+        <UiComboBoxBody>
+            <UiComboBoxItem
+                title="_s(Item 1)">
+            </UiComboBoxItem>
+            <UiComboBoxItem
+                title="_s(Item 2)">
+            </UiComboBoxItem>
+            <UiComboBoxItem
+                title="_s(Item 3)">
+            </UiComboBoxItem>
+        </UiComboBoxBody>
+    </UiComboBox>
+
     <UiExpander
     
         marginTop="30dp">

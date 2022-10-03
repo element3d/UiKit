@@ -1,0 +1,10 @@
+<Element
+    height="30dp"
+    width="100%"
+    alignItemsHor="Start">
+    <Text
+        element="mText"
+        fontSize="14dp"
+        marginLeft="10dp">
+    </Text>
+</Element>
