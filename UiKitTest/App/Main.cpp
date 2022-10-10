@@ -9,7 +9,7 @@ Main::Main(e3::Element* pParent)
 	{
 		UiTreeViewItem* pItem = new UiTreeViewItem();
 		UiTreeViewItemHeaderDefault* pHeader = new UiTreeViewItemHeaderDefault();
-		pHeader->SetIndicatorPosition(UiRight);
+	///	pHeader->SetIndicatorPosition(UiRight);
 		pItem->AddElement(pHeader);
 		pHeader->SetTitle(std::string("Item ") + std::to_string(i));
 		mTree->AddElement(pItem);
@@ -17,7 +17,7 @@ Main::Main(e3::Element* pParent)
 		{
 			UiTreeViewItem* pItem2 = new UiTreeViewItem();
 			UiTreeViewItemHeaderMini* pHeader = new UiTreeViewItemHeaderMini();
-			pHeader->SetIndicatorPosition(UiRight);
+	//		pHeader->SetIndicatorPosition(UiRight);
 			UiText* T = new UiText();
 			T->SetText(std::string("Child ") + std::to_string(j));
 			pHeader->AddElement(T);
@@ -29,7 +29,7 @@ Main::Main(e3::Element* pParent)
 			{
 				UiTreeViewItem* pItem3 = new UiTreeViewItem();
 				UiTreeViewItemHeaderDefault* pHeader = new UiTreeViewItemHeaderDefault();
-				pHeader->SetIndicatorPosition(UiRight);
+			//	pHeader->SetIndicatorPosition(UiRight);
 				pItem3->AddElement(pHeader);
 				pHeader->SetTitle(std::string("Child ") + std::to_string(j));
 				pItem2->AddElement(pItem3);
