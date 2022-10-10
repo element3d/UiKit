@@ -71,6 +71,12 @@
             height="100dp">
             <UiListView
                 width="100%">
+                <UiListViewItem
+                    title="_s(Element)">
+                </UiListViewItem>
+                <UiListViewItem
+                    title="_s(Text)">
+                </UiListViewItem>
             </UiListView>
         </UiExpanderBody>
     </UiExpander>

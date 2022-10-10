@@ -41,6 +41,12 @@ MainBase::MainBase(e3::Element* pParent)
                 UiListView* pCustomView10 = new UiListView();
         pCustomView9->AddElement(pCustomView10);
         pCustomView10->SetWidth("100%");
+                UiListViewItem* pCustomView11 = new UiListViewItem();
+        pCustomView10->AddElement(pCustomView11);
+        pCustomView11->SetTitle(_s(Element));
+                UiListViewItem* pCustomView12 = new UiListViewItem();
+        pCustomView10->AddElement(pCustomView12);
+        pCustomView12->SetTitle(_s(Text));
         mTree = new UiTreeView();
         AddElement(mTree);
         mTree->SetWidth(400);

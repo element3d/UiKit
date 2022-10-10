@@ -3,6 +3,7 @@
 #define __UiListViewItemBase_H__
 
 #include <e3/ViewFactory.h>
+#include "UiColor.h"
 
 
 class UiListViewItemBase : public e3::Element
@@ -22,7 +23,9 @@ public:
 
  
 protected:
-	
+	e3::Element* mSelection = nullptr;
+e3::Text* mTitle = nullptr;
+
 
 };
 

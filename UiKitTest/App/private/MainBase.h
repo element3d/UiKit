@@ -11,6 +11,7 @@
 #include <UiExpanderHeaderDefault.h>
 #include <UiExpanderBody.h>
 #include <UiListView.h>
+#include <UiListViewItem.h>
 #include <UiTreeView.h>
 
 
