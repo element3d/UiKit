@@ -11,6 +11,11 @@ public:
 	UiTreeView(e3::Element* pParent = nullptr);
 
 	virtual void AddElement(UiTreeViewItem* pItem);
+
+	void SetSelectedItem(UiTreeViewItem* pItem) { mSelectedItem = pItem; }
+	UiTreeViewItem* GetSelectedItem() { return mSelectedItem; }
+private:
+	UiTreeViewItem* mSelectedItem = nullptr;
 };
 
 #endif // UiTreeView_H_

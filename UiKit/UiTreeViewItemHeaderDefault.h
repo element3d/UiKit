@@ -14,6 +14,12 @@ public:
 
 	virtual void OnChange(bool expanded) override;
 	virtual void OnItemChildAdded() override;
+
+	virtual void Select() override;
+	virtual void Unselect() override;
+
+	bool OnClick(e3::MouseEvent* pE);
+
 };
 
 #endif // UiTreeViewItemHeaderDefault_H_

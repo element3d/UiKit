@@ -13,12 +13,17 @@ UiTreeViewItem::UiTreeViewItem(e3::Element* pParent)
 void UiTreeViewItem::SetTreeIndex(int index)
 {
 	mTreeIndex = index; 
-	SetMarginLeft(index * e3::Dim("40dp"));
+	if (mHeaderItem)
+	{
+		mHeaderItem->SetPaddingLeft(index * e3::Dim("10dp"));
+	}
+	//SetPaddingLeft(index * e3::Dim("40dp"));
 }
 
 void UiTreeViewItem::AddElement(UiTreeViewItem* pItem)
 {
 	pItem->SetTreeIndex(mTreeIndex + 1);
+	pItem->mTree = mTree;
 //	mIcon->SetVisibility(e3::EVisibility::Visible);
 	mBody->AddElement(pItem);
 	if (mHeaderItem) mHeaderItem->OnItemChildAdded();
@@ -37,11 +42,31 @@ void UiTreeViewItem::AddElement(UiTreeViewItem* pItem)
 	mItems.push_back(pItem);*/
 }
 
+void UiTreeViewItem::Select()
+{
+	if (mHeaderItem) mHeaderItem->Select();
+}
+
+void UiTreeViewItem::Unselect()
+{
+	if (mHeaderItem) mHeaderItem->Unselect();
+} 
+
 void UiTreeViewItem::AddElement(UiTreeViewItemHeader* pHeader)
 {
 	mHeader->AddElement(pHeader);
 	mHeaderItem = pHeader;
+	mHeaderItem->mTree = mTree;
 	if (mBody->GetNumChildren()) mHeaderItem->OnItemChildAdded();
+
+	mHeaderItem->SetOnClickCallback([this](e3::MouseEvent*) {
+		if (mTree)
+		{
+			auto pItem = mTree->GetSelectedItem();
+			if (pItem && pItem != this) pItem->Unselect();
+		}
+		mTree->SetSelectedItem(this);
+	});
 
 	mHeaderItem->SetOnChangeCallback([this](bool expanded) {	
 		mExpanded = expanded;
@@ -61,9 +86,11 @@ void UiTreeViewItem::AddElement(UiTreeViewItemHeader* pHeader)
 
 bool UiTreeViewItem::OnClick(e3::MouseEvent* pEvent)
 {
+	
 	e3::Element::OnClick(pEvent);
 
 
-
+	// mTree->SetSelectedItem(this);
+	//Select();
 	return true;
 }

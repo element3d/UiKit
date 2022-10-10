@@ -3,20 +3,31 @@
     width="100%"
     height="30dp"
     alignItemsHor="Start">
-
+    <include path="UiColor.h" />
+    <Element
+        element="mSelection"
+        width="3dp"
+        borderRadius="0.5"
+        height="60%"
+        backgroundColor="UiColor::Primary"
+        positionType="Absolute"
+        left="4dp"
+        visibility="Gone">
+    </Element>
     <FontIcon
         element="mIcon"
-        marginLeft="10dp"
-        marginRight="10dp"
-        width="10dp"
-        height="10dp"
+        marginLeft="16dp"
+        marginRight="16dp"
+        width="8dp"
+        height="8dp"
         color="glm::vec4(50, 50, 50, 255)"
         font="_s(UiKit/icons/Segoe_Fluent_Icons.ttf)"
         charcode="E011">
     </FontIcon>
     <Text
         element="mText"
-        fontSize="14dp">
+        fontSize="14dp"
+        textColor="glm::vec4(50, 50, 50, 255)">
     </Text>
 </UiTreeViewItemHeader>
   

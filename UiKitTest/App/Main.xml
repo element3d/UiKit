@@ -69,15 +69,15 @@
         <UiExpanderBody
             width="100%"
             height="100dp">
-            <Text
-                text="Expander"
-                fontSize="16dp">
-            </Text>
+            <UiListView
+                width="100%">
+            </UiListView>
         </UiExpanderBody>
     </UiExpander>
 
     <UiTreeView
         element="mTree"
+        width="400"
         marginTop="30dp">
     </UiTreeView>
 

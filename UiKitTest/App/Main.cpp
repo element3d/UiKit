@@ -18,6 +18,16 @@ Main::Main(e3::Element* pParent)
 			pItem2->AddElement(pHeader);
 			pHeader->SetTitle(std::string("Child ") + std::to_string(j));
 			pItem->AddElement(pItem2);
+
+			for (int j = 0; j < 3; ++j)
+			{
+				UiTreeViewItem* pItem3 = new UiTreeViewItem();
+				UiTreeViewItemHeaderDefault* pHeader = new UiTreeViewItemHeaderDefault();
+				pItem3->AddElement(pHeader);
+				pHeader->SetTitle(std::string("Child ") + std::to_string(j));
+				pItem2->AddElement(pItem3);
+			}
+
 		}
 	}
 }

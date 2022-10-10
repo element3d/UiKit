@@ -2,23 +2,23 @@
     element="mHeader"
     width="100%"
     height="30dp"
-    alignItemsHor="SpaceBetween"
-    backgroundColor="UiColor::White">
+    alignItemsHor="SpaceBetween">
     <include path="UiColor.h" />
 
     <Text
         element="mText"
         marginLeft="10dp"
         fontSize="14dp"
+        textColor="glm::vec4(20, 20, 20, 255)"
         text="Item 1">
     </Text>
 
     <FontIcon
         element="mIcon"
-        marginLeft="10dp"
-        marginRight="10dp"
-        width="14dp"
-        height="14dp"
+        marginLeft="14dp"
+        marginRight="14dp"
+        width="8dp"
+        height="8dp"
         color="glm::vec4(0, 0, 0, 255)"
         font="_s(UiKit/icons/Segoe_Fluent_Icons.ttf)"
         charcode="E011">

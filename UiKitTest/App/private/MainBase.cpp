@@ -38,12 +38,12 @@ MainBase::MainBase(e3::Element* pParent)
         pCustomView7->AddElement(pCustomView9);
         pCustomView9->SetWidth("100%");
         pCustomView9->SetHeight("100dp");
-        e3::Text* pText1 = e3::ViewFactory::CreateText();
-        pCustomView9->AddElement(pText1);
-        pText1->SetText("Expander");
-        pText1->SetFontSize("16dp");
+                UiListView* pCustomView10 = new UiListView();
+        pCustomView9->AddElement(pCustomView10);
+        pCustomView10->SetWidth("100%");
         mTree = new UiTreeView();
         AddElement(mTree);
+        mTree->SetWidth(400);
         mTree->SetMarginTop("30dp");
 
 }

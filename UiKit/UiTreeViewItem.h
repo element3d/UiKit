@@ -17,6 +17,9 @@ public:
 	virtual void AddElement(UiTreeViewItem* pItem);
 	virtual void AddElement(UiTreeViewItemHeader* pHeader);
 
+	virtual void Select();
+	virtual void Unselect();
+
 	virtual bool OnClick(e3::MouseEvent* pEvent) override;
 
 private:

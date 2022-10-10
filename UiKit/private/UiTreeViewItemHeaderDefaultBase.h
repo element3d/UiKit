@@ -3,6 +3,7 @@
 #define __UiTreeViewItemHeaderDefaultBase_H__
 
 #include <e3/ViewFactory.h>
+#include "UiColor.h"
 #include "UiTreeViewItemHeader.h"
 
 
@@ -23,7 +24,8 @@ public:
 
  
 protected:
-	e3::FontIcon* mIcon = nullptr;
+	e3::Element* mSelection = nullptr;
+e3::FontIcon* mIcon = nullptr;
 e3::Text* mText = nullptr;
 
 

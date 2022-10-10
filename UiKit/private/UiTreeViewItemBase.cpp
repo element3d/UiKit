@@ -6,7 +6,7 @@
 UiTreeViewItemBase::UiTreeViewItemBase(e3::Element* pParent)
 	: e3::Element(pParent)
 {
-        this->SetWidth("200dp");
+        this->SetWidth("100%");
         this->SetAlignItemsHor((e3::EAlignment)0);
         this->SetOrientation((e3::EOrientation)1);
     mHeader = e3::ViewFactory::CreateShape( e3::EOrientation::Horizontal);
