@@ -43,13 +43,13 @@
     <UiComboBox
         width="200"
         height="30"
-        backgroundColor="glm::vec4(255, 0, 0, 255)">
+        margin="20dp">
         <UiComboBoxHeaderDefault
             title="_s(Combo Box)">
         </UiComboBoxHeaderDefault>
         <UiComboBoxBody>
             <UiComboBoxItem
-                title="_s(Item 1)">
+                title="_s(Pick A Color)">
             </UiComboBoxItem>
             <UiComboBoxItem
                 title="_s(Item 2)">
@@ -60,9 +60,14 @@
         </UiComboBoxBody>
     </UiComboBox>
 
+    <UiInput
+        width="200dp"
+        margin="20dp">
+    </UiInput>
+
     <UiExpander
     
-        marginTop="30dp">
+        margin="30dp">
         <UiExpanderHeaderDefault
             title="_s(Size)">
         </UiExpanderHeaderDefault>

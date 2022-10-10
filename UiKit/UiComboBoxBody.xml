@@ -1,5 +1,9 @@
 <DropdownBody
     orientation="Vertical"
-    backgroundColor="glm::vec4(255)">
+    backgroundColor="glm::vec4(253, 253, 253, 255)"
+    borderRadius="8"
+    padding="4dp"
+    borderSize="1dp"
+    borderColor="glm::vec4(200, 200, 200, 255)">
 
 </DropdownBody>

@@ -1,22 +1,26 @@
 <UiExpanderHeader
     element="mHeader"
     width="100%"
-    height="30dp"
-    alignItemsHor="SpaceBetween">
+    height="48dp"
+    borderRadius="4"
+    borderSize="1dp"
+    borderColor="glm::vec4(200, 200, 200, 255)"
+    alignItemsHor="SpaceBetween"
+    backgroundColor="glm::vec4(248, 248, 248, 255)">
     <include path="UiColor.h" />
 
-    <Text
+    <UiText
         element="mText"
-        marginLeft="10dp"
+        marginLeft="20dp"
         fontSize="14dp"
         textColor="glm::vec4(20, 20, 20, 255)"
         text="Item 1">
-    </Text>
+    </UiText>
 
     <FontIcon
         element="mIcon"
-        marginLeft="14dp"
-        marginRight="14dp"
+        marginLeft="20dp"
+        marginRight="20dp"
         width="8dp"
         height="8dp"
         color="glm::vec4(0, 0, 0, 255)"

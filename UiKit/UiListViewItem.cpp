@@ -31,12 +31,7 @@ bool UiListViewItem::OnClick(e3::MouseEvent* pE)
 {
 	
 	Select();
-	
-	/*mExpanded = !mExpanded;
-	OnChange(mExpanded);
-	if (mOnChangeCallback) mOnChangeCallback(mExpanded);
 
-	return UiTreeViewItemHeaderBase::OnClick(pE);*/
 	return true;
 }
 

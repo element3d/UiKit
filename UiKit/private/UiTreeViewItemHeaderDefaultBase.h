@@ -4,10 +4,11 @@
 
 #include <e3/ViewFactory.h>
 #include "UiColor.h"
-#include "UiTreeViewItemHeader.h"
+#include <UiText.h>
+#include "UiTreeViewItemHeaderMini.h"
 
 
-class UiTreeViewItemHeaderDefaultBase : public UiTreeViewItemHeader
+class UiTreeViewItemHeaderDefaultBase : public UiTreeViewItemHeaderMini
 {
 public:
     struct __Id
@@ -24,9 +25,7 @@ public:
 
  
 protected:
-	e3::Element* mSelection = nullptr;
-e3::FontIcon* mIcon = nullptr;
-e3::Text* mText = nullptr;
+	UiText* mText = nullptr;
 
 
 };

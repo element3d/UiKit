@@ -12,13 +12,6 @@ public:
 
 	void SetTitle(const std::string& title, bool translate = false);
 
-	virtual void OnChange(bool expanded) override;
-	virtual void OnItemChildAdded() override;
-
-	virtual void Select() override;
-	virtual void Unselect() override;
-
-	bool OnClick(e3::MouseEvent* pE);
 
 };
 

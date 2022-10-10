@@ -1,10 +1,24 @@
 <Element
-    height="30dp"
-    width="100%"
-    alignItemsHor="Start">
-    <Text
-        element="mText"
-        fontSize="14dp"
-        marginLeft="10dp">
-    </Text>
+  width="100%"
+  height="34dp"
+  alignItemsHor="Start"
+  borderRadius="4"
+  marginTop="2dp"
+  marginBottom="2dp">
+  <include path="UiColor.h" />
+
+  <Element
+    element="mSelection"
+    width="3dp"
+    height="18dp"
+    left="2dp"
+    borderRadius="0.5"
+    backgroundColor="UiColor::Primary">
+  </Element>
+
+  <UiText
+    element="mTitle"
+    marginLeft="14dp">
+  </UiText>
+
 </Element>

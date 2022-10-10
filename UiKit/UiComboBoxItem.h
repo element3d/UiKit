@@ -11,6 +11,14 @@ public:
 
 	void SetTitle(const std::string& title, bool translate = false);
 	std::string GetTitle();
+
+	void Select();
+	void Unselect();
+
+protected:
+	bool OnClick(e3::MouseEvent* pE);
+	void OnMouseEnter(e3::MouseEvent* pE);
+	void OnMouseLeave(e3::MouseEvent* pE);
 };
 
 #endif // UiComboBoxItem_H_
