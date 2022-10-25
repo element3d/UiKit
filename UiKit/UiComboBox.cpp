@@ -42,3 +42,20 @@ void UiComboBox::AddElement(UiComboBoxBody* pBody)
 		Collapse();
 	});
 }
+
+void UiComboBox::Expand()
+{
+	UiComboBoxBase::Expand();
+	if (mBody->GetSelectedItem())
+	{
+		auto g = GetGeometry();
+		auto ig = mBody->GetSelectedItem()->GetGeometry();
+		float y = ig.y;
+		if (ig.y == 0) y = g.y; 
+		float dy = g.y + g.height / 2 - (y + ig.height / 2);
+		GetBody()->SetTop(dy);
+	}
+		// GetBody()->SetTranslation(glm::vec3(50, -50, 0));
+
+	printf("asdf");
+}

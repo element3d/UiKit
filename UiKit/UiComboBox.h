@@ -17,6 +17,7 @@ public:
 	void AddElement(UiComboBoxHeader* pHeader);
 	void AddElement(UiComboBoxBody* pBody);
 
+	virtual void Expand() override;
 private:
 	UiComboBoxHeader* mComboHeader = nullptr;
 	UiComboBoxBody* mBody = nullptr;

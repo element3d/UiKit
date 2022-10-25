@@ -1,4 +1,5 @@
 <Element
   overflow="Scroll"
+  padding="2dp"
   orientation="Vertical">
 </Element>

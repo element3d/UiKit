@@ -1,0 +1,34 @@
+ <UiButton
+    width="300dp"
+    height="80dp"
+
+    alignItemsHor="Start"
+    padding="20dp"
+    overflow="Hidden">
+
+    <Element
+        element="mImage"
+        width="50dp"
+        aspectRatio="1"
+        backgroundImage="UiKitTest/Images/ControlImages/Button.png">
+    </Element>
+    <Element
+        marginLeft="20dp"
+        orientation="Vertical"
+        alignItemsHor="Start">
+        <UiText
+            element="mTitle"
+            text="Button"
+            fontStyle="Bold">
+        </UiText>
+        <UiText
+            element="mDesc"
+            text="A control that responds a user input and raises a click event"
+            fontSize="12dp"
+            textColor="glm::vec4(100, 100, 100, 255)"
+            fontStyle="Bold"
+            maxNumLines="2">
+        </UiText>
+    </Element>
+
+</UiButton>

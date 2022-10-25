@@ -14,6 +14,7 @@ public:
 
 private:
 	void _SetMacOSStyles();
+	bool mChecked = false;
 };
 
 #endif // UiCheckBox_H_

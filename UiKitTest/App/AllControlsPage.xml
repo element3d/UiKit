@@ -1,0 +1,60 @@
+<Element
+    width="100%"
+    height="100%"
+    padding="60dp"
+    orientation="Vertical"
+    alignItemsVer="Start">
+
+    <Element
+        width="100%"
+        height="200dp"
+        borderRadius="10"
+        backgroundSize="Cover"
+        backgroundImage="UiKitTest/Images/MainPage_Banner.png">
+    </Element>
+
+    <Element
+        element="mMenu"
+        marginTop="20dp"
+        width="100%"
+        orientation="Vertical"
+        alignItemsHor="Start">
+        <!-- <UiButton
+            width="300dp"
+            height="80dp"
+            borderRadius="4"
+            borderSize="1dp"
+            backgroundColor="all: 255"
+            borderColor="glm::vec4(220, 220, 220, 255)"
+            alignItemsHor="Start"
+            padding="20dp"
+            overflow="Hidden">
+
+            <Element
+                width="50dp"
+                aspectRatio="1"
+                backgroundImage="UiKitTest/Images/ControlImages/Button.png">
+            </Element>
+            <Element
+                marginLeft="20dp"
+                orientation="Vertical"
+                alignItemsHor="Start">
+                <UiText
+                    text="Button"
+                    fontStyle="Bold">
+                </UiText>
+                <UiText
+                    text="A control that responds a user input and raises a click event"
+                    fontSize="12dp"
+                    textColor="glm::vec4(100, 100, 100, 255)"
+                    fontStyle="Bold"
+                    maxNumLines="2">
+                </UiText>
+            </Element>
+
+        </UiButton> -->
+
+
+    </Element>
+
+</Element>

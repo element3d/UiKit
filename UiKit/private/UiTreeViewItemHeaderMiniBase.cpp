@@ -13,7 +13,7 @@ UiTreeViewItemHeaderMiniBase::UiTreeViewItemHeaderMiniBase(e3::Element* pParent)
     AddElement(mSelection);
         mSelection->SetWidth("3dp");
         mSelection->SetBorderRadius(0.5);
-        mSelection->SetHeight("60%");
+        mSelection->SetHeight("16dp");
         mSelection->SetBackgroundColor(UiColor::Primary);
         mSelection->SetPositionType((e3::EPositionType)1);
         mSelection->SetLeft("4dp");

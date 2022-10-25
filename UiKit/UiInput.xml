@@ -1,17 +1,17 @@
 <Input
-    height="32dp"
-    backgroundColor="UiColor::White"
-    borderRadius="6"
+    height="31dp"
+    backgroundColor="glm::vec4(250, 250, 250, 255)"
+    borderRadius="4"
     textColor="glm::vec4(50, 50, 50, 255)"
     fontSize="14"
     paddingLeft="0"
     borderSize="1dp"
-    borderColor="glm::vec4(200, 200, 200, 255)"
+    borderColor="glm::vec4(220, 220, 220, 255)"
     overflow="Hidden">
     <include path="UiColor.h" />
     <Element
         width="100%"
-        height="2dp"
+        height="1dp"
         backgroundColor="UiColor::Primary"
         positionType="Absolute"
         bottom="0"

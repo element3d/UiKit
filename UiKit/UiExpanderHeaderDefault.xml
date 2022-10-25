@@ -1,12 +1,12 @@
 <UiExpanderHeader
     element="mHeader"
     width="100%"
-    height="48dp"
+    height="46dp"
     borderRadius="4"
     borderSize="1dp"
-    borderColor="glm::vec4(200, 200, 200, 255)"
+    borderColor="glm::vec4(220, 220, 220, 255)"
     alignItemsHor="SpaceBetween"
-    backgroundColor="glm::vec4(248, 248, 248, 255)">
+    backgroundColor="glm::vec4(250, 250, 250, 255)">
     <include path="UiColor.h" />
 
     <UiText

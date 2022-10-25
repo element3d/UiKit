@@ -3,7 +3,7 @@
 UiComboBoxItem::UiComboBoxItem(e3::Element* pParent)
 	: UiComboBoxItemBase(pParent)
 {
-
+	Unselect();
 }
 
 void UiComboBoxItem::SetTitle(const std::string& title, bool translate)
@@ -36,7 +36,7 @@ bool UiComboBoxItem::OnClick(e3::MouseEvent* pE)
 	
 	Select();
 
-	return true;
+	return UiComboBoxItemBase::OnClick(pE);
 }
 
 void UiComboBoxItem::OnMouseEnter(e3::MouseEvent* pE)

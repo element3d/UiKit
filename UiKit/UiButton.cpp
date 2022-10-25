@@ -23,3 +23,27 @@ void UiButton::_SetMacOSStyles()
 	sh.BlurSize = 0;
 	SetShadow(sh);
 }
+
+bool UiButton::OnMouseDown(e3::MouseEvent* pE) 
+{
+	SetOpacity(.95);
+	return UiButtonBase::OnMouseDown(pE);
+}
+
+bool UiButton::OnMouseUp(e3::MouseEvent* pE)
+{
+	SetOpacity(1);
+	return UiButtonBase::OnMouseUp(pE);
+}
+
+void UiButton::OnMouseEnter(e3::MouseEvent* pE)
+{
+	UiButtonBase::OnMouseEnter(pE);
+	SetBackgroundColor(glm::vec4(245, 245, 245, 255));
+}
+
+void UiButton::OnMouseLeave(e3::MouseEvent* pE)
+{
+	UiButtonBase::OnMouseLeave(pE);
+	SetBackgroundColor(glm::vec4(250, 250, 250, 255));
+}

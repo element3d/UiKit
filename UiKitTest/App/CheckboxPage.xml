@@ -1,0 +1,69 @@
+<Element
+    width="100%"
+    height="100%"
+    padding="60dp"
+    orientation="Vertical"
+    alignItemsVer="Start"
+    alignItemsHor="Start">
+
+    <Element
+        width="70%"
+        alignItemsHor="Start"
+        orientation="Vertical">
+        <UiText
+            text="CheckBox"
+            fontSize="30dp">
+        </UiText>
+        <UiText
+            marginTop="20dp"
+            text="The Button control provides a Click event to respond to user input from a touch, mouse, keyboard or other input device."
+            fontSize="16dp">
+        </UiText>
+
+        <UiText
+            marginTop="24dp"
+            text="A 2-state CheckBox."
+            fontSize="24dp">
+        </UiText>
+        <Element
+            width="100%"
+            height="100dp"
+            marginTop="20dp"
+            borderSize="1dp"
+            backgroundColor="glm::vec4(240, 240, 240, 255)"
+            borderColor="glm::vec4(220, 220, 220, 255)"
+            borderRadius="10"
+            padding="20dp"
+            alignItemsHor="Start">
+
+            <UiCheckBox>
+               
+            </UiCheckBox>
+
+        </Element>
+
+        <UiText
+            marginTop="30dp"
+            text="A 3-state CheckBox."
+            fontSize="24dp">
+        </UiText>
+        <Element
+            width="100%"
+            height="100dp"
+            marginTop="20dp"
+            borderSize="1dp"
+            backgroundColor="glm::vec4(240, 240, 240, 255)"
+            borderColor="glm::vec4(220, 220, 220, 255)"
+            borderRadius="10"
+            padding="20dp"
+            alignItemsHor="Start">
+
+           <UiCheckBox>
+               
+            </UiCheckBox>
+
+        </Element>
+
+    </Element>
+
+</Element>

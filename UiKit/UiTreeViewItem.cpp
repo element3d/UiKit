@@ -64,8 +64,9 @@ void UiTreeViewItem::AddElement(UiTreeViewItemHeader* pHeader)
 		{
 			auto pItem = mTree->GetSelectedItem();
 			if (pItem && pItem != this) pItem->Unselect();
+
+			mTree->SetSelectedItem(this);
 		}
-		mTree->SetSelectedItem(this);
 	});
 
 	mHeaderItem->SetOnChangeCallback([this](bool expanded) {	

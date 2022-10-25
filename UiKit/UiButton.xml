@@ -1,19 +1,24 @@
 <Element
-    borderSize="1dp"
-    borderColor="glm::vec4(100, 100, 100, 255)"
     borderRadius="4"
-
+    borderSize="1dp"
+    backgroundColor="glm::vec4(250, 250, 250, 255)"
+    borderColor="glm::vec4(220, 220, 220, 255)"
     padding="14dp"
     paddingTop="7dp"
     paddingBottom="7dp"
-    backgroundColor="all: 255">
+    >
+     <!-- borderSize="1dp"
+    borderColor="glm::vec4(100, 100, 100, 255)"
+    borderRadius="4"
+        backgroundColor="all: 255" -->
+
     <Shadow
         blurSize="1"
         offset="x: 0, y: 1"
-        color="glm::vec4(0, 0, 0, 255)">
+        color="glm::vec4(100, 100, 100, 255)">
     </Shadow>
-    <Text
+    <!-- <Text
         text="Standard XAML Button"
         fontSize="14dp">
-    </Text>
+    </Text> -->
 </Element>

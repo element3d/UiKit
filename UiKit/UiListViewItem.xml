@@ -3,14 +3,13 @@
   height="36dp"
   alignItemsHor="Start"
   borderRadius="4"
-  marginTop="2dp"
   marginBottom="2dp">
   <include path="UiColor.h" />
 
   <Element
     element="mSelection"
     width="3dp"
-    height="20dp"
+    height="16dp"
     left="2dp"
     borderRadius="0.5"
     backgroundColor="UiColor::Primary">

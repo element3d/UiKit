@@ -6,13 +6,14 @@
 UiCheckBoxBase::UiCheckBoxBase(e3::Element* pParent)
 	: e3::Element(pParent)
 {
-        this->SetWidth("24dp");
-        this->SetHeight("24dp");
+        this->SetWidth("22dp");
+        this->SetHeight("22dp");
         this->SetBorderSize("1dp");
         this->SetBorderRadius(4);
-        this->SetBorderColor(glm::vec4(0, 0, 0, 255));
+        this->SetBorderColor(glm::vec4(100, 100, 100, 255));
     mCheck = e3::ViewFactory::CreateShape( e3::EOrientation::Horizontal);
     AddElement(mCheck);
+        mCheck->SetVisibility((e3::EVisibility)1);
         mCheck->SetMarginBottom("6dp");
         mCheck->SetMarginRight("2dp");
         mCheck->SetWidth("60%");

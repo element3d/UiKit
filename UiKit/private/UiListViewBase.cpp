@@ -7,6 +7,7 @@ UiListViewBase::UiListViewBase(e3::Element* pParent)
 	: e3::Element(pParent)
 {
         this->SetOverflow((e3::EOverflow)2);
+        this->SetPadding("2dp");
         this->SetOrientation((e3::EOrientation)1);
 
 }

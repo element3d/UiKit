@@ -1,0 +1,56 @@
+<Element
+    width="100%"
+    orientation="Vertical">
+    <include path="UiColor.h" />
+    <Element
+        element="mHeader"
+        width="100%"
+        height="40dp"
+        borderRadius="6"
+        alignItemsHor="Start">
+        <Element
+            element="mSelection"
+            width="3dp"
+            borderRadius="0.5"
+            height="16dp"
+            backgroundColor="UiColor::Primary"
+            positionType="Absolute"
+            left="0dp"
+            visibility="Gone">
+        </Element>
+        <Element
+            element="mContainer"
+            alignItemsHor="Start"
+            width="100%"
+            height="100%"
+            marginLeft="12dp"
+            scaling="Shrink">
+            <UiIcon
+                element="mIcon"
+                width="16dp"
+                aspectRatio="1">
+            </UiIcon>
+            <UiText
+                element="mTitle"
+                marginLeft="20dp"
+                text="Title">
+            </UiText>
+        </Element>
+        <FontIcon
+            element="mExpandIcon"
+            marginLeft="16dp"
+            marginRight="16dp"
+            width="8dp"
+            height="8dp"
+            color="glm::vec4(50, 50, 50, 255)"
+            font="_s(UiKit/icons/Segoe_Fluent_Icons.ttf)"
+            charcode="E011">
+        </FontIcon>
+    </Element>
+    <Element
+        element="mChildCont"
+        orientation="Vertical"
+        width="100%">
+    </Element>
+</Element>
+  

@@ -3,7 +3,8 @@
 UiTreeViewItemHeaderMini::UiTreeViewItemHeaderMini(e3::Element* pParent)
 	: UiTreeViewItemHeaderMiniBase(pParent)
 {
-			mContainer->SetMarginLeft(0);
+	mContainer->SetMarginLeft(0);
+	mIcon->SetVisibility(e3::EVisibility::Gone);
 
 }
 
@@ -16,7 +17,7 @@ void UiTreeViewItemHeaderMini::SetIndicatorPosition(int ePosition)
 	{
 		RemoveElement(mIcon, false);
 		e3::Element::AddElement(mIcon);
-		mContainer->SetMarginLeft("16dp");
+		mContainer->SetMarginLeft("14dp");
 	}
 	else 
 	{

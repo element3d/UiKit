@@ -1,13 +1,14 @@
 <Element
-    width="24dp"
-    height="24dp"
+    width="22dp"
+    height="22dp"
     borderSize="1dp"
     borderRadius="4"
-    borderColor="glm::vec4(0, 0, 0, 255)">
+    borderColor="glm::vec4(100, 100, 100, 255)">
     <include path="UiColor.h" />
 
     <Element
         element="mCheck"
+        visibility="Gone"
         marginBottom="6dp"
         marginRight="2dp"
         width="60%"

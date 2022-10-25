@@ -1,0 +1,11 @@
+<Element
+    height="40dp"
+    width="40dp"
+    borderRadius="4">
+     <UiIcon    
+        element="mIcon"
+        width="12dp"
+        height="12dp"
+        charcode="E72B">
+    </UiIcon>
+</Element>

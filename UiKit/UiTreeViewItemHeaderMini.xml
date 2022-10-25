@@ -8,7 +8,7 @@
         element="mSelection"
         width="3dp"
         borderRadius="0.5"
-        height="60%"
+        height="16dp"
         backgroundColor="UiColor::Primary"
         positionType="Absolute"
         left="4dp"

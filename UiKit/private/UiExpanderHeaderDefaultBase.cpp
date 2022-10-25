@@ -7,12 +7,12 @@ UiExpanderHeaderDefaultBase::UiExpanderHeaderDefaultBase(e3::Element* pParent)
 	: UiExpanderHeader(pParent)
 {
         this->SetWidth("100%");
-        this->SetHeight("48dp");
+        this->SetHeight("46dp");
         this->SetBorderRadius(4);
         this->SetBorderSize("1dp");
-        this->SetBorderColor(glm::vec4(200, 200, 200, 255));
+        this->SetBorderColor(glm::vec4(220, 220, 220, 255));
         this->SetAlignItemsHor((e3::EAlignment)3);
-        this->SetBackgroundColor(glm::vec4(248, 248, 248, 255));
+        this->SetBackgroundColor(glm::vec4(250, 250, 250, 255));
         mText = new UiText();
         AddElement(mText);
         mText->SetMarginLeft("20dp");

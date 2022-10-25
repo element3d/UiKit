@@ -28,7 +28,17 @@ bool UiCheckBox::OnClick(e3::MouseEvent* pEvent)
 	UiCheckBoxBase::OnClick(pEvent);
 
 	// mCircle->SetWidth(GetGeometry().width * 0.5);
-	SetBackgroundColor(UiColor::Primary);
+	mChecked = !mChecked;
+	if (mChecked)
+	{
+		SetBackgroundColor(UiColor::Primary);
+		mCheck->SetVisibility(e3::EVisibility::Visible);
+	}
+	else
+	{
+		SetBackgroundColor(glm::vec4(0));
+		mCheck->SetVisibility(e3::EVisibility::Gone);
+	}
 
 	return true;
 }

@@ -1,7 +1,78 @@
 <Element
     orientation="Vertical"
     alignItemsVer="Start"
-    overflow="Scroll">
+    backgroundColor="glm::vec4(245, 245, 245, 255)">
+
+    <Element
+        width="100%"
+        padding="8dp"
+        alignItemsHor="Start">
+        <Element>
+            <UiAppBarButton
+                element="mBackButton">
+            </UiAppBarButton>
+            <UiText
+                marginLeft="12dp"
+                fontSize="12dp"
+                text="WinUI 3 Gallery">
+            </UiText>
+        </Element>
+    </Element>
+    <Element
+        width="100%"
+        height="100%"
+        scaling="Shrink"
+        alignItemsVer="Start">
+
+        <UiNavigationDrawer
+            element="mDrawer"
+            alignItemsHor="Start"
+            padding="4dp">
+            <UiAppBarButton
+                element="mDrawerToggle"
+                icon="_s(E700)">
+            </UiAppBarButton>
+            <Element>
+                <UiAppBarButton
+                    element="mSearch"
+                    visibility="Hidden"
+                    icon="_s(E700)">
+                </UiAppBarButton>
+                <Element
+                    element="mSearchInput"
+                    width="100%"
+                    height="40dp"
+                    alignItemsHor="Start">
+                    <UiInput
+                        width="100%"
+                        marginLeft="14dp"
+                        marginRight="14dp"
+                        scaling="Shrink"
+                        margin="0dp">
+                    </UiInput>
+                </Element>
+            </Element>
+            <!-- <UiTreeView
+                element="mTree"
+                width="100%">
+            </UiTreeView> -->
+        </UiNavigationDrawer>
+        <Element
+            element="mRouter"
+            width="100%"
+            height="100%"
+            scaling="Shrink"
+            backgroundColor="glm::vec4(250, 250, 250, 255)"
+            borderRadius="10"
+            borderSize="1dp"
+            borderColor="glm::vec4(220, 220, 220, 255)">
+
+           
+        </Element>
+
+    </Element>
+
+
 <!-- 
     <var
         name="mDDBody">
@@ -40,7 +111,7 @@
         marginTop="30dp">
     </UiSlider> -->
 
-    <UiComboBox
+    <!-- <UiComboBox
         width="200"
         height="30"
         margin="20dp">
@@ -90,6 +161,8 @@
         element="mTree"
         width="400"
         marginTop="30dp">
-    </UiTreeView>
+    </UiTreeView> -->
+
+
 
 </Element>

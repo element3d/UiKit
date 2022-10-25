@@ -12,10 +12,12 @@ public:
 	UiComboBoxBody(e3::Element* pParent = nullptr);
 
 	void AddElement(UiComboBoxItem* pItem);
+	UiComboBoxItem* GetSelectedItem() { return mSelectedItem; }
 
 	void SetOnChangeCallback(OnChangeCallback onChangeCallback) { mOnChangeCallback = onChangeCallback; }
 private:
 	OnChangeCallback mOnChangeCallback;
+	UiComboBoxItem* mSelectedItem = nullptr;
 };
 
 #endif // UiComboBoxBody_H_
