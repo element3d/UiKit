@@ -2,8 +2,12 @@
     element="mHeader"
     width="100%"
     height="30dp"
-    alignItemsHor="Start">
+    alignItemsHor="Start"
+    overflow="Hidden">
     <include path="UiColor.h" />
+
+    
+
     <Element
         element="mSelection"
         width="3dp"
@@ -11,10 +15,10 @@
         height="16dp"
         backgroundColor="UiColor::Primary"
         positionType="Absolute"
-        left="4dp"
+        left="0dp"
         visibility="Gone">
     </Element>
-    <FontIcon
+    <!-- <FontIcon
         element="mIcon"
         marginLeft="16dp"
         marginRight="16dp"
@@ -23,7 +27,16 @@
         color="glm::vec4(50, 50, 50, 255)"
         font="_s(UiKit/icons/Segoe_Fluent_Icons.ttf)"
         charcode="E011">
-    </FontIcon>
+    </FontIcon> -->
+    <UiIcon
+        element="mIcon"
+        marginLeft="16dp"
+        marginRight="16dp"
+        width="8dp"
+        height="8dp"
+        color="glm::vec4(50, 50, 50, 255)"
+        charcode="E70D">
+    </UiIcon>
     <Element
         element="mContainer"
         alignItemsHor="Start"

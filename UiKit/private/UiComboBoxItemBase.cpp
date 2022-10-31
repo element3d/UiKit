@@ -12,6 +12,14 @@ UiComboBoxItemBase::UiComboBoxItemBase(e3::Element* pParent)
         this->SetBorderRadius(4);
         this->SetMarginTop("2dp");
         this->SetMarginBottom("2dp");
+        this->SetOverflow((e3::EOverflow)0);
+    mHover = e3::ViewFactory::CreateShape( e3::EOrientation::Horizontal);
+    AddElement(mHover);
+        mHover->SetPositionType((e3::EPositionType)1);
+        mHover->SetTop(0);
+        mHover->SetLeft(0);
+        mHover->SetBottom(0);
+        mHover->SetRight(0);
     mSelection = e3::ViewFactory::CreateShape( e3::EOrientation::Horizontal);
     AddElement(mSelection);
         mSelection->SetWidth("3dp");

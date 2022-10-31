@@ -7,9 +7,10 @@
 #include <UiExpander.h>
 #include <UiExpanderHeaderDefault.h>
 #include <UiExpanderBody.h>
+#include "Page.h"
 
 
-class ExpanderPageBase : public e3::Element
+class ExpanderPageBase : public Page
 {
 public:
     struct __Id

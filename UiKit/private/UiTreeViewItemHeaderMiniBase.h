@@ -4,6 +4,7 @@
 
 #include <e3/ViewFactory.h>
 #include "UiColor.h"
+#include <UiIcon.h>
 #include "UiTreeViewItemHeader.h"
 
 
@@ -25,7 +26,7 @@ public:
  
 protected:
 	e3::Element* mSelection = nullptr;
-e3::FontIcon* mIcon = nullptr;
+UiIcon* mIcon = nullptr;
 e3::Element* mContainer = nullptr;
 
 

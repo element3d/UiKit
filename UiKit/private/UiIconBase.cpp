@@ -8,6 +8,7 @@ UiIconBase::UiIconBase(e3::Element* pParent)
 {
         this->SetWidth("16dp");
         this->SetHeight("16dp");
+        this->SetColor(glm::vec4(50, 50, 50, 255));
         this->SetFont(_s(UiKit/fonts/SegMDL2.ttf));
 
 }

@@ -1,11 +1,11 @@
 #include "UiButton.h"
 #include "UiKit.h"
+#include "UiColor.h"
 
 UiButton::UiButton(e3::Element* pParent)
 	: UiButtonBase(pParent)
 {
 	UiKitOS os = UiKit::GetOS();
-
 	switch (os)
 	{
 	case UiKitOS::MacOS:
@@ -26,7 +26,7 @@ void UiButton::_SetMacOSStyles()
 
 bool UiButton::OnMouseDown(e3::MouseEvent* pE) 
 {
-	SetOpacity(.95);
+	SetOpacity(.85);
 	return UiButtonBase::OnMouseDown(pE);
 }
 
@@ -39,11 +39,11 @@ bool UiButton::OnMouseUp(e3::MouseEvent* pE)
 void UiButton::OnMouseEnter(e3::MouseEvent* pE)
 {
 	UiButtonBase::OnMouseEnter(pE);
-	SetBackgroundColor(glm::vec4(245, 245, 245, 255));
+	mHover->SetBackgroundColor(glm::vec4(0, 0, 0, 8));
 }
 
 void UiButton::OnMouseLeave(e3::MouseEvent* pE)
 {
 	UiButtonBase::OnMouseLeave(pE);
-	SetBackgroundColor(glm::vec4(250, 250, 250, 255));
+	mHover->SetBackgroundColor(glm::vec4(0));
 }

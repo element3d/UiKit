@@ -8,9 +8,10 @@
 #include <UiComboBoxHeaderDefault.h>
 #include <UiComboBoxBody.h>
 #include <UiComboBoxItem.h>
+#include "Page.h"
 
 
-class ComboBoxPageBase : public e3::Element
+class ComboBoxPageBase : public Page
 {
 public:
     struct __Id

@@ -4,7 +4,7 @@
 #include "UiKitTestValues.h"
 
 ButtonPageBase::ButtonPageBase(e3::Element* pParent)
-	: e3::Element(pParent)
+	: Page(pParent)
 {
         this->SetWidth("100%");
         this->SetHeight("100%");
@@ -20,7 +20,8 @@ ButtonPageBase::ButtonPageBase(e3::Element* pParent)
                 UiText* pCustomView1 = new UiText();
         pElement1->AddElement(pCustomView1);
         pCustomView1->SetText("Button");
-        pCustomView1->SetFontSize("30dp");
+        pCustomView1->SetFontStyle((e3::EFontStyle)2);
+        pCustomView1->SetFontSize("24dp");
                 UiText* pCustomView2 = new UiText();
         pElement1->AddElement(pCustomView2);
         pCustomView2->SetMarginTop("20dp");
@@ -30,7 +31,8 @@ ButtonPageBase::ButtonPageBase(e3::Element* pParent)
         pElement1->AddElement(pCustomView3);
         pCustomView3->SetMarginTop("24dp");
         pCustomView3->SetText("A simple Button with text content.");
-        pCustomView3->SetFontSize("24dp");
+        pCustomView3->SetFontStyle((e3::EFontStyle)2);
+        pCustomView3->SetFontSize("20dp");
     e3::Element* pElement2 = e3::ViewFactory::CreateShape( e3::EOrientation::Horizontal);
     pElement1->AddElement(pElement2);
         pElement2->SetWidth("100%");
@@ -50,8 +52,9 @@ ButtonPageBase::ButtonPageBase(e3::Element* pParent)
                 UiText* pCustomView6 = new UiText();
         pElement1->AddElement(pCustomView6);
         pCustomView6->SetMarginTop("30dp");
+        pCustomView6->SetFontStyle((e3::EFontStyle)2);
         pCustomView6->SetText("A Button with graphical content.");
-        pCustomView6->SetFontSize("24dp");
+        pCustomView6->SetFontSize("20dp");
     e3::Element* pElement3 = e3::ViewFactory::CreateShape( e3::EOrientation::Horizontal);
     pElement1->AddElement(pElement3);
         pElement3->SetWidth("100%");
@@ -72,5 +75,26 @@ ButtonPageBase::ButtonPageBase(e3::Element* pParent)
         pElement4->SetWidth("26dp");
         pElement4->SetHeight("26dp");
         pElement4->SetBackgroundImage("UiKitTest/Images/Slices.png");
+                UiText* pCustomView8 = new UiText();
+        pElement1->AddElement(pCustomView8);
+        pCustomView8->SetMarginTop("30dp");
+        pCustomView8->SetFontStyle((e3::EFontStyle)2);
+        pCustomView8->SetText("Accent style applied to Button.");
+        pCustomView8->SetFontSize("20dp");
+    e3::Element* pElement5 = e3::ViewFactory::CreateShape( e3::EOrientation::Horizontal);
+    pElement1->AddElement(pElement5);
+        pElement5->SetWidth("100%");
+        pElement5->SetHeight("100dp");
+        pElement5->SetMarginTop("20dp");
+        pElement5->SetBorderSize("1dp");
+        pElement5->SetBackgroundColor(glm::vec4(240, 240, 240, 255));
+        pElement5->SetBorderColor(glm::vec4(220, 220, 220, 255));
+        pElement5->SetBorderRadius(10);
+        pElement5->SetPadding("20dp");
+        pElement5->SetAlignItemsHor((e3::EAlignment)0);
+                UiButtonDefault* pCustomView9 = new UiButtonDefault();
+        pElement5->AddElement(pCustomView9);
+        pCustomView9->SetStyle(UiAccent);
+        pCustomView9->SetText("Standart Ui Button");
 
 }

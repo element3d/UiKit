@@ -9,6 +9,7 @@ UiTreeViewItemHeaderMiniBase::UiTreeViewItemHeaderMiniBase(e3::Element* pParent)
         this->SetWidth("100%");
         this->SetHeight("30dp");
         this->SetAlignItemsHor((e3::EAlignment)0);
+        this->SetOverflow((e3::EOverflow)0);
     mSelection = e3::ViewFactory::CreateShape( e3::EOrientation::Horizontal);
     AddElement(mSelection);
         mSelection->SetWidth("3dp");
@@ -16,17 +17,16 @@ UiTreeViewItemHeaderMiniBase::UiTreeViewItemHeaderMiniBase(e3::Element* pParent)
         mSelection->SetHeight("16dp");
         mSelection->SetBackgroundColor(UiColor::Primary);
         mSelection->SetPositionType((e3::EPositionType)1);
-        mSelection->SetLeft("4dp");
+        mSelection->SetLeft("0dp");
         mSelection->SetVisibility((e3::EVisibility)1);
-        mIcon = e3::ViewFactory::CreateFontIcon();
+        mIcon = new UiIcon();
         AddElement(mIcon);
         mIcon->SetMarginLeft("16dp");
         mIcon->SetMarginRight("16dp");
         mIcon->SetWidth("8dp");
         mIcon->SetHeight("8dp");
         mIcon->SetColor(glm::vec4(50, 50, 50, 255));
-        mIcon->SetFont(_s(UiKit/icons/Segoe_Fluent_Icons.ttf));
-        mIcon->SetCharcode(57361);
+        mIcon->SetCharcode(59149);
     mContainer = e3::ViewFactory::CreateShape( e3::EOrientation::Horizontal);
     AddElement(mContainer);
         mContainer->SetAlignItemsHor((e3::EAlignment)0);

@@ -22,7 +22,8 @@ public:
 
  
 protected:
-	
+	e3::Element* mHover = nullptr;
+
 
 };
 

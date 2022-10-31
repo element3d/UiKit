@@ -4,19 +4,30 @@
     backgroundColor="glm::vec4(250, 250, 250, 255)"
     borderColor="glm::vec4(220, 220, 220, 255)"
     padding="14dp"
+    overflow="Hidden"
     paddingTop="7dp"
     paddingBottom="7dp"
     >
+
+    <Element
+        element="mHover"
+        top="0"
+        left="0"
+        bottom="0"
+        right="0"
+        positionType="Absolute">
+    </Element>
+
      <!-- borderSize="1dp"
     borderColor="glm::vec4(100, 100, 100, 255)"
     borderRadius="4"
         backgroundColor="all: 255" -->
 
-    <Shadow
+    <!-- <Shadow
         blurSize="1"
         offset="x: 0, y: 1"
-        color="glm::vec4(100, 100, 100, 255)">
-    </Shadow>
+        color="glm::vec4(0, 0, 0, 255)">
+    </Shadow> -->
     <!-- <Text
         text="Standard XAML Button"
         fontSize="14dp">

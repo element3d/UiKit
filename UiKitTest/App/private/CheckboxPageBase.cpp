@@ -4,7 +4,7 @@
 #include "UiKitTestValues.h"
 
 CheckboxPageBase::CheckboxPageBase(e3::Element* pParent)
-	: e3::Element(pParent)
+	: Page(pParent)
 {
         this->SetWidth("100%");
         this->SetHeight("100%");

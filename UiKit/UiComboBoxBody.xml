@@ -1,9 +1,17 @@
 <DropdownBody
     orientation="Vertical"
-    backgroundColor="glm::vec4(253, 253, 253, 255)"
-    borderRadius="8"
+    backgroundColor="glm::vec4(252, 252, 252, 0.85 * 255)"
+    borderRadius="7"
     padding="4dp"
     borderSize="1dp"
-    borderColor="glm::vec4(200, 200, 200, 255)">
+    filterBlur="100"
+    borderColor="glm::vec4(220, 220, 220, 255)">
+
+    <Shadow
+        blurSize="15"
+        offset="x: 0, y: 5"
+        color="glm::vec4(100, 100, 100, 255)"
+        opacity="1">
+    </Shadow>
 
 </DropdownBody>

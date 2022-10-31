@@ -8,7 +8,7 @@ MainBase::MainBase(e3::Element* pParent)
 {
         this->SetOrientation((e3::EOrientation)1);
         this->SetAlignItemsVer((e3::EAlignment)0);
-        this->SetBackgroundColor(glm::vec4(245, 245, 245, 255));
+        this->SetBackgroundColor(glm::vec4(243, 243, 243, 255));
     e3::Element* pElement1 = e3::ViewFactory::CreateShape( e3::EOrientation::Horizontal);
     AddElement(pElement1);
         pElement1->SetWidth("100%");
@@ -59,7 +59,7 @@ MainBase::MainBase(e3::Element* pParent)
         mRouter->SetWidth("100%");
         mRouter->SetHeight("100%");
         mRouter->SetScaling((e3::EScaling)1);
-        mRouter->SetBackgroundColor(glm::vec4(250, 250, 250, 255));
+        mRouter->SetBackgroundColor(glm::vec4(247, 247, 247, 255));
         mRouter->SetBorderRadius(10);
         mRouter->SetBorderSize("1dp");
         mRouter->SetBorderColor(glm::vec4(220, 220, 220, 255));

@@ -1,10 +1,10 @@
 <Element
-    width="50dp"
+    width="44dp"
     height="22dp"
     padding="4dp"
     borderSize="1dp"
     borderRadius="0.5"
-    borderColor="glm::vec4(0, 0, 0, 200)"
+    borderColor="glm::vec4(120, 120, 120, 255)"
     alignItemsHor="Start">
 
     <Element
@@ -12,7 +12,7 @@
         height="100%"
         aspectRatio="1"
         borderRadius="0.5"
-        backgroundColor="glm::vec4(0, 0, 0, 255)">
+        backgroundColor="glm::vec4(120, 120, 120, 255)">
     </Element>
 
 </Element>

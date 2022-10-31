@@ -15,7 +15,7 @@ void UiTreeViewItem::SetTreeIndex(int index)
 	mTreeIndex = index; 
 	if (mHeaderItem)
 	{
-		mHeaderItem->SetPaddingLeft(index * e3::Dim("10dp"));
+	//	mHeaderItem->SetPaddingLeft(index * e3::Dim("10dp"));
 	}
 	//SetPaddingLeft(index * e3::Dim("40dp"));
 }
@@ -56,10 +56,11 @@ void UiTreeViewItem::AddElement(UiTreeViewItemHeader* pHeader)
 {
 	mHeader->AddElement(pHeader);
 	mHeaderItem = pHeader;
+	mHeaderItem->SetPaddingLeft(mTreeIndex * e3::Dim("16dp"));
 	mHeaderItem->mTree = mTree;
 	if (mBody->GetNumChildren()) mHeaderItem->OnItemChildAdded();
 
-	mHeaderItem->SetOnClickCallback([this](e3::MouseEvent*) {
+	mHeaderItem->SignalOnClick.Connect([this](e3::MouseEvent*) {
 		if (mTree)
 		{
 			auto pItem = mTree->GetSelectedItem();

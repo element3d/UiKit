@@ -14,8 +14,9 @@ void UiNavigationDrawer::Toggle()
 		e3::Animation* pA = new e3::Animation();
 		pA->Start(0.1, GetGeometry().width, w, e3::EAnimation::EaseInOutQuad, [this](float v){
 			SetWidth(v);
-			for (auto c : mOnToggleCallbacks) c(!mExpanded);
-		}, [](){});
+		}, [this](){
+			SignalOnToggle(!mExpanded);
+		});
 	}
 	else 
 	{
@@ -23,8 +24,9 @@ void UiNavigationDrawer::Toggle()
 		e3::Animation* pA = new e3::Animation();
 		pA->Start(0.1, GetGeometry().width, w, e3::EAnimation::EaseInOutQuad, [this](float v){
 			SetWidth(v);
-			for (auto c : mOnToggleCallbacks) c(!mExpanded);
-		}, [](){});
+		}, [this](){
+			SignalOnToggle(!mExpanded);
+		});
 	}
 	mExpanded = !mExpanded;
 }

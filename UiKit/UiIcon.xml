@@ -1,5 +1,6 @@
 <FontIcon
     width="16dp"
     height="16dp"
+    color="glm::vec4(50, 50, 50, 255)"
     font="_s(UiKit/fonts/SegMDL2.ttf)">
 </FontIcon>

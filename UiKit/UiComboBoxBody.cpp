@@ -15,9 +15,14 @@ void UiComboBoxBody::AddElement(UiComboBoxItem* pItem)
 	}
 	UiComboBoxBodyBase::AddElement(pItem);
 	int index = GetNumChildren() - 1;
-	pItem->SetOnClickCallback([this, index, pItem](e3::MouseEvent*) {
+	pItem->SignalOnClick.Connect([this, index, pItem](e3::MouseEvent*) {
 		if (mSelectedItem) mSelectedItem->Unselect();
 		mSelectedItem = pItem;
 		if (mOnChangeCallback) mOnChangeCallback(index, pItem);
 	});
+	/*pItem->SetOnClickCallback([this, index, pItem](e3::MouseEvent*) {
+		if (mSelectedItem) mSelectedItem->Unselect();
+		mSelectedItem = pItem;
+		if (mOnChangeCallback) mOnChangeCallback(index, pItem);
+	});*/
 }

@@ -4,10 +4,18 @@
     <include path="UiColor.h" />
     <Element
         element="mHeader"
+        marginBottom="4dp"
         width="100%"
-        height="40dp"
-        borderRadius="6"
+        height="34dp"
+        borderRadius="3"
+        overflow="Hidden"
         alignItemsHor="Start">
+        <Element
+            element="mHover"
+            positionType="Absolute"
+            width="100%"
+            height="100%">
+        </Element>
         <Element
             element="mSelection"
             width="3dp"
@@ -36,19 +44,20 @@
                 text="Title">
             </UiText>
         </Element>
-        <FontIcon
+        <UiIcon
             element="mExpandIcon"
             marginLeft="16dp"
             marginRight="16dp"
             width="8dp"
             height="8dp"
-            color="glm::vec4(50, 50, 50, 255)"
-            font="_s(UiKit/icons/Segoe_Fluent_Icons.ttf)"
-            charcode="E011">
-        </FontIcon>
+            color="glm::vec4(00, 0, 0, 255)"
+            charcode="E70D">
+        </UiIcon>
     </Element>
     <Element
         element="mChildCont"
+        alignItemsVer="End"
+        overflow="Hidden"
         orientation="Vertical"
         width="100%">
     </Element>

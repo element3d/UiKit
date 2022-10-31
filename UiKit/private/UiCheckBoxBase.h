@@ -4,6 +4,7 @@
 
 #include <e3/ViewFactory.h>
 #include "UiColor.h"
+#include <UiIcon.h>
 
 
 class UiCheckBoxBase : public e3::Element
@@ -23,7 +24,7 @@ public:
 
  
 protected:
-	e3::Element* mCheck = nullptr;
+	UiIcon* mCheck = nullptr;
 
 
 };

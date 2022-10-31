@@ -8,6 +8,8 @@ class E3_EXPORT UiText : public UiTextBase
 {
 public:
 	UiText(e3::Element* pParent = nullptr);
+
+	static bool sFontsInitialized;
 };
 
 #endif // UiText_H_

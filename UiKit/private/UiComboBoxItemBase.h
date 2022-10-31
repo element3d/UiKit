@@ -24,7 +24,8 @@ public:
 
  
 protected:
-	e3::Element* mSelection = nullptr;
+	e3::Element* mHover = nullptr;
+e3::Element* mSelection = nullptr;
 UiText* mTitle = nullptr;
 
 

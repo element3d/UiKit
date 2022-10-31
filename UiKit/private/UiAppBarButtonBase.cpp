@@ -11,8 +11,8 @@ UiAppBarButtonBase::UiAppBarButtonBase(e3::Element* pParent)
         this->SetBorderRadius(4);
         mIcon = new UiIcon();
         AddElement(mIcon);
-        mIcon->SetWidth("12dp");
-        mIcon->SetHeight("12dp");
+        mIcon->SetWidth("16dp");
+        mIcon->SetHeight("16dp");
         mIcon->SetCharcode(59179);
 
 }

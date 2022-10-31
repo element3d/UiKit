@@ -5,9 +5,10 @@
 #include <e3/ViewFactory.h>
 #include <UiText.h>
 #include <UiListView.h>
+#include "Page.h"
 
 
-class ListViewPageBase : public e3::Element
+class ListViewPageBase : public Page
 {
 public:
     struct __Id

@@ -3,7 +3,7 @@
 UiExpanderHeader::UiExpanderHeader(e3::Element* pParent)
 	: UiExpanderHeaderBase(pParent)
 {
-	SetOnClickCallback([this](e3::MouseEvent*) {
+	SignalOnClick.Connect([this](e3::MouseEvent*) {
 		mExpanded = !mExpanded;
 		OnChange(mExpanded);
 		if (mOnChangeCallback) mOnChangeCallback(mExpanded);

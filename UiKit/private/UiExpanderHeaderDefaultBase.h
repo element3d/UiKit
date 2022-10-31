@@ -5,6 +5,7 @@
 #include <e3/ViewFactory.h>
 #include "UiColor.h"
 #include <UiText.h>
+#include <UiIcon.h>
 #include "UiExpanderHeader.h"
 
 
@@ -26,7 +27,7 @@ public:
  
 protected:
 	UiText* mText = nullptr;
-e3::FontIcon* mIcon = nullptr;
+UiIcon* mIcon = nullptr;
 
 
 };

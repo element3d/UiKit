@@ -1,9 +1,10 @@
-<Element
+<Page
     width="100%"
     height="100%"
     padding="60dp"
     orientation="Vertical"
-    alignItemsVer="Start">
+    alignItemsVer="Start"
+    overflow="Scroll">
 
     <Element
         width="100%"
@@ -18,7 +19,8 @@
         marginTop="20dp"
         width="100%"
         orientation="Vertical"
-        alignItemsHor="Start">
+        alignItemsHor="Start"
+        >
         <!-- <UiButton
             width="300dp"
             height="80dp"
@@ -57,4 +59,4 @@
 
     </Element>
 
-</Element>
+</Page>

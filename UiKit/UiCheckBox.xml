@@ -1,32 +1,43 @@
 <Element
-    width="22dp"
-    height="22dp"
+    width="20dp"
+    height="20dp"
     borderSize="1dp"
     borderRadius="4"
-    borderColor="glm::vec4(100, 100, 100, 255)">
+    borderColor="glm::vec4(150, 150, 150, 255)">
     <include path="UiColor.h" />
 
-    <Element
+    <UiIcon
         element="mCheck"
         visibility="Gone"
-        marginBottom="6dp"
-        marginRight="2dp"
         width="60%"
-        height="60%"
+        color="all: 255"
+        aspectRatio="1"
+        charcode="E73E">
+    </UiIcon>
+
+    <!-- <Element
+        element="mCheck"
+        visibility="Gone"
+        marginBottom="2dp"
+        marginRight="0dp"
+        width="60%"
+        height="30%"
         backgroundColor="glm::vec4(255, 0, 0, 0)"
         orientation="Vertical"
         alignItemsHor="Start"
-        alignItemsVer="End">
+        alignItemsVer="Center">
         <Element
             width="2dp"
-            height="50%"
+            height="100%"
+            scaling="Shrink"
             backgroundColor="UiColor::White">
         </Element>
         <Element
             width="100%"
             height="2dp"
+            scaling="Shrink"
             backgroundColor="UiColor::White">
-        </Element>
-    </Element>
+        </Element> 
+    </Element>-->
 
 </Element>

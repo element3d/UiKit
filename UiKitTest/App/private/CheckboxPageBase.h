@@ -5,9 +5,10 @@
 #include <e3/ViewFactory.h>
 #include <UiText.h>
 #include <UiCheckBox.h>
+#include "Page.h"
 
 
-class CheckboxPageBase : public e3::Element
+class CheckboxPageBase : public Page
 {
 public:
     struct __Id

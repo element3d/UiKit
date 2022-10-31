@@ -6,6 +6,7 @@
 class UiColor
 {
 public:
+	static glm::vec4 Transparent;
 	static glm::vec4 White;
 	static glm::vec4 Primary;
 

@@ -3,9 +3,10 @@
 #define __AllControlsPageBase_H__
 
 #include <e3/ViewFactory.h>
+#include "Page.h"
 
 
-class AllControlsPageBase : public e3::Element
+class AllControlsPageBase : public Page
 {
 public:
     struct __Id

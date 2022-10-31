@@ -14,11 +14,11 @@ UiSlider::UiSlider(e3::Element* pParent)
 		break;
 	}
 
-	mCircle->SetOnMouseEnterCallback([this](e3::MouseEvent* pEvent){
+	mCircle->SignalOnMouseEnter.Connect([this](e3::MouseEvent* pEvent){
 			mInnerCircle->SetScale(glm::vec3(1.4), e3::ETransformAlignment::Center);
 	});
 
-	mCircle->SetOnMouseLeaveCallback([this](e3::MouseEvent* pEvent){
+	mCircle->SignalOnMouseLeave.Connect([this](e3::MouseEvent* pEvent){
 		mInnerCircle->SetScale(glm::vec3(1), e3::ETransformAlignment::Center);
 	});
 

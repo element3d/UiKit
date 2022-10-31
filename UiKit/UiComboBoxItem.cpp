@@ -21,7 +21,7 @@ void UiComboBoxItem::Select()
 	/*auto pItem = mListView->GetSelectedItem();
 	if (pItem && pItem != this) pItem->Unselect();*/
 	mSelection->SetVisibility(e3::EVisibility::Visible);
-	SetBackgroundColor(glm::vec4(0, 0, 0, 15));
+	SetBackgroundColor(glm::vec4(0, 0, 0, 0.0373 * 255));
 //	mListView->SetSelectedItem(this);
 }
 
@@ -42,11 +42,11 @@ bool UiComboBoxItem::OnClick(e3::MouseEvent* pE)
 void UiComboBoxItem::OnMouseEnter(e3::MouseEvent* pE)
 {
 	UiComboBoxItemBase::OnMouseEnter(pE);
-	SetBackgroundColor(glm::vec4(0, 0, 0, 10));
+	mHover->SetBackgroundColor(glm::vec4(0, 0, 0, 0.0373 * 255));
 }
 
 void UiComboBoxItem::OnMouseLeave(e3::MouseEvent* pE)
 {
 	UiComboBoxItemBase::OnMouseLeave(pE);
-	SetBackgroundColor(glm::vec4(0, 0, 0, 0));
+	mHover->SetBackgroundColor(glm::vec4(0, 0, 0, 0));
 }

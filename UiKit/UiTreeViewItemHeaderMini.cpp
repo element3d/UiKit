@@ -52,7 +52,6 @@ void UiTreeViewItemHeaderMini::AddElement(e3::Element* pElement)
 bool UiTreeViewItemHeaderMini::OnClick(e3::MouseEvent* pE)
 {
 	mSelection->SetVisibility(e3::EVisibility::Visible);
-	SetBackgroundColor(glm::vec4(0, 0, 0, 15));
 	return UiTreeViewItemHeaderMiniBase::OnClick(pE);
 }
 

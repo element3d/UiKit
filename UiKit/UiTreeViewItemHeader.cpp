@@ -9,7 +9,7 @@ UiTreeViewItemHeader::UiTreeViewItemHeader(e3::Element* pParent)
 
 void UiTreeViewItemHeader::Select()
 {
-	
+		SetBackgroundColor(glm::vec4(0, 0, 0, 0.0373 * 255));
 }
 
 void UiTreeViewItemHeader::Unselect()
@@ -40,11 +40,11 @@ bool UiTreeViewItemHeader::OnClick(e3::MouseEvent* pE)
 void UiTreeViewItemHeader::OnMouseEnter(e3::MouseEvent* pE)
 {
 	UiTreeViewItemHeaderBase::OnMouseEnter(pE);
-	SetBackgroundColor(glm::vec4(0, 0, 0, 10));
+	mHover->SetBackgroundColor(glm::vec4(0, 0, 0, 0.0373 * 255));
 }
 
 void UiTreeViewItemHeader::OnMouseLeave(e3::MouseEvent* pE)
 {
 	UiTreeViewItemHeaderBase::OnMouseLeave(pE);
-	SetBackgroundColor(glm::vec4(0, 0, 0, 0));
+	mHover->SetBackgroundColor(glm::vec4(0, 0, 0, 0));
 }

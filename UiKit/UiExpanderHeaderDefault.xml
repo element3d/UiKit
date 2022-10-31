@@ -2,11 +2,11 @@
     element="mHeader"
     width="100%"
     height="46dp"
-    borderRadius="4"
+    borderRadius="3"
     borderSize="1dp"
     borderColor="glm::vec4(220, 220, 220, 255)"
     alignItemsHor="SpaceBetween"
-    backgroundColor="glm::vec4(250, 250, 250, 255)">
+    backgroundColor="glm::vec4(255, 255, 255, 255 * 0.7)">
     <include path="UiColor.h" />
 
     <UiText
@@ -16,8 +16,16 @@
         textColor="glm::vec4(20, 20, 20, 255)"
         text="Item 1">
     </UiText>
-
-    <FontIcon
+    <UiIcon
+        element="mIcon"
+        marginLeft="20dp"
+        marginRight="20dp"
+        width="8dp"
+        height="8dp"
+        color="glm::vec4(00, 0, 0, 255)"
+        charcode="E70D">
+    </UiIcon>
+    <!-- <FontIcon
         element="mIcon"
         marginLeft="20dp"
         marginRight="20dp"
@@ -26,5 +34,5 @@
         color="glm::vec4(0, 0, 0, 255)"
         font="_s(UiKit/icons/Segoe_Fluent_Icons.ttf)"
         charcode="E011">
-    </FontIcon>
+    </FontIcon> -->
 </UiExpanderHeader>

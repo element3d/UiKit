@@ -5,11 +5,17 @@
 #include "ComboBoxPage.h"
 #include "ExpanderPage.h"
 #include "ListViewPage.h"
+#include "RadioButtonPage.h"
+#include "SliderPage.h"
+#include "SwitchPage.h"
+#include "TreeViewPage.h"
 #include "Main.h"
 
 AllControlsPage::AllControlsPage(e3::Element* pParent)
 	: AllControlsPageBase(pParent)
 {
+
+	mType = EPageType::AllControls;
 
 	enum class EControlType 
 	{
@@ -17,7 +23,11 @@ AllControlsPage::AllControlsPage(e3::Element* pParent)
 		Checkbox,
 		ComboBox,
 		Expander,
-		ListView
+		ListView,
+		RadioButton,
+		Slider,
+		Switch,
+		TreeView
 	};
 
 	struct _Item 
@@ -54,6 +64,26 @@ AllControlsPage::AllControlsPage(e3::Element* pParent)
 			"ListView",
 			"A control that responds a user input and raises a click event",
 			"UiKitTest/Images/ControlImages/ListView.png"
+		},
+		{
+			"RadioButton",
+			"A control that responds a user input and raises a click event",
+			"UiKitTest/Images/ControlImages/RadioButton.png"
+		},
+		{
+			"Slider",
+			"A control that responds a user input and raises a click event",
+			"UiKitTest/Images/ControlImages/Slider.png"
+		},
+		{
+			"Switch",
+			"A control that responds a user input and raises a click event",
+			"UiKitTest/Images/ControlImages/ToggleSwitch.png"
+		},
+		{
+			"TreeView",
+			"A control that responds a user input and raises a click event",
+			"UiKitTest/Images/ControlImages/TreeView.png"
 		}
 	};
 
@@ -62,27 +92,47 @@ AllControlsPage::AllControlsPage(e3::Element* pParent)
 		{
 		case (int)EControlType::Button:
 		{
-			mMain->Navigate(new ButtonPage());
+			mMain->Navigate(EPageType::Button);
 			break;
 		}
 		case (int)EControlType::Checkbox:
 		{
-			mMain->Navigate(new CheckboxPage());
+			mMain->Navigate(EPageType::CheckBox);
 			break;
 		}
 		case (int)EControlType::ComboBox:
 		{
-			mMain->Navigate(new ComboBoxPage());
+			mMain->Navigate(EPageType::ComboBox);
 			break;
 		}
 		case (int)EControlType::Expander:
 		{
-			mMain->Navigate(new ExpanderPage());
+			mMain->Navigate(EPageType::Expander);
 			break;
 		}
 		case (int)EControlType::ListView:
 		{
-			mMain->Navigate(new ListViewPage());
+			mMain->Navigate(EPageType::ListView);
+			break;
+		}
+		case (int)EControlType::RadioButton:
+		{
+			mMain->Navigate(EPageType::RadioButton);
+			break;
+		}
+		case (int)EControlType::Slider:
+		{
+			mMain->Navigate(EPageType::Slider);
+			break;
+		}
+		case (int)EControlType::Switch:
+		{
+			mMain->Navigate(EPageType::Switch);
+			break;
+		}
+		case (int)EControlType::TreeView:
+		{
+			mMain->Navigate(EPageType::TreeView);
 			break;
 		}
 		default:
@@ -108,7 +158,7 @@ AllControlsPage::AllControlsPage(e3::Element* pParent)
 		pB->SetImage(item.Image);
 		pB->SetMarginRight("10dp");
 		pRow->AddElement(pB);
-		pB->SetOnClickCallback([this, fProcessClick, i](e3::MouseEvent*){
+		pB->SignalOnClick.Connect([this, fProcessClick, i](e3::MouseEvent*){
 			fProcessClick(i);
 		});
 		i++;

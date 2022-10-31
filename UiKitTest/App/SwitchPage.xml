@@ -1,0 +1,49 @@
+<Page
+    width="100%"
+    height="100%"
+    padding="60dp"
+    orientation="Vertical"
+    alignItemsVer="Start"
+    alignItemsHor="Start">
+
+    <Element
+        width="70%"
+        alignItemsHor="Start"
+        orientation="Vertical">
+        <UiText
+            text="Switch"
+            fontSize="30dp">
+        </UiText>
+        <UiText
+            marginTop="20dp"
+            text="Use a ComboBox when you need to conserve on-screen space and when users select only option at time."
+            fontSize="16dp">
+        </UiText>
+
+        <UiText
+            marginTop="24dp"
+            text="A ComboBox with items defined inline and its width set."
+            fontSize="24dp">
+        </UiText>
+        <Element
+            width="100%"
+            height="100dp"
+            marginTop="20dp"
+            borderSize="1dp"
+            backgroundColor="glm::vec4(240, 240, 240, 255)"
+            borderColor="glm::vec4(220, 220, 220, 255)"
+            borderRadius="10"
+            padding="20dp"
+            alignItemsHor="Start"
+            orientation="Vertical">
+
+            <UiSwitch>
+            </UiSwitch>
+
+        </Element>
+
+      
+
+    </Element>
+
+</Page>

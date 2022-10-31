@@ -5,45 +5,93 @@
 #include "AllControlsPage.h"
 #include "MainNavDrawerItem.h"
 #include "UiIcon.h"
+#include "ButtonPage.h"
+#include "CheckboxPage.h"
+#include "ExpanderPage.h"
+#include "SliderPage.h"
+#include "ComboBoxPage.h"
+#include "RadioButtonPage.h"
+#include "SwitchPage.h"
+#include "ListViewPage.h"
+#include "TreeViewPage.h"
 
 Main::Main(e3::Element* pParent)
 	: MainBase(pParent)
 {
-	struct _Menu
-	{
-		std::string Title;
-		std::string Icon;
-	};
 
-	std::vector<_Menu> menus = 
+
+	mMenus = 
 	{
 		{
 			"Basic Input",
-			"F16C"
+			"F16C",
+			EPageType::AllControls,
+			{
+				{
+					EPageType::Button,
+					"Button",
+				},
+				{
+					EPageType::CheckBox,
+					"CheckBox",
+				},
+				{
+					EPageType::ComboBox,
+					"ComboBox",
+				},
+				{
+					EPageType::RadioButton,
+					"RadioButton",
+				},
+				{
+					EPageType::Slider,
+					"Slider",
+				},
+				{
+					EPageType::Switch,
+					"Switch"
+				}
+			}
 		},
 		{
 			"Collections",
-			"F0E2"
+			"F0E2",
+			EPageType::AllControls,
+			{
+				{
+					EPageType::ListView,
+					"ListView",
+				},
+				{
+					EPageType::TreeView,
+					"TreeView"
+				}
+			}
 		},
 		{
 			"Date and Time",
-			"EC92"
+			"EC92",
+			EPageType::AllControls,
 		},
 		{
 			"Dialogs and Flyouts",
-			"E8BD"
+			"E8BD",
+			EPageType::AllControls,
 		},
 		{
 			"Layout",
-			"E8B9"
+			"E8B9",
+			EPageType::AllControls,
 		},
 		{
 			"Media",
-			"EA69"
+			"EA69",
+			EPageType::AllControls,
 		},
 		{
 			"Menus and Toolbars",
-			"E74E"
+			"E74E",
+			EPageType::AllControls,
 		},
 		{
 			"Motion",
@@ -56,6 +104,8 @@ Main::Main(e3::Element* pParent)
 	};
 
 	UiDivider* pDiv = new UiDivider();
+	pDiv->SetMarginBottom("4dp");
+	// pDiv->SetMarginTop();
 	mDrawer->InsertElement(2, pDiv);
 	{
 		UiNavigationDrawerItem* pHeader = new UiNavigationDrawerItem();
@@ -81,56 +131,84 @@ Main::Main(e3::Element* pParent)
 
 
 
-	for (int i = 0; i < menus.size(); ++i)
+	for (int i = 0; i < mMenus.size(); ++i)
 	{
 		// UiTreeViewItem* pItem = new UiTreeViewItem();
 		UiNavigationDrawerItem* pHeader = new UiNavigationDrawerItem();
-		pHeader->SetTitle(menus[i].Title);
-		pHeader->SetIcon(menus[i].Icon);
-	
+		pHeader->SetTitle(mMenus[i].Title);
+		pHeader->SetIcon(mMenus[i].Icon);
 		mDrawer->AddElement(pHeader);
-		for (int j = 0; j < 3; ++j)
+
+		pHeader->SignalOnClick.Connect([this, i](e3::MouseEvent*){
+			Navigate(mMenus[i].PageType);
+		});
+
+		int j = 0;
+		for (auto& c : mMenus[i].Children)
 		{
 			UiNavigationDrawerItem* pChild = new UiNavigationDrawerItem();
-			pChild->SetTitle(menus[i].Title);
-			// pChild->SetIcon(menus[i].Icon);
+			pChild->SetTitle(c.Title);
 			pHeader->AddElement(pChild);
-			// UiTreeViewItem* pItem2 = new UiTreeViewItem();
-			//UiTreeViewItemHeaderMini* pHeader = new UiTreeViewItemHeaderMini();
-	//		pHeader->SetIndicatorPosition(UiRight);
-			//UiText* T = new UiText();
-			//T->SetText(std::string("Child ") + std::to_string(j));
-			//pHeader->AddElement(T);
-			// pItem2->AddElement(pHeader);
-		//	pHeader->SetTitle(std::string("Child ") + std::to_string(j));
-			//pItem->AddElement(pHeader);
 
-			/*for (int j = 0; j < 3; ++j)
-			{
-				UiTreeViewItem* pItem3 = new UiTreeViewItem();
-				UiTreeViewItemHeaderDefault* pHeader = new UiTreeViewItemHeaderDefault();
-			//	pHeader->SetIndicatorPosition(UiRight);
-				pItem3->AddElement(pHeader);
-				pHeader->SetTitle(std::string("Child ") + std::to_string(j));
-				pItem2->AddElement(pItem3);
-			}*/
+			pChild->SignalOnClick.Connect([this, j, i](e3::MouseEvent*){
+				Page* pC = nullptr;
+				EPageType pt = mMenus[i].Children[j].PageType;
+				/*switch (pt
+)
+				{
+				case EPageType::AllControls:
+					break;
+				case EPageType::Button:
+					pC = new ButtonPage();
+					break;
+				case EPageType::CheckBox:
+					pC = new CheckboxPage();
+					break;
+				case EPageType::ComboBox:
+					pC = new ComboBoxPage();
+					break;
+				case EPageType::RadioButton:
+					pC = new RadioButtonPage();
+					break;
+				case EPageType::Slider:
+					pC = new SliderPage();
+					break;
+				case EPageType::Switch:
+					pC = new SwitchPage();
+					break;
+				case EPageType::ListView:
+					pC = new ListViewPage();
+					break;
+				case EPageType::TreeView:
+					pC = new TreeViewPage();
+					break;
+				default:
+					break;
+				}
+			
+				if (pC)
+					Navigate(pC);*/
+				Navigate(pt);
+			});
 
+			++j;
 		}
 	}
 
 	AllControlsPage* pC = new AllControlsPage();
 	pC->SetMain(this);
 	mRouter->AddElement(pC);
+	mHistory.push_back(pC);
 	
-	mBackButton->SetOnClickCallback([this](e3::MouseEvent*){
+	mBackButton->SignalOnClick.Connect([this](e3::MouseEvent*){
 			NavigateBack();
 	});
 
-	mDrawerToggle->SetOnClickCallback([this](e3::MouseEvent*){
+	mDrawerToggle->SignalOnClick.Connect([this](e3::MouseEvent*){
 			mDrawer->Toggle();
 	});
 
-	mDrawer->AddOnToggleCallback([this](bool minimized){
+	mDrawer->SignalOnToggle.Connect([this](bool minimized){
 		if (minimized) 
 		{
 			mSearchInput->SetVisibility(e3::EVisibility::Hidden);
@@ -144,20 +222,84 @@ Main::Main(e3::Element* pParent)
 	});
 }
 
-void Main::Navigate(e3::Element* pPage)
+void Main::Navigate(EPageType page)
 {
-	mPrevPage = mRouter->GetChildren()[0];
+	auto it = std::find_if(mHistory.begin(), mHistory.end(), [page](Page* pPage){
+		return pPage->GetType() == page;
+	});
+
+	Page* pPage = nullptr;
+	if (it != mHistory.end()) 
+	{
+		pPage = *it;
+	}
+	else
+	{
+		switch (page)
+		{
+		case EPageType::AllControls:
+			pPage = new AllControlsPage();
+			((AllControlsPage*)pPage)->SetMain(this);
+			break;
+		case EPageType::Button:
+			pPage = new ButtonPage();
+			break;
+		case EPageType::CheckBox:
+				pPage = new CheckboxPage();
+			break;
+		case EPageType::ComboBox:
+				pPage = new ComboBoxPage();
+			break;
+		case EPageType::RadioButton:
+				pPage = new RadioButtonPage();
+			break;
+		case EPageType::Slider:
+				pPage = new SliderPage();
+			break;
+		case EPageType::Switch:
+				pPage = new SwitchPage();
+			break;
+		case EPageType::ListView:
+				pPage = new ListViewPage();
+			break;
+		case EPageType::TreeView:
+				pPage = new TreeViewPage();
+			break;
+		case EPageType::Expander:
+				pPage = new ExpanderPage();
+			break;
+		default:
+			return;
+			break;
+		}
+	}
+	if (mRouter->GetChildren()[0] != pPage)
+	{
+		if (it != mHistory.end()) mHistory.erase(it);
+		mRouter->RemoveAllElements(false);
+		mHistory.push_back(pPage);
+		mRouter->AddElement(pPage);
+	}
+}
+
+void Main::Navigate(Page* pPage)
+{
+	//mPrevPage = mRouter->GetChildren()[0];
 	mRouter->RemoveAllElements(false);
+	mHistory.push_back(pPage);
 	mRouter->AddElement(pPage);
+	
 }
 
 void Main::NavigateBack()
 {
-	if (!mPrevPage) return;
+	if (mHistory.size() <= 1) return;
 
 	mRouter->RemoveAllElements();
-	mRouter->AddElement(mPrevPage);
-	mPrevPage = nullptr;
+	mHistory.pop_back();
+	mRouter->AddElement(mHistory[mHistory.size() - 1]);
+//	mRouter->AddElement(mPrevPage);
+	//mPrevPage = nullptr;
 
 	e3::Animation* pA = new e3::Animation();
 	pA->Start(0.3, e3::EAnimation::EaseOutQuad, [this](float v){

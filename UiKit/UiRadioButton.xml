@@ -1,9 +1,9 @@
 <Element
-    width="24dp"
-    height="24dp"
+    width="22dp"
+    height="22dp"
     borderSize="1dp"
     borderRadius="0.5"
-    borderColor="glm::vec4(0, 0, 0, 255)">
+    borderColor="glm::vec4(150, 150, 150, 255)">
 
     <Element
         element="mCircle"

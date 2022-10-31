@@ -4,13 +4,14 @@
 #include "UiKitTestValues.h"
 
 AllControlsPageBase::AllControlsPageBase(e3::Element* pParent)
-	: e3::Element(pParent)
+	: Page(pParent)
 {
         this->SetWidth("100%");
         this->SetHeight("100%");
         this->SetPadding("60dp");
         this->SetOrientation((e3::EOrientation)1);
         this->SetAlignItemsVer((e3::EAlignment)0);
+        this->SetOverflow((e3::EOverflow)2);
     e3::Element* pElement1 = e3::ViewFactory::CreateShape( e3::EOrientation::Horizontal);
     AddElement(pElement1);
         pElement1->SetWidth("100%");

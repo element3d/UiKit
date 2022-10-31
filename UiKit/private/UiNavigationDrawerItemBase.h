@@ -26,11 +26,12 @@ public:
  
 protected:
 	e3::Element* mHeader = nullptr;
+e3::Element* mHover = nullptr;
 e3::Element* mSelection = nullptr;
 e3::Element* mContainer = nullptr;
 UiIcon* mIcon = nullptr;
 UiText* mTitle = nullptr;
-e3::FontIcon* mExpandIcon = nullptr;
+UiIcon* mExpandIcon = nullptr;
 e3::Element* mChildCont = nullptr;
 
 

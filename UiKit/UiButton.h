@@ -4,6 +4,12 @@
 
 #include "private/UiButtonBase.h"
 
+enum E3_EXPORT UiStyle
+{
+	UiDefault,
+	UiAccent
+};
+
 class E3_EXPORT UiButton : public UiButtonBase
 {
 public:

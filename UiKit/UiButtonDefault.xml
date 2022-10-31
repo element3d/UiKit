@@ -1,0 +1,6 @@
+<UiButton
+    >
+    <UiText
+        element="mText">
+    </UiText>
+</UiButton>

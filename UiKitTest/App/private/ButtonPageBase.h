@@ -5,9 +5,11 @@
 #include <e3/ViewFactory.h>
 #include <UiText.h>
 #include <UiButton.h>
+#include <UiButtonDefault.h>
+#include "Page.h"
 
 
-class ButtonPageBase : public e3::Element
+class ButtonPageBase : public Page
 {
 public:
     struct __Id

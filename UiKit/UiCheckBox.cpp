@@ -14,7 +14,7 @@ UiCheckBox::UiCheckBox(e3::Element* pParent)
 		break;
 	}
 
-	mCheck->SetRotation(-45, glm::vec3(0, 0, 1), e3::ETransformAlignment::Center);
+	// mCheck->SetRotation(-45, glm::vec3(0, 0, 1), e3::ETransformAlignment::Center);
 }
 
 void UiCheckBox::_SetMacOSStyles()
@@ -33,11 +33,13 @@ bool UiCheckBox::OnClick(e3::MouseEvent* pEvent)
 	{
 		SetBackgroundColor(UiColor::Primary);
 		mCheck->SetVisibility(e3::EVisibility::Visible);
+		SetBorderSize(0);
 	}
 	else
 	{
 		SetBackgroundColor(glm::vec4(0));
 		mCheck->SetVisibility(e3::EVisibility::Gone);
+		SetBorderSize("1dp");
 	}
 
 	return true;

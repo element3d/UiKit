@@ -4,8 +4,8 @@
     borderRadius="4">
      <UiIcon    
         element="mIcon"
-        width="12dp"
-        height="12dp"
+        width="16dp"
+        height="16dp"
         charcode="E72B">
     </UiIcon>
 </Element>
