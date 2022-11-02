@@ -20,7 +20,7 @@
     </Element>
     <Element
         element="mCircle"
-        width="20dp"
+        width="22dp"
         aspectRatio="1"
         borderSize="1dp"
         borderColor="glm::vec4(220, 220, 220, 255)"
@@ -29,11 +29,31 @@
 
         <Element
             element="mInnerCircle"
-            width="10dp"
+            width="12dp"
             aspectRatio="1"
             backgroundColor="UiColor::Primary"
             borderRadius="0.5">
         </Element>
 
+    </Element>
+    <Element
+        element="mInfo"
+        opacity="0"
+        positionType="Absolute"
+        padding="8dp"
+        paddingLeft="8dp"
+        paddingRight="8dp"
+        borderRadius="4"
+        backgroundColor="glm::vec4(248, 248, 248, 255)">
+        <Shadow
+            color="glm::vec4(0, 0, 0, 255)"
+            opacity="1"
+            blurSize="4"
+            offset="x: 0, y: 1">
+        </Shadow>
+        <UiText
+            element="mInfoText"
+            text="0">
+        </UiText>
     </Element>
 </Element>

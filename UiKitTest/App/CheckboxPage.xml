@@ -49,7 +49,6 @@
         </UiText>
         <Element
             width="100%"
-            height="100dp"
             marginTop="20dp"
             borderSize="1dp"
             backgroundColor="glm::vec4(240, 240, 240, 255)"
@@ -58,9 +57,53 @@
             padding="20dp"
             alignItemsHor="Start">
 
-           <UiCheckBox>
-               
-            </UiCheckBox>
+            <Element
+                orientation="Vertical"
+                alignItemsHor="Start">
+                <Element>
+                    <UiCheckBox
+                        isThreeState="true"
+                        group="_s(Group1)"> 
+                    </UiCheckBox>
+                    <UiText
+                        text="Select All"
+                        marginLeft="10dp">
+                    </UiText>
+                </Element>
+                <Element
+                    marginTop="10dp"
+                    marginLeft="10dp">
+                    <UiCheckBox
+                        group="_s(Group1)"> 
+                    </UiCheckBox>
+                    <UiText
+                        text="Option 1"
+                        marginLeft="10dp">
+                    </UiText>
+                </Element>
+                <Element
+                    marginTop="10dp"
+                    marginLeft="10dp">
+                    <UiCheckBox
+                        group="_s(Group1)"> 
+                    </UiCheckBox>
+                    <UiText
+                        text="Option 2"
+                        marginLeft="10dp">
+                    </UiText>
+                </Element>
+                <Element
+                    marginTop="10dp"
+                    marginLeft="10dp">
+                    <UiCheckBox
+                        group="_s(Group1)"> 
+                    </UiCheckBox>
+                    <UiText
+                        text="Option 3"
+                        marginLeft="10dp">
+                    </UiText>
+                </Element>
+            </Element>
 
         </Element>
 

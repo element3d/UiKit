@@ -18,6 +18,7 @@ public:
 private:
 	void _SetMacOSStyles();
 	bool mChecked = false;
+	e3::Animation* mAnimation = nullptr;
 };
 
 #endif // UiSwitch_H_

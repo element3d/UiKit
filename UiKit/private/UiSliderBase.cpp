@@ -24,7 +24,7 @@ UiSliderBase::UiSliderBase(e3::Element* pParent)
         mValue->SetPositionType((e3::EPositionType)1);
     mCircle = e3::ViewFactory::CreateShape( e3::EOrientation::Horizontal);
     AddElement(mCircle);
-        mCircle->SetWidth("20dp");
+        mCircle->SetWidth("22dp");
         mCircle->SetAspectRatio(1.000000);
         mCircle->SetBorderSize("1dp");
         mCircle->SetBorderColor(glm::vec4(220, 220, 220, 255));
@@ -32,9 +32,28 @@ UiSliderBase::UiSliderBase(e3::Element* pParent)
         mCircle->SetBorderRadius(0.5);
     mInnerCircle = e3::ViewFactory::CreateShape( e3::EOrientation::Horizontal);
     mCircle->AddElement(mInnerCircle);
-        mInnerCircle->SetWidth("10dp");
+        mInnerCircle->SetWidth("12dp");
         mInnerCircle->SetAspectRatio(1.000000);
         mInnerCircle->SetBackgroundColor(UiColor::Primary);
         mInnerCircle->SetBorderRadius(0.5);
+    mInfo = e3::ViewFactory::CreateShape( e3::EOrientation::Horizontal);
+    AddElement(mInfo);
+        mInfo->SetOpacity(0.000000);
+        mInfo->SetPositionType((e3::EPositionType)1);
+        mInfo->SetPadding("8dp");
+        mInfo->SetPaddingLeft("8dp");
+        mInfo->SetPaddingRight("8dp");
+        mInfo->SetBorderRadius(4);
+        mInfo->SetBackgroundColor(glm::vec4(248, 248, 248, 255));
+        e3::ShadowParams mInfoShadowParams;
+        mInfoShadowParams.Color = glm::vec4(0, 0, 0, 255);
+        mInfoShadowParams.BlurSize = 4;
+        mInfoShadowParams.Opacity = 1;
+        mInfoShadowParams.Scale = 1.0;
+        mInfoShadowParams.Offset = glm::ivec2(0, 1);
+        mInfo->SetShadow(mInfoShadowParams);
+        mInfoText = new UiText();
+        mInfo->AddElement(mInfoText);
+        mInfoText->SetText("0");
 
 }

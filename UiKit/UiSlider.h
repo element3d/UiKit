@@ -10,10 +10,16 @@ public:
 	UiSlider(e3::Element* pParent = nullptr);
 
 	bool OnMouseDown(e3::MouseEvent* pEvent) override;
+	bool OnMouseUp(e3::MouseEvent* pEvent) override;
 	void OnMouseMove(e3::MouseEvent* pEvent) override;
 
 private:
 	void _SetMacOSStyles();
+
+private:
+	e3::Animation* mAnimation = nullptr;
+	e3::Animation* mInfoAnimation = nullptr;
+	float mNValue = 0;
 };
 
 
