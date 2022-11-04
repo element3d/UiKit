@@ -50,12 +50,12 @@ void UiComboBox::Expand()
 	{
 		auto g = GetGeometry();
 //		mBody->UpdateGeometry();
-	//	mBody->GetSelectedItem()->UpdateGeometry();
+		mBody->GetSelectedItem()->UpdateGeometry();
 		auto ig = mBody->GetSelectedItem()->GetGeometry();
 		float y = ig.y;
 		if (ig.y == 0) y = g.y; 
 		float dy = g.y + g.height / 2 - (y + ig.height / 2);
-		// GetBody()->SetTranslation(glm::vec3(0, dy, 0));
+		 GetBody()->SetTranslation(glm::vec3(0, mBody->GetGeometry().y - ig.y - g.height, 0));
 		//GetBody()->SetTop(dy);
 	}
 		// GetBody()->SetTranslation(glm::vec3(50, -50, 0));

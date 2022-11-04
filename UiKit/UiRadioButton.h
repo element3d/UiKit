@@ -18,11 +18,17 @@ public:
 	void UnCheck();
 
 	virtual bool OnClick(e3::MouseEvent* pEvent) override;
+	virtual bool OnMouseDown(e3::MouseEvent* pEvent) override;
+	virtual bool OnMouseUp(e3::MouseEvent* pEvent) override;
+	virtual void OnMouseEnter(e3::MouseEvent* pEvent) override;
+	virtual void OnMouseLeave(e3::MouseEvent* pEvent) override;
 
 private:
 	void _SetMacOSStyles();
 	std::string mGroup;
 	static std::map<std::string, std::vector<UiRadioButton*>> sRadioGroups;
+	bool mChecked = false;
+	e3::Animation* mAnimation = nullptr;
 };
 
 #endif // UiRadioButton_H_

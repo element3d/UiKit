@@ -3,7 +3,8 @@
     height="22dp"
     borderSize="1dp"
     borderRadius="0.5"
-    borderColor="glm::vec4(150, 150, 150, 255)">
+    backgroundColor="glm::vec4(244, 244, 244, 255)"
+    borderColor="glm::vec4(138, 138, 138, 255)">
 
     <Element
         element="mCircle"
