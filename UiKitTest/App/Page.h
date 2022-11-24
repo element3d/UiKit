@@ -8,12 +8,14 @@ enum class EPageType
 {
 	AllControls,
 	Button,
+	DropDownButton,
 	CheckBox,
 	ComboBox,
 	RadioButton,
 	Slider,
 	Switch,
 	ListView,
+	TabView,
 	TreeView,
 	Expander
 };

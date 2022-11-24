@@ -19,6 +19,23 @@ UiNavigationDrawerItem::UiNavigationDrawerItem(e3::Element* pParent)
 	});
 
 	mHeader->SignalOnClick.Connect([this](e3::MouseEvent* pE){
+
+		if (!mConn.Connected())
+		{
+			mConn = GetApplication()->GetElement()->SignalOnClick.Connect([this](e3::MouseEvent* pE){
+				if (mHeader->GetGeometry().contains(glm::vec2(pE->GetX(), pE->GetY())))
+				{
+
+				}
+				else if (mMenu && mExpanded && !mMenu->GetGeometry().contains(glm::vec2(pE->GetX(), pE->GetY())) && mChildCont->GetParent() == mMenu)
+				{
+						GetApplication()->GetElement()->RemoveElement(mMenu, false);
+						mExpanded = false;
+						pE->Stop();
+				}
+			});
+		}
+
 		Select();
 		if (!mDrawer || !mChildCont->GetNumChildren()) 
 		{
@@ -138,6 +155,11 @@ void UiNavigationDrawerItem::Unselect()
 {
 	mSelection->SetVisibility(e3::EVisibility::Gone);
 	mHeader->SetBackgroundColor(glm::vec4(0, 0, 0, 0));
+	if (mDrawer->IsMinimized() && mMenu) 
+	{
+		GetApplication()->GetElement()->RemoveElement(mMenu, false);
+		mExpanded = false;
+	}
 }
 
 void UiNavigationDrawerItem::AddElement(e3::Element* pElement)

@@ -9,6 +9,7 @@
 #include "SliderPage.h"
 #include "SwitchPage.h"
 #include "TreeViewPage.h"
+#include "TabViewPage.h"
 #include "Main.h"
 
 AllControlsPage::AllControlsPage(e3::Element* pParent)
@@ -20,6 +21,7 @@ AllControlsPage::AllControlsPage(e3::Element* pParent)
 	enum class EControlType 
 	{
 		Button,
+		DropDownButton,
 		Checkbox,
 		ComboBox,
 		Expander,
@@ -27,6 +29,7 @@ AllControlsPage::AllControlsPage(e3::Element* pParent)
 		RadioButton,
 		Slider,
 		Switch,
+		TabView,
 		TreeView
 	};
 
@@ -44,6 +47,11 @@ AllControlsPage::AllControlsPage(e3::Element* pParent)
 			"Button",
 			"A control that responds a user input and raises a click event",
 			"UiKitTest/Images/ControlImages/Button.png"
+		},
+		{
+			"DropDownButton",
+			"A control that responds a user input and raises a click event",
+			"UiKitTest/Images/ControlImages/DropDownButton.png"
 		},
 		{
 			"Checkbox",
@@ -81,6 +89,11 @@ AllControlsPage::AllControlsPage(e3::Element* pParent)
 			"UiKitTest/Images/ControlImages/ToggleSwitch.png"
 		},
 		{
+			"TabView",
+			"A control that responds a user input and raises a click event",
+			"UiKitTest/Images/ControlImages/TabView.png"
+		},
+		{
 			"TreeView",
 			"A control that responds a user input and raises a click event",
 			"UiKitTest/Images/ControlImages/TreeView.png"
@@ -93,6 +106,11 @@ AllControlsPage::AllControlsPage(e3::Element* pParent)
 		case (int)EControlType::Button:
 		{
 			mMain->Navigate(EPageType::Button);
+			break;
+		}
+		case (int)EControlType::DropDownButton:
+		{
+			mMain->Navigate(EPageType::DropDownButton);
 			break;
 		}
 		case (int)EControlType::Checkbox:
@@ -128,6 +146,11 @@ AllControlsPage::AllControlsPage(e3::Element* pParent)
 		case (int)EControlType::Switch:
 		{
 			mMain->Navigate(EPageType::Switch);
+			break;
+		}
+		case (int)EControlType::TabView:
+		{
+			mMain->Navigate(EPageType::TabView);
 			break;
 		}
 		case (int)EControlType::TreeView:

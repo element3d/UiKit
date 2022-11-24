@@ -1,0 +1,40 @@
+<Element
+    height="100%"
+    width="180dp"
+    borderRadius="glm::vec4(7, 7, 0, 0)"
+    borderSize="1dp"
+    borderColor="glm::vec4(0, 0, 0, 23)"
+    alignItemsHor="SpaceBetween"
+    backgroundColor="glm::vec4(249, 249, 249, 255)">
+    <Element>
+        <UiIcon
+            element="mIcon"
+            marginLeft="10dp"
+            marginRight="10dp"
+            width="16dp"
+            height="16dp"
+            color="glm::vec4(50, 50, 50, 255)"
+            charcode="e8a5">
+        </UiIcon>
+        <UiText
+            element="mTitle">
+        </UiText>
+    </Element>
+    <Element>
+        <UiHoverable
+            width="32"
+            height="24"
+            overflow="Hidden"
+            borderRadius="7"
+            marginLeft="10dp"
+            marginRight="10dp">
+            <UiIcon
+                element="mClose"
+                width="8dp"
+                height="8dp"
+                color="glm::vec4(50, 50, 50, 255)"
+                charcode="e8bb">
+            </UiIcon>
+        </UiHoverable>
+    </Element>
+</Element>

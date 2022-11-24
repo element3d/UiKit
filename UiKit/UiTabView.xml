@@ -1,0 +1,46 @@
+<Element
+    orientation="Vertical"
+    overflow="Hidden">
+    <Element
+        element="mTabs"
+        width="100%"
+        height="31dp"
+        overflow="Scroll"
+        alignItemsVer="Center">
+        <!-- <UiTab>
+        </UiTab>
+         <UiTab>
+        </UiTab>
+         <UiTab>
+        </UiTab>
+         <UiTab>
+        </UiTab> -->
+        <Element
+            element="mTabCont"
+            height="31dp">
+        </Element>
+        <UiHoverable
+            element="mAdd"
+            width="32"
+            height="24"
+            overflow="Hidden"
+            borderRadius="7"
+            marginLeft="7dp"
+            marginRight="7dp">
+            <UiIcon
+                width="12dp"
+                height="12dp"
+                color="glm::vec4(50, 50, 50, 255)"
+                charcode="E710">
+            </UiIcon>
+        </UiHoverable>
+    </Element>
+    <Element
+        element="mPageCont"
+        width="100%"
+        height="100%"
+        scaling="Shrink"
+        backgroundColor="glm::vec4(255, 255, 255, 255)">
+    </Element>
+
+</Element>

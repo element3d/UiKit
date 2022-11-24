@@ -7,6 +7,8 @@
 class E3_EXPORT UiDropDownBody : public UiDropDownBodyBase
 {
 public:
+	void Expand();
+
 	UiDropDownBody(e3::Element* pParent = nullptr);
 };
 

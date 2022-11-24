@@ -1,21 +1,30 @@
 <Dropdown 
     borderSize="1dp"
-    borderColor="glm::vec4(100, 100, 100, 255)"
+    borderColor="glm::vec4(200, 200, 200, 255)"
     borderRadius="4"
 
     padding="14dp"
     paddingTop="7dp"
     paddingBottom="7dp"
-    backgroundColor="all: 255">
+    backgroundColor="glm::vec4(250, 250, 250, 255)">
 
     <Shadow
         blurSize="1"
         offset="x: 0, y: 1"
         color="glm::vec4(0, 0, 0, 255)">
     </Shadow>
-    <Text
+    <UiText
         text="Email"
         fontSize="14dp">
-    </Text>
+    </UiText>
+
+     <UiIcon
+        element="mIcon"
+        marginLeft="14dp"
+        width="8dp"
+        height="8dp"
+        color="glm::vec4(50, 50, 50, 255)"
+        charcode="E70D">
+    </UiIcon>
 
 </Dropdown>

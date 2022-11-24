@@ -14,6 +14,8 @@
 #include "SwitchPage.h"
 #include "ListViewPage.h"
 #include "TreeViewPage.h"
+#include "DropDownPage.h"
+#include "TabViewPage.h"
 
 Main::Main(e3::Element* pParent)
 	: MainBase(pParent)
@@ -30,6 +32,10 @@ Main::Main(e3::Element* pParent)
 				{
 					EPageType::Button,
 					"Button",
+				},
+				{
+					EPageType::DropDownButton,
+					"DropDownButton",
 				},
 				{
 					EPageType::CheckBox,
@@ -244,6 +250,9 @@ void Main::Navigate(EPageType page)
 		case EPageType::Button:
 			pPage = new ButtonPage();
 			break;
+		case EPageType::DropDownButton:
+			pPage = new DropDownPage();
+			break;
 		case EPageType::CheckBox:
 				pPage = new CheckboxPage();
 			break;
@@ -261,6 +270,9 @@ void Main::Navigate(EPageType page)
 			break;
 		case EPageType::ListView:
 				pPage = new ListViewPage();
+			break;
+		case EPageType::TabView:
+				pPage = new TabViewPage();
 			break;
 		case EPageType::TreeView:
 				pPage = new TreeViewPage();
