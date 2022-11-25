@@ -26,6 +26,7 @@ AllControlsPage::AllControlsPage(e3::Element* pParent)
 		ComboBox,
 		Expander,
 		ListView,
+		MenuBar,
 		RadioButton,
 		Slider,
 		Switch,
@@ -72,6 +73,11 @@ AllControlsPage::AllControlsPage(e3::Element* pParent)
 			"ListView",
 			"A control that responds a user input and raises a click event",
 			"UiKitTest/Images/ControlImages/ListView.png"
+		},
+		{
+			"MenuBar",
+			"A control that responds a user input and raises a click event",
+			"UiKitTest/Images/ControlImages/MenuBar.png"
 		},
 		{
 			"RadioButton",
@@ -131,6 +137,11 @@ AllControlsPage::AllControlsPage(e3::Element* pParent)
 		case (int)EControlType::ListView:
 		{
 			mMain->Navigate(EPageType::ListView);
+			break;
+		}
+		case (int)EControlType::MenuBar:
+		{
+			mMain->Navigate(EPageType::MenuBar);
 			break;
 		}
 		case (int)EControlType::RadioButton:

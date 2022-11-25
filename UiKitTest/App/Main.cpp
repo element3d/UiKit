@@ -16,6 +16,7 @@
 #include "TreeViewPage.h"
 #include "DropDownPage.h"
 #include "TabViewPage.h"
+#include "MenuBarPage.h"
 
 Main::Main(e3::Element* pParent)
 	: MainBase(pParent)
@@ -270,6 +271,9 @@ void Main::Navigate(EPageType page)
 			break;
 		case EPageType::ListView:
 				pPage = new ListViewPage();
+			break;
+		case EPageType::MenuBar:
+				pPage = new MenuBarPage();
 			break;
 		case EPageType::TabView:
 				pPage = new TabViewPage();

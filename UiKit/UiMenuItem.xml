@@ -1,0 +1,13 @@
+<UiHoverable
+    width="100%"
+    height="30dp"
+    overflow="Hidden"
+    borderRadius="4"
+    marginTop="4dp"
+    marginBottom="4dp"
+    alignItemsHor="Start">
+    <UiText
+        element="mText"
+        marginLeft="10dp">
+    </UiText>
+</UiHoverable>

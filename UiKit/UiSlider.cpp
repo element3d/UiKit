@@ -32,11 +32,11 @@ UiSlider::UiSlider(e3::Element* pParent)
 			});
 	});
 
-	mCircle->SetOnMouseDownCallback([this](e3::MouseEvent* pEvent){
+	mCircle->SignalOnMouseDown.Connect([this](e3::MouseEvent* pEvent){
 			mInnerCircle->SetScale(glm::vec3(0.6), e3::ETransformAlignment::Center);
 	});
 
-	mCircle->SetOnMouseUpCallback([this](e3::MouseEvent* pEvent){
+	mCircle->SignalOnMouseUp.Connect([this](e3::MouseEvent* pEvent){
 		mInnerCircle->SetScale(glm::vec3(1), e3::ETransformAlignment::Center);
 	});
 }

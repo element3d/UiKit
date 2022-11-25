@@ -10,6 +10,8 @@ UiInputBase::UiInputBase(e3::Element* pParent)
         this->SetBackgroundColor(glm::vec4(250, 250, 250, 255));
         this->SetBorderRadius(4);
         this->SetTextColor(glm::vec4(50, 50, 50, 255));
+        this->SetFontFamily("Segoe");
+        this->SetTextColor(glm::vec4(60, 60, 60, 255));
         this->SetFontSize(14);
         this->SetPaddingLeft(0);
         this->SetBorderSize("1dp");

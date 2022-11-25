@@ -15,6 +15,7 @@ enum class EPageType
 	Slider,
 	Switch,
 	ListView,
+	MenuBar,
 	TabView,
 	TreeView,
 	Expander

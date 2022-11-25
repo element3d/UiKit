@@ -1,0 +1,85 @@
+<Page
+    width="100%"
+    height="100%"
+    padding="60dp"
+    overflow="Scroll"
+    orientation="Vertical"
+    alignItemsVer="Start"
+    alignItemsHor="Start">
+
+    <Element
+        width="70%"
+        alignItemsHor="Start"
+        orientation="Vertical">
+        <UiText
+            text="MenuBar"
+            fontSize="30dp">
+        </UiText>
+        <UiText
+            marginTop="20dp"
+            text="The ListView lets you show a collection of items."
+            fontSize="16dp">
+        </UiText>
+
+        <UiText
+            marginTop="24dp"
+            text="Basic ListView with simple data."
+            fontSize="24dp">
+        </UiText>
+        <Element
+            width="100%"
+            minHeight="100dp"
+            marginTop="20dp"
+            borderSize="1dp"
+            backgroundColor="glm::vec4(240, 240, 240, 255)"
+            borderColor="glm::vec4(220, 220, 220, 255)"
+            borderRadius="10"
+            padding="20dp"
+            alignItemsVer="Start"
+            alignItemsHor="Start">
+
+            <UiMenuBar>
+                <UiMenu
+                    text="File">
+                    <UiMenuItem
+                        text="New">
+                    </UiMenuItem>
+                    <UiMenuItem
+                        text="Open">
+                    </UiMenuItem>
+                      <UiMenuItem
+                        text="Save">
+                    </UiMenuItem>
+                    <UiMenuItem
+                        text="Exit">
+                    </UiMenuItem>
+                </UiMenu>
+
+                <UiMenu
+                    text="Edit">
+                    <UiMenuItem
+                        text="Undo">
+                    </UiMenuItem>
+                      <UiMenuItem
+                        text="Cut">
+                    </UiMenuItem>
+                      <UiMenuItem
+                        text="Copy">
+                    </UiMenuItem>
+                      <UiMenuItem
+                        text="Paste">
+                    </UiMenuItem>
+                </UiMenu>
+
+                <UiMenu
+                    text="Help">
+                </UiMenu>
+            </UiMenuBar>
+
+        </Element>
+
+      
+
+    </Element>
+
+</Page>

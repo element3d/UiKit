@@ -3,6 +3,8 @@
     backgroundColor="glm::vec4(250, 250, 250, 255)"
     borderRadius="4"
     textColor="glm::vec4(50, 50, 50, 255)"
+    fontFamily="Segoe"
+    textColor="glm::vec4(60, 60, 60, 255)"
     fontSize="14"
     paddingLeft="0"
     borderSize="1dp"
