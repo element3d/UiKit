@@ -3,7 +3,6 @@
 #define __UiDropDownButtonBase_H__
 
 #include <e3/ViewFactory.h>
-#include <UiText.h>
 #include <UiIcon.h>
 
 
@@ -24,7 +23,9 @@ public:
 
  
 protected:
-	UiIcon* mIcon = nullptr;
+	e3::Element* mHover = nullptr;
+e3::Element* mContent = nullptr;
+UiIcon* mIcon = nullptr;
 
 
 };

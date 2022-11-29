@@ -7,7 +7,7 @@
     alignItemsHor="Start">
 
     <Element
-        width="70%"
+        width="100%"
         alignItemsHor="Start"
         orientation="Vertical">
         <UiText
@@ -16,7 +16,10 @@
         </UiText>
         <UiText
             marginTop="20dp"
-            text="Use a ComboBox when you need to conserve on-screen space and when users select only option at time."
+            width="100%"
+            maxNumLines="5"
+            textAlignHor="Start"
+            text="Use a ComboBox when you need to conserve on-screen space and when users select only option at time. A ComboBox shows only the currently selected item."
             fontSize="16dp">
         </UiText>
 

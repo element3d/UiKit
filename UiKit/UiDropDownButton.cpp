@@ -6,6 +6,11 @@ UiDropDownButton::UiDropDownButton(e3::Element* pParent)
 
 }
 
+void UiDropDownButton::AddElement(e3::Element* pElement)
+{
+	mContent->AddElement(pElement);
+}
+
 void UiDropDownButton::AddElement(UiDropDownBody* pBody)
 {
 	SetBody(pBody);
@@ -26,4 +31,16 @@ void UiDropDownButton::Expand()
 		}, [](){
 		
 		});
+}
+
+void UiDropDownButton::OnMouseEnter(e3::MouseEvent* pE)
+{
+	UiDropDownButtonBase::OnMouseEnter(pE);
+	mHover->SetBackgroundColor(glm::vec4(0, 0, 0, 0.0173 * 255));
+}
+
+void UiDropDownButton::OnMouseLeave(e3::MouseEvent* pE)
+{
+	UiDropDownButtonBase::OnMouseLeave(pE);
+	mHover->SetBackgroundColor(glm::vec4(0, 0, 0, 0));
 }

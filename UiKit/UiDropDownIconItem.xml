@@ -1,16 +1,24 @@
 <UiHoverable
     minWidth="90dp"
+    width="100%"
+    scaling="Shrink"
     alignItemsHor="Start"
     height="30dp"
     marginTop="4dp"
     marginBottom="4dp"
     borderRadius="4"
     overflow="Hidden">
+
+    <UiIcon
+        element="mIcon"
+        marginLeft="9dp"
+        width="18dp"
+        height="18dp">
+    </UiIcon> 
     <UiText
         element="mText"
         marginLeft="9dp"
         marginRight="9dp"
-        text="Medium"
         fontSize="14dp">
     </UiText>
 </UiHoverable>

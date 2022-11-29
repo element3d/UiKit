@@ -7,6 +7,8 @@
 enum class EPageType
 {
 	AllControls,
+	BasicInput,
+	Collections,
 	Button,
 	DropDownButton,
 	CheckBox,
@@ -21,6 +23,7 @@ enum class EPageType
 	Expander
 };
 
+class Main;
 class E3_EXPORT Page : public PageBase
 {
 public:
@@ -28,8 +31,11 @@ public:
 
 	EPageType GetType() { return mType; }
 
+	void SetMain(Main* pMain) { mMain = pMain; }
+
 protected:
 	EPageType mType;
+	Main* mMain = nullptr;
 };
 
 #endif // Page_H_

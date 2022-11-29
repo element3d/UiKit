@@ -14,7 +14,7 @@ CheckboxPageBase::CheckboxPageBase(e3::Element* pParent)
         this->SetAlignItemsHor((e3::EAlignment)0);
     e3::Element* pElement1 = e3::ViewFactory::CreateShape( e3::EOrientation::Horizontal);
     AddElement(pElement1);
-        pElement1->SetWidth("70%");
+        pElement1->SetWidth("100%");
         pElement1->SetAlignItemsHor((e3::EAlignment)0);
         pElement1->SetOrientation((e3::EOrientation)1);
                 UiText* pCustomView1 = new UiText();
@@ -24,7 +24,10 @@ CheckboxPageBase::CheckboxPageBase(e3::Element* pParent)
                 UiText* pCustomView2 = new UiText();
         pElement1->AddElement(pCustomView2);
         pCustomView2->SetMarginTop("20dp");
-        pCustomView2->SetText("The Button control provides a Click event to respond to user input from a touch, mouse, keyboard or other input device.");
+        pCustomView2->SetWidth("100%");
+        pCustomView2->SetMaxNumLines(5);
+        pCustomView2->SetTextAlignHor((e3::EAlignment)0);
+        pCustomView2->SetText("CheckBox control let the user select a combination of binary options. In contrast, RadioButton control allow the user to select from mutually exclusive options. The indeterminate state is used to indicate that an option is set for some, but not all, child oprions. Don't allow user to set indeterminate state directly to indicate a third option.");
         pCustomView2->SetFontSize("16dp");
                 UiText* pCustomView3 = new UiText();
         pElement1->AddElement(pCustomView3);

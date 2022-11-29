@@ -14,7 +14,7 @@ SwitchPageBase::SwitchPageBase(e3::Element* pParent)
         this->SetAlignItemsHor((e3::EAlignment)0);
     e3::Element* pElement1 = e3::ViewFactory::CreateShape( e3::EOrientation::Horizontal);
     AddElement(pElement1);
-        pElement1->SetWidth("70%");
+        pElement1->SetWidth("100%");
         pElement1->SetAlignItemsHor((e3::EAlignment)0);
         pElement1->SetOrientation((e3::EOrientation)1);
                 UiText* pCustomView1 = new UiText();
@@ -24,12 +24,15 @@ SwitchPageBase::SwitchPageBase(e3::Element* pParent)
                 UiText* pCustomView2 = new UiText();
         pElement1->AddElement(pCustomView2);
         pCustomView2->SetMarginTop("20dp");
-        pCustomView2->SetText("Use a ComboBox when you need to conserve on-screen space and when users select only option at time.");
+        pCustomView2->SetWidth("100%");
+        pCustomView2->SetTextAlignHor((e3::EAlignment)0);
+        pCustomView2->SetMaxNumLines(5);
+        pCustomView2->SetText("Use Switch controls to present users with exactly two mutually exclusive options (like on/off), where choosing an option results in an immediate commit. A switch should have a single label.");
         pCustomView2->SetFontSize("16dp");
                 UiText* pCustomView3 = new UiText();
         pElement1->AddElement(pCustomView3);
         pCustomView3->SetMarginTop("24dp");
-        pCustomView3->SetText("A ComboBox with items defined inline and its width set.");
+        pCustomView3->SetText("A simple Switch");
         pCustomView3->SetFontSize("24dp");
     e3::Element* pElement2 = e3::ViewFactory::CreateShape( e3::EOrientation::Horizontal);
     pElement1->AddElement(pElement2);

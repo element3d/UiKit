@@ -1,5 +1,7 @@
 <DropdownBody
     orientation="Vertical"
+    paddingLeft="4dp"
+    paddingRight="4dp"
     borderRadius="8"
     backgroundColor="glm::vec4(250, 250, 250, 255)">
     <Shadow

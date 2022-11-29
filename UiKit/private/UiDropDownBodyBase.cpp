@@ -7,6 +7,8 @@ UiDropDownBodyBase::UiDropDownBodyBase(e3::Element* pParent)
 	: e3::DropdownBody(pParent)
 {
         this->SetOrientation((e3::EOrientation)1);
+        this->SetPaddingLeft("4dp");
+        this->SetPaddingRight("4dp");
         this->SetBorderRadius(8);
         this->SetBackgroundColor(glm::vec4(250, 250, 250, 255));
         e3::ShadowParams ShadowParams;

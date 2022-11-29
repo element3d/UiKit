@@ -3,6 +3,8 @@
 #include "UiTreeViewItemHeaderMini.h"
 #include "UiDivider.h"
 #include "AllControlsPage.h"
+#include "BasicInputPage.h"
+#include "CollectionsPage.h"
 #include "MainNavDrawerItem.h"
 #include "UiIcon.h"
 #include "ButtonPage.h"
@@ -28,7 +30,7 @@ Main::Main(e3::Element* pParent)
 		{
 			"Basic Input",
 			"F16C",
-			EPageType::AllControls,
+			EPageType::BasicInput,
 			{
 				{
 					EPageType::Button,
@@ -63,7 +65,7 @@ Main::Main(e3::Element* pParent)
 		{
 			"Collections",
 			"F0E2",
-			EPageType::AllControls,
+			EPageType::Collections,
 			{
 				{
 					EPageType::ListView,
@@ -113,14 +115,14 @@ Main::Main(e3::Element* pParent)
 	UiDivider* pDiv = new UiDivider();
 	pDiv->SetMarginBottom("4dp");
 	// pDiv->SetMarginTop();
-	mDrawer->InsertElement(2, pDiv);
+//	mDrawer->InsertElement(2, pDiv);
 	{
 		UiNavigationDrawerItem* pHeader = new UiNavigationDrawerItem();
 		// pHeader->SetHeight("40dp");
 		// pHeader->SetIndicatorPosition(UiRight);
 		pHeader->SetTitle("All Controls");
 		pHeader->SetIcon("E700");
-		mDrawer->InsertElement(2, pHeader);
+	//	mDrawer->InsertElement(2, pHeader);
 
 		//UiIcon* pE = new UiIcon();
 		//pE->SetWidth(20);
@@ -133,7 +135,7 @@ Main::Main(e3::Element* pParent)
 		UiNavigationDrawerItem* pHeader = new UiNavigationDrawerItem();
 		pHeader->SetTitle("Home");
 		pHeader->SetIcon("E80F");
-		mDrawer->InsertElement(2, pHeader);
+	//	mDrawer->InsertElement(2, pHeader);
 	}
 
 
@@ -247,6 +249,14 @@ void Main::Navigate(EPageType page)
 		case EPageType::AllControls:
 			pPage = new AllControlsPage();
 			((AllControlsPage*)pPage)->SetMain(this);
+			break;
+		case EPageType::BasicInput:
+			pPage = new BasicInputPage();
+			pPage->SetMain(this);
+			break;
+		case EPageType::Collections:
+			pPage = new CollectionsPage();
+			pPage->SetMain(this);
 			break;
 		case EPageType::Button:
 			pPage = new ButtonPage();

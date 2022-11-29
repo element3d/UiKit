@@ -1,22 +1,11 @@
-#include "AllControlsPage.h"
-#include "MenuButton.h"
-#include "ButtonPage.h"
-#include "CheckboxPage.h"
-#include "ComboBoxPage.h"
-#include "ExpanderPage.h"
-#include "ListViewPage.h"
-#include "RadioButtonPage.h"
-#include "SliderPage.h"
-#include "SwitchPage.h"
-#include "TreeViewPage.h"
-#include "TabViewPage.h"
+#include "BasicInputPage.h"
 #include "Main.h"
+#include "MenuButton.h"
 
-AllControlsPage::AllControlsPage(e3::Element* pParent)
-	: AllControlsPageBase(pParent)
+BasicInputPage::BasicInputPage(e3::Element* pParent)
+	: BasicInputPageBase(pParent)
 {
-
-	mType = EPageType::AllControls;
+	mType = EPageType::BasicInput;
 
 	enum class EControlType 
 	{
@@ -24,14 +13,9 @@ AllControlsPage::AllControlsPage(e3::Element* pParent)
 		DropDownButton,
 		Checkbox,
 		ComboBox,
-		Expander,
-		ListView,
-		MenuBar,
 		RadioButton,
 		Slider,
-		Switch,
-		TabView,
-		TreeView
+		Switch
 	};
 
 	struct _Item 
@@ -65,21 +49,6 @@ AllControlsPage::AllControlsPage(e3::Element* pParent)
 			"UiKitTest/Images/ControlImages/ComboBox.png"
 		},
 		{
-			"Expander",
-			"A control that responds a user input and raises a click event",
-			"UiKitTest/Images/ControlImages/Expander.png"
-		},
-		{
-			"ListView",
-			"A control that responds a user input and raises a click event",
-			"UiKitTest/Images/ControlImages/ListView.png"
-		},
-		{
-			"MenuBar",
-			"A control that responds a user input and raises a click event",
-			"UiKitTest/Images/ControlImages/MenuBar.png"
-		},
-		{
 			"RadioButton",
 			"A control that responds a user input and raises a click event",
 			"UiKitTest/Images/ControlImages/RadioButton.png"
@@ -93,16 +62,6 @@ AllControlsPage::AllControlsPage(e3::Element* pParent)
 			"Switch",
 			"A control that responds a user input and raises a click event",
 			"UiKitTest/Images/ControlImages/ToggleSwitch.png"
-		},
-		{
-			"TabView",
-			"A control that responds a user input and raises a click event",
-			"UiKitTest/Images/ControlImages/TabView.png"
-		},
-		{
-			"TreeView",
-			"A control that responds a user input and raises a click event",
-			"UiKitTest/Images/ControlImages/TreeView.png"
 		}
 	};
 
@@ -129,21 +88,6 @@ AllControlsPage::AllControlsPage(e3::Element* pParent)
 			mMain->Navigate(EPageType::ComboBox);
 			break;
 		}
-		case (int)EControlType::Expander:
-		{
-			mMain->Navigate(EPageType::Expander);
-			break;
-		}
-		case (int)EControlType::ListView:
-		{
-			mMain->Navigate(EPageType::ListView);
-			break;
-		}
-		case (int)EControlType::MenuBar:
-		{
-			mMain->Navigate(EPageType::MenuBar);
-			break;
-		}
 		case (int)EControlType::RadioButton:
 		{
 			mMain->Navigate(EPageType::RadioButton);
@@ -157,16 +101,6 @@ AllControlsPage::AllControlsPage(e3::Element* pParent)
 		case (int)EControlType::Switch:
 		{
 			mMain->Navigate(EPageType::Switch);
-			break;
-		}
-		case (int)EControlType::TabView:
-		{
-			mMain->Navigate(EPageType::TabView);
-			break;
-		}
-		case (int)EControlType::TreeView:
-		{
-			mMain->Navigate(EPageType::TreeView);
 			break;
 		}
 		default:
@@ -198,4 +132,3 @@ AllControlsPage::AllControlsPage(e3::Element* pParent)
 		i++;
 	}
 }
-

@@ -7,7 +7,7 @@
     alignItemsHor="Start">
 
     <Element
-        width="70%"
+        width="100%"
         alignItemsHor="Start"
         orientation="Vertical">
         <UiText
@@ -16,7 +16,10 @@
         </UiText>
         <UiText
             marginTop="20dp"
-            text="The Button control provides a Click event to respond to user input from a touch, mouse, keyboard or other input device."
+            width="100%"
+            maxNumLines="5"
+            textAlignHor="Start"
+            text="CheckBox control let the user select a combination of binary options. In contrast, RadioButton control allow the user to select from mutually exclusive options. The indeterminate state is used to indicate that an option is set for some, but not all, child oprions. Don't allow user to set indeterminate state directly to indicate a third option."
             fontSize="16dp">
         </UiText>
 

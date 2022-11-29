@@ -41,7 +41,7 @@ MainBase::MainBase(e3::Element* pParent)
         mSearch = new UiAppBarButton();
         pElement4->AddElement(mSearch);
         mSearch->SetVisibility((e3::EVisibility)2);
-        mSearch->SetIcon(_s(E700));
+        mSearch->SetIcon(_s(e721));
     mSearchInput = e3::ViewFactory::CreateShape( e3::EOrientation::Horizontal);
     pElement4->AddElement(mSearchInput);
         mSearchInput->SetWidth("100%");

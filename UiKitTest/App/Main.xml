@@ -36,7 +36,7 @@
                 <UiAppBarButton
                     element="mSearch"
                     visibility="Hidden"
-                    icon="_s(E700)">
+                    icon="_s(e721)">
                 </UiAppBarButton>
                 <Element
                     element="mSearchInput"

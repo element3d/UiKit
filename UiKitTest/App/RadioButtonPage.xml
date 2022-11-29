@@ -7,7 +7,7 @@
     alignItemsHor="Start">
 
     <Element
-        width="70%"
+        width="100%"
         alignItemsHor="Start"
         orientation="Vertical">
         <UiText
@@ -16,7 +16,10 @@
         </UiText>
         <UiText
             marginTop="20dp"
-            text="Use a ComboBox when you need to conserve on-screen space and when users select only option at time."
+            width="100%"
+            textAlignHor="Start"
+            maxNumLines="5"
+            text="Use RadioButton to let a user choose between exclusive, related options."
             fontSize="16dp">
         </UiText>
 
@@ -37,19 +40,35 @@
             alignItemsHor="Start"
             orientation="Vertical">
 
-            <UiRadioButton
-                group="_s(test)">
-            </UiRadioButton>
-
-            <UiRadioButton
-                marginTop="10dp"
-                group="_s(test)">
-            </UiRadioButton>
-
-            <UiRadioButton
-                marginTop="10dp"
-                group="_s(test)">
-            </UiRadioButton>
+            <Element>
+                <UiRadioButton
+                    group="_s(test)">
+                </UiRadioButton>
+                <UiText
+                    marginLeft="10dp"
+                    text="Option 1">
+                </UiText>
+            </Element>
+            <Element>
+                <UiRadioButton
+                    marginTop="10dp"
+                    group="_s(test)">
+                </UiRadioButton>
+                <UiText
+                    marginLeft="10dp"
+                    text="Option 2">
+                </UiText>
+            </Element>
+            <Element>
+                <UiRadioButton
+                    marginTop="10dp"
+                    group="_s(test)">
+                </UiRadioButton>
+                <UiText
+                    marginLeft="10dp"
+                    text="Option 3">
+                </UiText>
+            </Element>
 
         </Element>
 
