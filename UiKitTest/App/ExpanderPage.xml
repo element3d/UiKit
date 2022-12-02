@@ -7,23 +7,28 @@
     alignItemsHor="Start">
 
     <Element
-        width="70%"
+        width="100%"
         alignItemsHor="Start"
         orientation="Vertical">
         <UiText
             text="Expander"
-            fontSize="30dp">
+            fontStyle="SemiBold"
+            fontSize="24dp">
         </UiText>
         <UiText
             marginTop="20dp"
-            text="The Expander has a header and can expand to show a body with more content."
-            fontSize="16dp">
+            width="100%"
+            maxNumLines="5"
+            textAlignHor="Start"
+            text="The Expander has a header and can expand to show a body with more content. Use an Expander when some content is only relevant some of the time (for example to read more information or access additional options for an item)."
+            fontSize="14dp">
         </UiText>
 
         <UiText
             marginTop="24dp"
             text="A ComboBox with items defined inline and its width set."
-            fontSize="24dp">
+            fontStyle="SemiBold"
+            fontSize="18dp">
         </UiText>
         <Element
             width="100%"

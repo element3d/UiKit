@@ -12,18 +12,20 @@
         orientation="Vertical">
         <UiText
             text="ListView"
-            fontSize="30dp">
+            fontSize="24dp"
+            fontStyle="SemiBold">
         </UiText>
         <UiText
             marginTop="20dp"
-            text="The ListView lets you show a collection of items."
-            fontSize="16dp">
+            text="The ListView lets you show a collection of items in a list that scrolls vertically."
+            fontSize="14dp">
         </UiText>
 
         <UiText
             marginTop="24dp"
             text="Basic ListView with simple data."
-            fontSize="24dp">
+            fontStyle="SemiBold"
+            fontSize="18dp">
         </UiText>
         <Element
             width="100%"
@@ -53,3 +55,4 @@
     </Element>
 
 </Page>
+

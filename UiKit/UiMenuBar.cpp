@@ -27,7 +27,7 @@ UiMenuBar::UiMenuBar(e3::Element* pParent)
 	s.Offset = (glm::vec2(0, 5));
 	mFlyout->SetShadow(s);
 
-	GetApplication()->GetElement()->SignalOnMouseDown.Connect([this](e3::MouseEvent* pEvent){
+	mConn = GetApplication()->GetElement()->SignalOnMouseDown.Connect([this](e3::MouseEvent* pEvent){
 		if (!mFlyout->GetGeometry().contains(glm::vec2(pEvent->GetX(), pEvent->GetY())))
 		{
 			GetApplication()->GetElement()->RemoveElement(mFlyout, false);
@@ -37,6 +37,11 @@ UiMenuBar::UiMenuBar(e3::Element* pParent)
 		}
 
 		});
+}
+
+UiMenuBar::~UiMenuBar()
+{
+	GetApplication()->GetElement()->SignalOnMouseDown.Disconnect(mConn);
 }
 
 void UiMenuBar::AddElement(UiMenu* pMenu)

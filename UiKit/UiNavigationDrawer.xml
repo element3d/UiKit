@@ -2,6 +2,7 @@
     width="300dp"
     height="100%"
     orientation="Vertical"
+    overflow="Scroll"
     alignItemsVer="Start">
     
 </Element>

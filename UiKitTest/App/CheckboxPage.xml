@@ -12,7 +12,8 @@
         orientation="Vertical">
         <UiText
             text="CheckBox"
-            fontSize="30dp">
+            fontStyle="SemiBold"
+            fontSize="24dp">
         </UiText>
         <UiText
             marginTop="20dp"
@@ -20,13 +21,14 @@
             maxNumLines="5"
             textAlignHor="Start"
             text="CheckBox control let the user select a combination of binary options. In contrast, RadioButton control allow the user to select from mutually exclusive options. The indeterminate state is used to indicate that an option is set for some, but not all, child oprions. Don't allow user to set indeterminate state directly to indicate a third option."
-            fontSize="16dp">
+            fontSize="14dp">
         </UiText>
 
         <UiText
             marginTop="24dp"
             text="A 2-state CheckBox."
-            fontSize="24dp">
+            fontStyle="SemiBold"
+            fontSize="18dp">
         </UiText>
         <Element
             width="100%"
@@ -48,7 +50,8 @@
         <UiText
             marginTop="30dp"
             text="A 3-state CheckBox."
-            fontSize="24dp">
+            fontStyle="SemiBold"
+            fontSize="18dp">
         </UiText>
         <Element
             width="100%"

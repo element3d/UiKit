@@ -20,7 +20,8 @@ SwitchPageBase::SwitchPageBase(e3::Element* pParent)
                 UiText* pCustomView1 = new UiText();
         pElement1->AddElement(pCustomView1);
         pCustomView1->SetText("Switch");
-        pCustomView1->SetFontSize("30dp");
+        pCustomView1->SetFontSize("24dp");
+        pCustomView1->SetFontStyle((e3::EFontStyle)16);
                 UiText* pCustomView2 = new UiText();
         pElement1->AddElement(pCustomView2);
         pCustomView2->SetMarginTop("20dp");
@@ -28,12 +29,13 @@ SwitchPageBase::SwitchPageBase(e3::Element* pParent)
         pCustomView2->SetTextAlignHor((e3::EAlignment)0);
         pCustomView2->SetMaxNumLines(5);
         pCustomView2->SetText("Use Switch controls to present users with exactly two mutually exclusive options (like on/off), where choosing an option results in an immediate commit. A switch should have a single label.");
-        pCustomView2->SetFontSize("16dp");
+        pCustomView2->SetFontSize("14dp");
                 UiText* pCustomView3 = new UiText();
         pElement1->AddElement(pCustomView3);
         pCustomView3->SetMarginTop("24dp");
         pCustomView3->SetText("A simple Switch");
-        pCustomView3->SetFontSize("24dp");
+        pCustomView3->SetFontSize("18dp");
+        pCustomView3->SetFontStyle((e3::EFontStyle)16);
     e3::Element* pElement2 = e3::ViewFactory::CreateShape( e3::EOrientation::Horizontal);
     pElement1->AddElement(pElement2);
         pElement2->SetWidth("100%");

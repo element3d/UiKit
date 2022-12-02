@@ -149,7 +149,7 @@ Main::Main(e3::Element* pParent)
 		mDrawer->AddElement(pHeader);
 
 		pHeader->SignalOnClick.Connect([this, i](e3::MouseEvent*){
-			Navigate(mMenus[i].PageType);
+			 Navigate(mMenus[i].PageType);
 		});
 
 		int j = 0;
@@ -160,6 +160,7 @@ Main::Main(e3::Element* pParent)
 			pHeader->AddElement(pChild);
 
 			pChild->SignalOnClick.Connect([this, j, i](e3::MouseEvent*){
+				
 				Page* pC = nullptr;
 				EPageType pt = mMenus[i].Children[j].PageType;
 				/*switch (pt

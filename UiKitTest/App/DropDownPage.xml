@@ -12,20 +12,20 @@
         orientation="Vertical">
         <UiText
             text="DropDown"
-            fontStyle="Bold"
+            fontStyle="SemiBold"
             fontSize="24dp">
         </UiText>
         <UiText
             marginTop="20dp"
             text="A control that drops down a flyout of choices from which one can be chosen."
-            fontSize="16dp">
+            fontSize="14dp">
         </UiText>
 
         <UiText
             marginTop="24dp"
             text="Simple DropDownButton"
-            fontStyle="Bold"
-            fontSize="20dp">
+            fontStyle="SemiBold"
+            fontSize="18dp">
         </UiText>
         <Element
             width="100%"
@@ -60,8 +60,8 @@
         <UiText
             marginTop="24dp"
             text="DropDownButton with icons"
-            fontStyle="Bold"
-            fontSize="20dp">
+            fontStyle="SemiBold"
+            fontSize="18dp">
         </UiText>
         <Element
             width="100%"

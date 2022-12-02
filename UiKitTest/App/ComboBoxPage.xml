@@ -12,7 +12,8 @@
         orientation="Vertical">
         <UiText
             text="ComboBox"
-            fontSize="30dp">
+            fontStyle="SemiBold"
+            fontSize="24dp">
         </UiText>
         <UiText
             marginTop="20dp"
@@ -20,13 +21,14 @@
             maxNumLines="5"
             textAlignHor="Start"
             text="Use a ComboBox when you need to conserve on-screen space and when users select only option at time. A ComboBox shows only the currently selected item."
-            fontSize="16dp">
+            fontSize="14dp">
         </UiText>
 
         <UiText
             marginTop="24dp"
             text="A ComboBox with items defined inline and its width set."
-            fontSize="24dp">
+            fontStyle="SemiBold"
+            fontSize="18dp">
         </UiText>
         <Element
             width="100%"

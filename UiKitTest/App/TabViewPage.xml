@@ -13,18 +13,20 @@
         orientation="Vertical">
         <UiText
             text="TabView"
-            fontSize="30dp">
+            fontSize="24dp"
+            fontStyle="SemiBold">
         </UiText>
         <UiText
             marginTop="20dp"
             text="The ListView lets you show a collection of items."
-            fontSize="16dp">
+            fontSize="14dp">
         </UiText>
 
         <UiText
             marginTop="24dp"
             text="Basic ListView with simple data."
-            fontSize="24dp">
+            fontSize="18dp"
+            fontStyle="SemiBold">
         </UiText>
         <Element
             width="100%"

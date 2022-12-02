@@ -13,18 +13,20 @@
         orientation="Vertical">
         <UiText
             text="MenuBar"
-            fontSize="30dp">
+            fontStyle="SemiBold"
+            fontSize="24dp">
         </UiText>
         <UiText
             marginTop="20dp"
             text="The ListView lets you show a collection of items."
-            fontSize="16dp">
+            fontSize="14dp">
         </UiText>
 
         <UiText
             marginTop="24dp"
             text="Basic ListView with simple data."
-            fontSize="24dp">
+            fontStyle="SemiBold"
+            fontSize="18dp">
         </UiText>
         <Element
             width="100%"

@@ -12,23 +12,23 @@
         orientation="Vertical">
         <UiText
             text="Button"
-            fontStyle="Bold"
+            fontStyle="SemiBold"
             fontSize="24dp">
         </UiText>
         <UiText
             marginTop="20dp"
             width="100%"
-            fontStyle="SemiLight"
+            fontStyle="Normal"
             textAlignHor="Start"
             maxNumLines="5"
             text="The Button control provides a Click event to respond to user input from a touch, mouse, keyboard or other input device. You can put different kinds of content in a button, such as text or an image, or you can restyle a button to give it a new look."
-            fontSize="15dp">
+            fontSize="14dp">
         </UiText>
 
         <UiText
             marginTop="24dp"
             text="A simple Button with text content."
-            fontStyle="Bold"
+            fontStyle="SemiBold"
             fontSize="18dp">
         </UiText>
         <Element
@@ -52,9 +52,9 @@
 
         <UiText
             marginTop="30dp"
-            fontStyle="Bold"
+            fontStyle="SemiBold"
             text="A Button with graphical content."
-            fontSize="20dp">
+            fontSize="18dp">
         </UiText>
         <Element
             width="100%"
@@ -80,9 +80,9 @@
 
         <UiText
             marginTop="30dp"
-            fontStyle="Bold"
+            fontStyle="SemiBold"
             text="Accent style applied to Button."
-            fontSize="20dp">
+            fontSize="18dp">
         </UiText>
         <Element
             width="100%"

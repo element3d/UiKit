@@ -60,7 +60,9 @@ if(ANDROID)
 	)	
 elseif(EMSCRIPTEN)
 	target_link_libraries(${PROJECT}
-		yoga
+		yogacore
+		shapes3d
+		glfw3
 	)
 elseif(WIN32)
 	target_link_libraries(${PROJECT}

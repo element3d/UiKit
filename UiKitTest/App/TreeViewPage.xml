@@ -12,18 +12,20 @@
         orientation="Vertical">
         <UiText
             text="TreeView"
-            fontSize="30dp">
+            fontSize="24dp"
+            fontStyle="SemiBold">
         </UiText>
         <UiText
             marginTop="20dp"
             text="Use a ComboBox when you need to conserve on-screen space and when users select only option at time."
-            fontSize="16dp">
+            fontSize="14dp">
         </UiText>
 
         <UiText
             marginTop="24dp"
             text="A ComboBox with items defined inline and its width set."
-            fontSize="24dp">
+            fontSize="18dp"
+            fontStyle="SemiBold">
         </UiText>
         <Element
             width="100%"

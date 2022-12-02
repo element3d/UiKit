@@ -9,6 +9,7 @@ UiNavigationDrawerBase::UiNavigationDrawerBase(e3::Element* pParent)
         this->SetWidth("300dp");
         this->SetHeight("100%");
         this->SetOrientation((e3::EOrientation)1);
+        this->SetOverflow((e3::EOverflow)2);
         this->SetAlignItemsVer((e3::EAlignment)0);
 
 }

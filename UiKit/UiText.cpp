@@ -8,9 +8,14 @@ UiText::UiText(e3::Element* pParent)
 {
 	if (!sFontsInitialized)
 	{
-		e3::Typography::AddFont("Segoe", e3::EFontStyle::Normal, "UiKit/fonts/Segoe/segoeui.ttf");
-		e3::Typography::AddFont("Segoe", e3::EFontStyle::Bold, "UiKit/fonts/Segoe/segoeuib.ttf");
-		e3::Typography::AddFont("Segoe", e3::EFontStyle::Light, "UiKit/fonts/Segoe/segoeuil.ttf");
+		e3::Typography::AddFont("Segoe", e3::EFontStyle::Normal, "UiKit/fonts/SegoeUI/segoeui.ttf");
+		e3::Typography::AddFont("Segoe", e3::EFontStyle::Bold, "UiKit/fonts/SegoeUI/segoeuib.ttf");
+		e3::Typography::AddFont("Segoe", e3::EFontStyle::Light, "UiKit/fonts/SegoeUI/segoeuil.ttf");
+		e3::Typography::AddFont("Segoe", e3::EFontStyle::Black, "UiKit/fonts/SegoeUI/seguibl.ttf");
+		e3::Typography::AddFont("Segoe", e3::EFontStyle::SemiBold, "UiKit/fonts/SegoeUI/seguisb.ttf");
+	//	e3::Typography::AddFont("SegoeUI", e3::EFontStyle::Normal, "UiKit/fonts/SegoeUI/segoeui.ttf");
+//		e3::Typography::AddFont("SegoeUI", e3::EFontStyle::Bold, "UiKit/fonts/SegoeUI/segoeuib.ttf");
+		//e3::Typography::AddFont("SegoeUI", e3::EFontStyle::Light, "UiKit/fonts/SegoeUI/segoeuil.ttf");
 		sFontsInitialized = true;
 	}
 }

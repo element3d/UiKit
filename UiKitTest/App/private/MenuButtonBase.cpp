@@ -28,7 +28,7 @@ MenuButtonBase::MenuButtonBase(e3::Element* pParent)
         mTitle = new UiText();
         pElement1->AddElement(mTitle);
         mTitle->SetText("Button");
-        mTitle->SetFontStyle((e3::EFontStyle)2);
+        mTitle->SetFontStyle((e3::EFontStyle)16);
         mDesc = new UiText();
         pElement1->AddElement(mDesc);
         mDesc->SetMarginTop("4dp");

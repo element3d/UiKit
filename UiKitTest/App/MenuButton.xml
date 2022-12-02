@@ -23,7 +23,7 @@
         <UiText
             element="mTitle"
             text="Button"
-            fontStyle="Bold">
+            fontStyle="SemiBold">
         </UiText>
         <UiText
             marginTop="4dp"
