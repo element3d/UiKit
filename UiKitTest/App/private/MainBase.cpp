@@ -48,7 +48,7 @@ MainBase::MainBase(e3::Element* pParent)
         mSearchInput->SetHeight("40dp");
         mSearchInput->SetAlignItemsHor((e3::EAlignment)0);
                 UiInput* pCustomView2 = new UiInput();
-        mSearchInput->AddElement(pCustomView2);
+        // mSearchInput->AddElement(pCustomView2);
         pCustomView2->SetWidth("100%");
         pCustomView2->SetMarginLeft("14dp");
         pCustomView2->SetMarginRight("14dp");

@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.0)
 
-set(CMAKE_BUILD_TYPE Debug)
+set(CMAKE_BUILD_TYPE Release)
 
 set(CMAKE_CXX_STANDARD 11)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
@@ -17,7 +17,7 @@ set(INCLUDES_DIR $ENV{ELEMENT3D_DIR}/libs/include)
 include_directories(
 	${CMAKE_SOURCE_DIR}
 	${INCLUDES_DIR}
-	${INCLUDES_DIR}/Carbon
+	#${INCLUDES_DIR}/Carbon
 	${INCLUDES_DIR}/element3d
 	${INCLUDES_DIR}/glm
 	${INCLUDES_DIR}/glew
