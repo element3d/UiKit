@@ -19,6 +19,13 @@
 #include "DropDownPage.h"
 #include "TabViewPage.h"
 #include "MenuBarPage.h"
+#include "TextPage.h"
+#include "InputPage.h"
+#include "NumberInputPage.h"
+#include "DateAndTimePage.h"
+#include "CalendarDatePickerPage.h"
+#include "DialogsAndFlyoutsPage.h"
+#include "DialogPage.h"
 
 Main::Main(e3::Element* pParent)
 	: MainBase(pParent)
@@ -80,12 +87,24 @@ Main::Main(e3::Element* pParent)
 		{
 			"Date and Time",
 			"EC92",
-			EPageType::AllControls,
+			EPageType::DateAndTime,
+			{
+				{
+					EPageType::CalendarDatePicker,
+					"CalendarDatePicker",
+				}
+			}
 		},
 		{
 			"Dialogs and Flyouts",
 			"E8BD",
-			EPageType::AllControls,
+			EPageType::DialogsAndFlyouts,
+			{
+			  {
+				EPageType::Dialog,
+				"Dialog",
+			  }
+			}
 		},
 		{
 			"Layout",
@@ -109,6 +128,21 @@ Main::Main(e3::Element* pParent)
 		{
 			"Navigation",
 			"E700"
+		},
+		{
+			"Text",
+			"E8D2",
+			EPageType::Text,
+			{
+				{
+					EPageType::Input,
+					"Input",
+				},
+				{
+					EPageType::NumberInput,
+					"NumberInput"
+				}
+			}
 		}
 	};
 
@@ -259,6 +293,18 @@ void Main::Navigate(EPageType page)
 			pPage = new CollectionsPage();
 			pPage->SetMain(this);
 			break;
+		case EPageType::DateAndTime:
+			pPage = new DateAndTimePage();
+			pPage->SetMain(this);
+			break;
+		case EPageType::DialogsAndFlyouts:
+		  pPage = new DialogsAndFlyoutsPage();
+		  pPage->SetMain(this);
+		  break;
+		case EPageType::Text:
+			pPage = new TextPage();
+			pPage->SetMain(this);
+			break;
 		case EPageType::Button:
 			pPage = new ButtonPage();
 			break;
@@ -294,6 +340,18 @@ void Main::Navigate(EPageType page)
 			break;
 		case EPageType::Expander:
 				pPage = new ExpanderPage();
+			break;
+		case EPageType::Input:
+				pPage = new InputPage();
+			break;
+		case EPageType::NumberInput:
+			pPage = new NumberInputPage();
+			break;
+		case EPageType::CalendarDatePicker:
+			pPage = new CalendarDatePickerPage();
+			break;
+		case EPageType::Dialog:
+			pPage = new DialogPage();
 			break;
 		default:
 			return;

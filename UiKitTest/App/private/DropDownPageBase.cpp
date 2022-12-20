@@ -14,7 +14,7 @@ DropDownPageBase::DropDownPageBase(e3::Element* pParent)
         this->SetAlignItemsHor((e3::EAlignment)0);
     e3::Element* pElement1 = e3::ViewFactory::CreateShape( e3::EOrientation::Horizontal);
     AddElement(pElement1);
-        pElement1->SetWidth("70%");
+        pElement1->SetWidth("100%");
         pElement1->SetAlignItemsHor((e3::EAlignment)0);
         pElement1->SetOrientation((e3::EOrientation)1);
                 UiText* pCustomView1 = new UiText();
@@ -88,12 +88,15 @@ DropDownPageBase::DropDownPageBase(e3::Element* pParent)
         pCustomView11->AddElement(pCustomView13);
                 UiDropDownIconItem* pCustomView14 = new UiDropDownIconItem();
         pCustomView13->AddElement(pCustomView14);
+        pCustomView14->SetIcon(_s(E725));
         pCustomView14->SetText("Send");
                 UiDropDownIconItem* pCustomView15 = new UiDropDownIconItem();
         pCustomView13->AddElement(pCustomView15);
+        pCustomView15->SetIcon(_s(E8CA));
         pCustomView15->SetText("Reply");
                 UiDropDownIconItem* pCustomView16 = new UiDropDownIconItem();
         pCustomView13->AddElement(pCustomView16);
+        pCustomView16->SetIcon(_s(E8C2));
         pCustomView16->SetText("Reply All");
 
 }

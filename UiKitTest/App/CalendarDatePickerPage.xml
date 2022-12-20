@@ -1,0 +1,54 @@
+<Page
+    width="100%"
+    height="100%"
+    padding="60dp"
+    orientation="Vertical"
+    alignItemsVer="Start"
+    alignItemsHor="Start">
+
+    <Element
+        width="100%"
+        alignItemsHor="Start"
+        orientation="Vertical">
+        <UiText
+            text="CalendarDatePicker"
+            fontStyle="SemiBold"
+            fontSize="24dp">
+        </UiText>
+        <UiText
+            marginTop="20dp"
+            width="100%"
+            maxNumLines="5"
+            textAlignHor="Start"
+            text="The Expander has a header and can expand to show a body with more content. Use an Expander when some content is only relevant some of the time (for example to read more information or access additional options for an item)."
+            fontSize="14dp">
+        </UiText>
+
+        <UiText
+            marginTop="24dp"
+            text="A ComboBox with items defined inline and its width set."
+            fontStyle="SemiBold"
+            fontSize="18dp">
+        </UiText>
+        <Element
+            width="100%"
+            minHeight="100dp"
+            marginTop="20dp"
+            borderSize="1dp"
+            backgroundColor="glm::vec4(240, 240, 240, 255)"
+            borderColor="glm::vec4(220, 220, 220, 255)"
+            borderRadius="10"
+            padding="20dp"
+            alignItemsVer="Start"
+            alignItemsHor="Start">
+
+            <UiCalendarDatePicker>
+            </UiCalendarDatePicker>
+
+        </Element>
+
+      
+
+    </Element>
+
+</Page>

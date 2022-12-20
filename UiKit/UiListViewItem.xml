@@ -1,9 +1,10 @@
-<Element
+<UiHoverable
   width="100%"
   height="36dp"
   alignItemsHor="Start"
   borderRadius="4"
-  marginBottom="2dp">
+  marginBottom="2dp"
+  overflow="Hidden">
   <include path="UiColor.h" />
 
   <Element
@@ -15,11 +16,11 @@
     backgroundColor="UiColor::Primary">
   </Element>
 
-  <Text
+  <UiText
     element="mTitle"
     fontSize="14dp"
-    marginLeft="14dp"
+    marginLeft="12dp"
     textColor="glm::vec4(50, 50, 50, 255)">
-  </Text>
+  </UiText>
 
-</Element>
+</UiHoverable>

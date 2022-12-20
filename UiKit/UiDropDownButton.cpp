@@ -24,7 +24,7 @@ void UiDropDownButton::Expand()
 	auto g = GetGeometry();
 
 	e3::Animation* pA = new e3::Animation();
-	pA->Start(0.1, [this, g, bg](float v){
+	pA->Start(0.2, [this, g, bg](float v){
 			GetBody()->SetOpacity(v);
 			GetBody()->SetTranslation(glm::vec3(g.width / 2 - bg.width / 2, v * e3::Dim("6dp"), 0));
 

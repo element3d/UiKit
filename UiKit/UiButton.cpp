@@ -26,8 +26,10 @@ void UiButton::_SetMacOSStyles()
 
 bool UiButton::OnMouseDown(e3::MouseEvent* pE) 
 {
+	UiButtonBase::OnMouseDown(pE);
+	pE->Stop();
 	SetOpacity(.85);
-	return UiButtonBase::OnMouseDown(pE);
+	return true;
 }
 
 bool UiButton::OnMouseUp(e3::MouseEvent* pE)

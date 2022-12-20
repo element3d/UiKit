@@ -1,0 +1,11 @@
+<Element
+    width="40dp"
+    aspectRatio="1"
+    borderRadius="20"
+    margin="2dp">
+
+    <UiText
+        element="mText">
+    </UiText>
+
+</Element>

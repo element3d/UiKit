@@ -1,0 +1,5 @@
+<UiDialog>
+    <UiText
+        text="Dialog">
+    </UiText>
+</UiDialog>

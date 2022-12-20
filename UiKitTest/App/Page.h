@@ -9,6 +9,9 @@ enum class EPageType
 	AllControls,
 	BasicInput,
 	Collections,
+	DateAndTime,
+	DialogsAndFlyouts,
+	Text,
 	Button,
 	DropDownButton,
 	CheckBox,
@@ -20,7 +23,11 @@ enum class EPageType
 	MenuBar,
 	TabView,
 	TreeView,
-	Expander
+	Expander,
+	Input,
+	NumberInput,
+	CalendarDatePicker,
+	Dialog
 };
 
 class Main;

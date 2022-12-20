@@ -1,0 +1,25 @@
+<Page
+    width="100%"
+    height="100%"
+    padding="60dp"
+    orientation="Vertical"
+    alignItemsVer="Start"
+    overflow="Scroll">
+
+    <UiText
+        text="Text"
+        fontSize="26dp"
+        fontStyle="Bold">
+    </UiText>
+
+    <Element
+        element="mMenu"
+        marginTop="20dp"
+        width="100%"
+        orientation="Vertical"
+        alignItemsHor="Start"
+        >
+
+    </Element>
+
+</Page>

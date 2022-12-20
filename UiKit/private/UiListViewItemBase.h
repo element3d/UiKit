@@ -4,9 +4,11 @@
 
 #include <e3/ViewFactory.h>
 #include "UiColor.h"
+#include <UiText.h>
+#include "UiHoverable.h"
 
 
-class UiListViewItemBase : public e3::Element
+class UiListViewItemBase : public UiHoverable
 {
 public:
     struct __Id
@@ -24,7 +26,7 @@ public:
  
 protected:
 	e3::Element* mSelection = nullptr;
-e3::Text* mTitle = nullptr;
+UiText* mTitle = nullptr;
 
 
 };

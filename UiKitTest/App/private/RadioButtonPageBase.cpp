@@ -59,9 +59,9 @@ RadioButtonPageBase::RadioButtonPageBase(e3::Element* pParent)
         pCustomView5->SetText("Option 1");
     e3::Element* pElement4 = e3::ViewFactory::CreateShape( e3::EOrientation::Horizontal);
     pElement2->AddElement(pElement4);
+        pElement4->SetMarginTop("10dp");
                 UiRadioButton* pCustomView6 = new UiRadioButton();
         pElement4->AddElement(pCustomView6);
-        pCustomView6->SetMarginTop("10dp");
         pCustomView6->SetGroup(_s(test));
                 UiText* pCustomView7 = new UiText();
         pElement4->AddElement(pCustomView7);
@@ -69,9 +69,9 @@ RadioButtonPageBase::RadioButtonPageBase(e3::Element* pParent)
         pCustomView7->SetText("Option 2");
     e3::Element* pElement5 = e3::ViewFactory::CreateShape( e3::EOrientation::Horizontal);
     pElement2->AddElement(pElement5);
+        pElement5->SetMarginTop("10dp");
                 UiRadioButton* pCustomView8 = new UiRadioButton();
         pElement5->AddElement(pCustomView8);
-        pCustomView8->SetMarginTop("10dp");
         pCustomView8->SetGroup(_s(test));
                 UiText* pCustomView9 = new UiText();
         pElement5->AddElement(pCustomView9);

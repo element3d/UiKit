@@ -13,7 +13,7 @@ void UiAppBarButton::SetIcon(const std::string& charcode)
 
 void UiAppBarButton::OnMouseEnter(e3::MouseEvent* pE)
 {
-	SetBackgroundColor(glm::vec4(230, 230, 230, 230));
+	SetBackgroundColor(glm::vec4(0, 0, 0, 255 * 0.0337));
 	UiAppBarButtonBase::OnMouseEnter(pE);
 }
 

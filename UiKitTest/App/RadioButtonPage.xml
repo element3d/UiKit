@@ -51,9 +51,9 @@
                     text="Option 1">
                 </UiText>
             </Element>
-            <Element>
+            <Element
+                marginTop="10dp">
                 <UiRadioButton
-                    marginTop="10dp"
                     group="_s(test)">
                 </UiRadioButton>
                 <UiText
@@ -61,9 +61,9 @@
                     text="Option 2">
                 </UiText>
             </Element>
-            <Element>
+            <Element
+                marginTop="10dp">
                 <UiRadioButton
-                    marginTop="10dp"
                     group="_s(test)">
                 </UiRadioButton>
                 <UiText

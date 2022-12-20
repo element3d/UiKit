@@ -1,0 +1,11 @@
+<UiButton>
+
+    <UiText
+        text="Pick a date">
+    </UiText>
+    <UiIcon
+        marginLeft="8dp"
+        width="12dp"
+        charcode="E8C0">
+    </UiIcon>
+</UiButton>

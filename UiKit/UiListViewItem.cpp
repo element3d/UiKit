@@ -17,8 +17,16 @@ void UiListViewItem::Select()
 	auto pItem = mListView->GetSelectedItem();
 	if (pItem && pItem != this) pItem->Unselect();
 	mSelection->SetVisibility(e3::EVisibility::Visible);
-	SetBackgroundColor(glm::vec4(0, 0, 0, 15));
+	SetBackgroundColor(glm::vec4(0, 0, 0, 0.0373 * 255));
 	mListView->SetSelectedItem(this);
+
+	if (!mAnimation) mAnimation = new e3::Animation();
+	mAnimation->Start(0.1, [this](float v) {
+	  mSelection->SetScale(glm::vec3(1, v, 1), e3::ETransformAlignment::Center);
+	  }, [this]() {
+		mAnimation = nullptr;
+	  });
+	
 }
 
 void UiListViewItem::Unselect()
@@ -38,11 +46,11 @@ bool UiListViewItem::OnClick(e3::MouseEvent* pE)
 void UiListViewItem::OnMouseEnter(e3::MouseEvent* pE)
 {
 	UiListViewItemBase::OnMouseEnter(pE);
-	SetBackgroundColor(glm::vec4(0, 0, 0, 10));
+	//SetBackgroundColor(glm::vec4(0, 0, 0, 10));
 }
 
 void UiListViewItem::OnMouseLeave(e3::MouseEvent* pE)
 {
 	UiListViewItemBase::OnMouseLeave(pE);
-	SetBackgroundColor(glm::vec4(0, 0, 0, 0));
+	//SetBackgroundColor(glm::vec4(0, 0, 0, 0));
 }

@@ -14,6 +14,13 @@ UiButtonBase::UiButtonBase(e3::Element* pParent)
         this->SetOverflow((e3::EOverflow)0);
         this->SetPaddingTop("7dp");
         this->SetPaddingBottom("7dp");
+        e3::ShadowParams ShadowParams;
+        ShadowParams.Color = glm::vec4(0, 0, 0, 255);
+        ShadowParams.BlurSize = 1;
+        ShadowParams.Opacity = 1.0;
+        ShadowParams.Scale = 1.0;
+        ShadowParams.Offset = glm::ivec2(0, 1);
+        SetShadow(ShadowParams);
     mHover = e3::ViewFactory::CreateShape( e3::EOrientation::Horizontal);
     AddElement(mHover);
         mHover->SetTop(0);

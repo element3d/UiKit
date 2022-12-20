@@ -26,9 +26,7 @@
     <Element
         element="mContent">
     </Element>
-    <!-- <UiText
-        fontSize="14dp">
-    </UiText> -->
+
 
      <UiIcon
         element="mIcon"

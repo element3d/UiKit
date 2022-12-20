@@ -22,6 +22,7 @@ protected:
 private:
 	friend class UiListView;
 	UiListView* mListView = nullptr;
+	e3::Animation* mAnimation = nullptr;
 };
 
 #endif // UiListViewItem_H_

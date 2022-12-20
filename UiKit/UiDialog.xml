@@ -1,0 +1,15 @@
+<Element
+    width="400dp"
+    height="300dp"
+    stopEvents="true"
+    positionType="Absolute"
+    backgroundColor="glm::vec4(255)"
+    borderRadius="8">
+    <Shadow
+        blurSize="30"
+        offset="x: 0, y: 10"
+        opacity="1"
+        color="glm::vec4(50, 50, 50, 255)">
+    </Shadow>
+    
+</Element>
