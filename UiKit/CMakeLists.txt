@@ -35,6 +35,11 @@ elseif(WIN32)
         glew32
         OpenGL32
     )
+elseif(APPLE)
+    target_link_libraries(${PROJECT}
+        "-framework OpenGL"
+        GLEW
+    )
 elseif(UNIX)
     target_link_libraries(${PROJECT}
         GL

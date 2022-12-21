@@ -13,10 +13,6 @@ public:
 	bool OnMouseUp(e3::MouseEvent* pEvent) override;
 	void OnMouseMove(e3::MouseEvent* pEvent) override;
 
-	void Render() 
-	{
-	  __super::Render();
-	}
 private:
 	void _SetMacOSStyles();
 
