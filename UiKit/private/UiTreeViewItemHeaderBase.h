@@ -3,9 +3,10 @@
 #define __UiTreeViewItemHeaderBase_H__
 
 #include <e3/ViewFactory.h>
+#include "UiHoverable.h"
 
 
-class UiTreeViewItemHeaderBase : public e3::Element
+class UiTreeViewItemHeaderBase : public UiHoverable
 {
 public:
     struct __Id
@@ -22,8 +23,7 @@ public:
 
  
 protected:
-	e3::Element* mHover = nullptr;
-
+	
 
 };
 

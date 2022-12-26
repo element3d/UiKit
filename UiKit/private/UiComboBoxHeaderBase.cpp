@@ -6,7 +6,6 @@
 UiComboBoxHeaderBase::UiComboBoxHeaderBase(e3::Element* pParent)
 	: e3::Element(pParent)
 {
-        this->SetWidth("100%");
         this->SetOverflow((e3::EOverflow)0);
     mHover = e3::ViewFactory::CreateShape( e3::EOrientation::Horizontal);
     AddElement(mHover);

@@ -4,6 +4,7 @@
 
 #include <e3/ViewFactory.h>
 #include "UiColor.h"
+#include <UiText.h>
 #include <UiIcon.h>
 #include "UiComboBoxHeader.h"
 
@@ -25,7 +26,8 @@ public:
 
  
 protected:
-	e3::Text* mText = nullptr;
+	UiText* mText = nullptr;
+e3::Element* mIconCont = nullptr;
 UiIcon* mIcon = nullptr;
 
 

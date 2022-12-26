@@ -13,6 +13,9 @@ public:
 	bool OnMouseUp(e3::MouseEvent* pEvent) override;
 	void OnMouseMove(e3::MouseEvent* pEvent) override;
 
+	void OnMouseLeave(e3::MouseEvent* e);
+	void OnMouseEnter(e3::MouseEvent* e);
+
 private:
 	void _SetMacOSStyles();
 
@@ -20,6 +23,7 @@ private:
 	e3::Animation* mAnimation = nullptr;
 	e3::Animation* mInfoAnimation = nullptr;
 	float mNValue = 0;
+	
 };
 
 

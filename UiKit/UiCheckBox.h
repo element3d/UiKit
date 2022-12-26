@@ -30,6 +30,9 @@ public:
 	void SemiCheck();
 	void UnCheck();
 
+	void OnMouseEnter(e3::MouseEvent*);
+	void OnMouseLeave(e3::MouseEvent*);
+
 private:
 	void _SetMacOSStyles();
 	EUiCheckBoxState mState = EUiCheckBoxState::UnChecked;

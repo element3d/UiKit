@@ -1,5 +1,7 @@
 #include "UiMenuBar.h"
 #include <e3/Application.h>
+#include "UiKit.h"
+
 UiMenuBar::UiMenuBar(e3::Element* pParent)
 	: UiMenuBarBase(pParent)
 {
@@ -15,11 +17,30 @@ UiMenuBar::UiMenuBar(e3::Element* pParent)
 	mFlyout->SetBackgroundColor(glm::vec4(247, 247, 247, 255));
 	mFlyout->SetPaddingLeft("4dp");
 	mFlyout->SetPaddingRight("4dp");
+	mFlyout->SetPadding("4dp");
 	mFlyout->SetBorderRadius(7);
 	mFlyout->SetOrientation(e3::EOrientation::Vertical);
 	mFlyout->SetPositionType(e3::EPositionType::Absolute);
 	mFlyout->SetLeft(0);
 	mFlyout->SetTop(0);
+
+	auto des = UiKit::GetDesign();
+	switch (des)
+	{
+	case EUiKitDesign::Windows:
+	  break;
+	case EUiKitDesign::Apple:
+	  break;
+	case EUiKitDesign::Material:
+	  mFlyout->SetBorderRadius(0);
+	  mFlyout->SetPaddingLeft("0dp");
+	  mFlyout->SetPaddingRight("0dp");
+	  break;
+	default:
+	  break;
+	}
+	
+
 	e3::ShadowParams s;
 	s.BlurSize = 10;
 	s.Color = glm::vec4(50, 50, 50, 255);
@@ -56,7 +77,9 @@ void UiMenuBar::AddElement(UiMenu* pMenu)
 		pHover->SetWidth(mg.width + e3::Dim("16dp"));
 		pHover->SetHeight("32dp");
 		pHover->SetBackgroundColor(glm::vec4(0, 0, 0, 0.03 * 255));
-		pHover->SetBorderRadius(5);
+		auto des = UiKit::GetDesign();
+		if (des == EUiKitDesign::Material) pHover->SetBorderRadius(0);
+		else pHover->SetBorderRadius(5);
 		pHover->SetPositionType(e3::EPositionType::Absolute);
 		InsertElement(0, pHover);
 

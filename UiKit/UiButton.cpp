@@ -5,47 +5,84 @@
 UiButton::UiButton(e3::Element* pParent)
 	: UiButtonBase(pParent)
 {
-	UiKitOS os = UiKit::GetOS();
-	switch (os)
+	auto des = UiKit::GetDesign();
+	if (des == EUiKitDesign::Material)
 	{
-	case UiKitOS::MacOS:
-		_SetMacOSStyles();
-	default:
-		break;
+		if (mStyle == UiDefault) mRipple->SetBackgroundColor(glm::vec4(98, 0, 238, 0.06 * 255));
+		else mRipple->SetBackgroundColor(glm::vec4(255, 255, 255, 0.36 * 255));
 	}
-}
-
-void UiButton::_SetMacOSStyles()
-{
-	SetBorderColor(glm::vec4(0, 0, 0, 0.2 * 255));
-	SetBorderRadius(e3::Dim("6dp"));
-	e3::ShadowParams sh;
-	sh.BlurSize = 0;
-	SetShadow(sh);
 }
 
 bool UiButton::OnMouseDown(e3::MouseEvent* pE) 
 {
 	UiButtonBase::OnMouseDown(pE);
 	pE->Stop();
-	SetOpacity(.85);
+	auto des = UiKit::GetDesign();
+	if (des == EUiKitDesign::Material)
+	{
+	  e3::ShadowParams s;
+	  s.BlurSize = 20;
+	  s.Color = glm::vec4(0, 0, 0, 255);
+	  s.Opacity = 1;
+	  s.Offset = glm::vec2(0, 5);
+	  s.Scale = 1;
+	  SetShadow(s);
+	  mRipple->SetOpacity(1);
+
+	  if (!mAnimation) mAnimation = new e3::Animation();
+	  
+	  mAnimation->Start(0.1, [this](float v) {
+		mRipple->SetScale(glm::vec3(v), e3::ETransformAlignment::Center);
+		}, [this]() {
+		  mAnimation = nullptr;
+		});
+	}
+	else
+	{
+	  SetOpacity(.85);
+	}
 	return true;
 }
 
 bool UiButton::OnMouseUp(e3::MouseEvent* pE)
 {
-	SetOpacity(1);
+	auto des = UiKit::GetDesign();
+	if (des == EUiKitDesign::Material)
+	{
+	  if (!mAnimation) mAnimation = new e3::Animation();
+	  mAnimation->Start(0.3, GetOpacity(), 0, [this](float v) {
+		mRipple->SetOpacity(v);
+		}, [this]() {
+		  mAnimation = nullptr;
+		});
+	}
+	else
+	{
+	  SetOpacity(1);
+	}
 	return UiButtonBase::OnMouseUp(pE);
 }
-
+#include <e3/Application.h>
 void UiButton::OnMouseEnter(e3::MouseEvent* pE)
 {
 	UiButtonBase::OnMouseEnter(pE);
-	mHover->SetBackgroundColor(glm::vec4(0, 0, 0, 8));
+
+	//GetApplication()->SetCursor(e3::ECursor::Hand);
+	auto des = UiKit::GetDesign();
+	if (des != EUiKitDesign::Material)
+	{
+		mHover->SetBackgroundColor(glm::vec4(0, 0, 0, 8));
+	}
+	else 
+	{
+		if (mStyle == UiDefault)
+			mHover->SetBackgroundColor(glm::vec4(98, 0, 238, 0.04 * 255));
+	}
 }
 
 void UiButton::OnMouseLeave(e3::MouseEvent* pE)
 {
+  //GetApplication()->SetCursor(e3::ECursor::Arrow);
 	UiButtonBase::OnMouseLeave(pE);
 	mHover->SetBackgroundColor(glm::vec4(0));
 }

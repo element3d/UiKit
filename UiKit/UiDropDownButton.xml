@@ -2,11 +2,22 @@
     borderSize="1dp"
     borderColor="glm::vec4(220, 220, 220, 255)"
     borderRadius="4"
-
+    
     padding="14dp"
     paddingTop="7dp"
     paddingBottom="7dp"
     backgroundColor="glm::vec4(250, 250, 250, 255)">
+    <include path="UiColor.h" />
+
+    <Element
+        element="mUnderline"
+        left="0"
+        right="0"
+        bottom="0"
+        positionType="Absolute"
+        backgroundColor="UiColor::Primary"
+        height="2dp">
+    </Element>
 
     <Element
       element="mHover"
@@ -27,14 +38,23 @@
         element="mContent">
     </Element>
 
+    <Element
+        element="mIconCont"
+        marginLeft="14dp"
+        scaling="Shrink"
+        padding="4dp"
+        aspectRatio="1"
+        borderRadius="4"
+        backgroundColor="UiColor::Primary">
 
      <UiIcon
         element="mIcon"
-        marginLeft="14dp"
+       
         width="8dp"
         height="8dp"
         color="glm::vec4(50, 50, 50, 255)"
         charcode="E70D">
     </UiIcon>
+    </Element>
 
 </Dropdown>

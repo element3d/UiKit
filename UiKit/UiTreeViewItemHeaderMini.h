@@ -27,6 +27,9 @@ public:
 
 	virtual void AddElement(e3::Element* pElement) override;
 
+	void OnMouseEnter(e3::MouseEvent* pE);
+	void OnMouseLeave(e3::MouseEvent* pE);
+
 private:
 	int mIndicatorPosition = UiLeft;
 };

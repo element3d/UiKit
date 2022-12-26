@@ -20,8 +20,12 @@ public:
 	void OnMouseEnter(e3::MouseEvent* pE);
 	void OnMouseLeave(e3::MouseEvent* pE);
 
+protected:
+	UiStyle mStyle = UiDefault;
+
 private:
-	void _SetMacOSStyles();
+  e3::Animation* mAnimation = nullptr;
+
 };
 
 #endif // UiButton_H_

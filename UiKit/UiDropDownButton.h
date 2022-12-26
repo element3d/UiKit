@@ -18,6 +18,9 @@ public:
 
 	void OnMouseEnter(e3::MouseEvent* pE);
 	void OnMouseLeave(e3::MouseEvent* pE);
+
+private:
+  void _SetMacOSStyles();
 };
 
 #endif // UiDropDownButton_H_

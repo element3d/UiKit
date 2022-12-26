@@ -6,12 +6,13 @@
 UiComboBoxItemBase::UiComboBoxItemBase(e3::Element* pParent)
 	: e3::Element(pParent)
 {
-        this->SetWidth("100%");
+        this->SetMinWidth("100%");
         this->SetHeight("34dp");
         this->SetAlignItemsHor((e3::EAlignment)0);
         this->SetBorderRadius(4);
         this->SetMarginTop("2dp");
         this->SetMarginBottom("2dp");
+        this->SetPaddingRight("14dp");
         this->SetOverflow((e3::EOverflow)0);
     mHover = e3::ViewFactory::CreateShape( e3::EOrientation::Horizontal);
     AddElement(mHover);

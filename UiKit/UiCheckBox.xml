@@ -1,10 +1,27 @@
 <Element
     width="20dp"
-    height="20dp"
-    borderSize="1dp"
-    borderRadius="4"
-    borderColor="glm::vec4(150, 150, 150, 255)">
+    height="20dp">
     <include path="UiColor.h" />
+
+    <Element
+        element="mHover"
+        width="36dp"
+        borderRadius="0.5"
+        height="36dp"
+        opacity="0"
+        backgroundColor="glm::vec4(98, 0, 238, 0.04 * 255)"
+        positionType="Absolute">
+    </Element>
+ 
+    <Element
+        element="mBG"
+        width="20dp"
+        height="20dp"
+        borderSize="1dp"
+        borderRadius="4"
+        borderColor="glm::vec4(150, 150, 150, 255)"
+        positionType="Absolute">
+    </Element>
 
     <UiIcon
         element="mCheck"

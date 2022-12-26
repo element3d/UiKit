@@ -1,9 +1,25 @@
 #include "UiDropDownBody.h"
+#include "UiKit.h"
 
 UiDropDownBody::UiDropDownBody(e3::Element* pParent)
 	: UiDropDownBodyBase(pParent)
 {
-
+  EUiKitDesign design = UiKit::GetDesign();
+  switch (design)
+  {
+  case EUiKitDesign::Windows:
+	break;
+  case EUiKitDesign::Apple:
+	break;
+  case EUiKitDesign::Material:
+	SetBorderRadius(0);
+	SetPadding(0);
+	SetBorderSize(0);
+	SetBackgroundColor(glm::vec4(255));
+	break;
+  default:
+	break;
+  }
 }
 
 void UiDropDownBody::Expand()

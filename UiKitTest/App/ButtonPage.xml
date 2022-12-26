@@ -42,11 +42,16 @@
             padding="20dp"
             alignItemsHor="Start">
 
-            <UiButton>
+            <UiButtonDefault
+                text="BUTTON">
+               
+            </UiButtonDefault>
+
+            <!-- <UiButton>
                 <UiText
                     text="Standart Ui Button">
                 </UiText>
-            </UiButton>
+            </UiButton> -->
 
         </Element>
 

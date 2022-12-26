@@ -1,5 +1,4 @@
 <UiComboBoxHeader
-    width="100%"
     height="34dp"
     alignItemsHor="SpaceBetween"
     backgroundColor="glm::vec4(252, 252, 252, 255)"
@@ -8,33 +7,27 @@
     borderColor="glm::vec4(0, 0, 0, 0.1622 * 255)">
     <include path="UiColor.h" />
 
-    <Text
+    <UiText
         element="mText"
         marginLeft="10dp"
         fontSize="14dp"
         text="Pick A Color"
-        font="_s(UiKit/fonts/SegoeUIVF.ttf)"
         textColor="glm::vec4(50, 50, 50, 255)">
-    </Text>
-    <UiIcon
-        element="mIcon"
-        marginLeft="16dp"
-        marginRight="16dp"
-        width="8dp"
-        height="8dp"
-        color="glm::vec4(0, 0, 0, 255)"
-        charcode="E70D">
-    </UiIcon>
-    <!-- <FontIcon
-        element="mIcon"
-        marginLeft="14dp"
-        marginRight="14dp"
-        width="8dp"
-        height="8dp"
-        color="glm::vec4(0, 0, 0, 255)"
-        font="_s(UiKit/icons/Segoe_Fluent_Icons.ttf)"
-        charcode="E011">
-    </FontIcon> -->
-    
-
+    </UiText>
+    <Element 
+        element="mIconCont"   
+        width="16dp"
+        height="18dp"
+        marginLeft="2dp"
+        marginRight="2dp"
+        borderRadius="4"
+        backgroundColor="glm::vec4(60, 60, 67, 0.18 * 255)">
+        <UiIcon
+            element="mIcon"
+            width="8dp"
+            aspectRatio="1"
+            color="glm::vec4(0, 0, 0, 255)"
+            charcode="E70D">
+        </UiIcon>
+    </Element> 
 </UiComboBoxHeader>

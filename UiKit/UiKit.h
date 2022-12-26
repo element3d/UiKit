@@ -4,21 +4,21 @@
 
 #include "private/UiKitBase.h"
 
-enum class UiKitOS 
+enum class EUiKitDesign 
 {
 	Windows,
-	MacOS,
-	Linux
+	Apple,
+	Material
 };
 
 class E3_EXPORT UiKit
 {
 public:
-	static void SetOS(UiKitOS os);
-	static UiKitOS GetOS();
+	static void SetDesign(EUiKitDesign os);
+	static EUiKitDesign GetDesign();
 
 private:
-	static UiKitOS sOs;
+	static EUiKitDesign sOs;
 };
 
 #endif // UiKit_H_

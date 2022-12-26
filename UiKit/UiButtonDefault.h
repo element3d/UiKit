@@ -13,7 +13,11 @@ public:
 	void SetStyle(UiStyle style);
 
 private:
-	UiStyle mStyle = UiDefault;
+	void _SetWindowsStyles();
+  void _SetMacOSStyles();
+	void _SetMaterialStyles();
+
+private:
 	glm::vec4 mColor;
 };
 

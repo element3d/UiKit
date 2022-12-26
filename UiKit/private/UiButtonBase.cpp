@@ -28,5 +28,13 @@ UiButtonBase::UiButtonBase(e3::Element* pParent)
         mHover->SetBottom(0);
         mHover->SetRight(0);
         mHover->SetPositionType((e3::EPositionType)1);
+    mRipple = e3::ViewFactory::CreateShape( e3::EOrientation::Horizontal);
+    AddElement(mRipple);
+        mRipple->SetWidth("150%");
+        mRipple->SetAspectRatio(1.000000);
+        mRipple->SetPositionType((e3::EPositionType)1);
+        mRipple->SetOpacity(0.000000);
+        mRipple->SetBorderRadius(0.5);
+        mRipple->SetBackgroundColor(glm::vec4(255, 255, 255, 0.36 * 255));
 
 }

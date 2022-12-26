@@ -1,6 +1,5 @@
 <Dropdown>
     <Element
-        element="mHeader"
-        width="100%">
+        element="mHeader">
     </Element>
 </Dropdown>

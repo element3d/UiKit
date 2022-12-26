@@ -24,7 +24,9 @@ public:
 
  
 protected:
-	UiIcon* mCheck = nullptr;
+	e3::Element* mHover = nullptr;
+e3::Element* mBG = nullptr;
+UiIcon* mCheck = nullptr;
 
 
 };

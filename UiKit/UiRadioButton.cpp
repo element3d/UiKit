@@ -6,12 +6,19 @@ std::map<std::string, std::vector<UiRadioButton*>> UiRadioButton::sRadioGroups;
 UiRadioButton::UiRadioButton(e3::Element* pParent)
 	: UiRadioButtonBase(pParent)
 {
-	UiKitOS os = UiKit::GetOS();
+	EUiKitDesign os = UiKit::GetDesign();
 
 	switch (os)
 	{
-	case UiKitOS::MacOS:
+	case EUiKitDesign::Apple:
 		_SetMacOSStyles();
+		break;
+	case EUiKitDesign::Material:
+	  SetWidth("18dp");
+	  SetHeight("18dp");
+	  SetBorderSize(e3::Dim("2dp"));
+	  mCircle->SetBackgroundColor(UiColor::Primary);
+	  break;
 	default:
 		break;
 	}
@@ -19,8 +26,11 @@ UiRadioButton::UiRadioButton(e3::Element* pParent)
 
 void UiRadioButton::_SetMacOSStyles()
 {
-	SetBorderSize(0);
-	SetBackgroundColor(UiColor::White);
+	//SetBorderSize(0);
+  SetWidth("18dp");
+  SetHeight("18dp");
+  SetBorderColor(glm::vec4(0, 0, 0, 0.12 * 255));
+  SetBackgroundColor(UiColor::White);
 }
 
 void UiRadioButton::SetGroup(const std::string& group)
@@ -40,28 +50,84 @@ std::string UiRadioButton::GetGroup()
 void UiRadioButton::Check()
 {
 	mChecked = true;
-	mCircle->SetWidth(GetGeometry().width * 0.55);
-	SetBorderSize(0);
-	SetBackgroundColor(UiColor::Primary);
+	
+	float scale = 0.55;
+	EUiKitDesign os = UiKit::GetDesign();
+	switch (os)
+	{
+	case EUiKitDesign::Apple:
+	  SetBackgroundLinearGradient(0, glm::vec4(75, 145, 247, 255), glm::vec4(54, 122, 246, 255));
+	  SetBorderSize(0);
+	  break;
+	case EUiKitDesign::Material:
+	{
+		SetBorderColor(UiColor::Primary);
+		scale = 0.2;
+		break;
+	}
+	default:
+	  SetBackgroundColor(UiColor::Primary);
+	  SetBorderSize(0);
+	  break;
+	}
+
+	// mCircle->SetWidth(GetGeometry().width * scale);
 }
 
 void UiRadioButton::UnCheck()
 {
 	mChecked = false;
 	mCircle->SetWidth(0);
-	SetBorderSize("1dp");
-	SetBackgroundColor(glm::vec4(0));
+	
+
+	EUiKitDesign os = UiKit::GetDesign();
+	switch (os)
+	{
+	case EUiKitDesign::Apple:
+	  SetBackgroundColor(glm::vec4(255));
+	  SetBorderSize("1dp");
+	  break;
+	case EUiKitDesign::Material:
+	  SetBorderColor(glm::vec4(138, 138, 138, 255));
+	  SetBackgroundColor(glm::vec4(0));
+	  break;
+	default:
+	  SetBackgroundColor(glm::vec4(0));
+	  SetBorderSize("1dp");
+	  break;
+	}
 }
 
 void UiRadioButton::OnMouseEnter(e3::MouseEvent* pEvent) 
 {
 	UiRadioButtonBase::OnMouseEnter(pEvent);
-	if (!mChecked) SetBackgroundColor(glm::vec4(235, 235, 235, 255));
+	EUiKitDesign os = UiKit::GetDesign();
+	switch (os)
+	{
+	case EUiKitDesign::Apple:
+	  break;
+	case EUiKitDesign::Material:
+	  mHover->SetOpacity(1);
+	  break;
+	default:
+	  if (!mChecked) SetBackgroundColor(glm::vec4(235, 235, 235, 255));
+	  break;
+	}
 }
 
 void UiRadioButton::OnMouseLeave(e3::MouseEvent* pEvent) 
 {
 	UiRadioButtonBase::OnMouseLeave(pEvent);
+
+	EUiKitDesign os = UiKit::GetDesign();
+	switch (os)
+	{
+	case EUiKitDesign::Apple:
+	  return;
+	case EUiKitDesign::Material:
+	  mHover->SetOpacity(0);
+	  return;
+	}
 	if (!mChecked) 
 	{
 		SetBackgroundColor(glm::vec4(244, 244, 244, 255));

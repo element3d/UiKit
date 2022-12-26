@@ -15,6 +15,9 @@ public:
 	void Select();
 	void Unselect();
 
+private:
+  void _SetMacOSStyles();
+
 protected:
 	bool OnClick(e3::MouseEvent* pE);
 	void OnMouseEnter(e3::MouseEvent* pE);

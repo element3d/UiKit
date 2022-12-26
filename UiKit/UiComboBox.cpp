@@ -7,7 +7,7 @@ UiComboBox::UiComboBox(e3::Element* pParent)
 	SetOnLoadCallback([this](){
 		if (GetBody())
 		{
-			GetBody()->SetWidth(GetGeometry().width);
+			GetBody()->SetMinWidth(GetGeometry().width);
 			if (mBody->GetNumChildren())
 			{
 				UiComboBoxHeaderDefault* pDefHead = dynamic_cast<UiComboBoxHeaderDefault*>(mComboHeader);
@@ -31,7 +31,7 @@ void UiComboBox::AddElement(UiComboBoxBody* pBody)
 {
 	SetBody(pBody);
 	mBody = pBody;
-	pBody->SetWidth(GetGeometry().width);
+	pBody->SetMinWidth(GetGeometry().width);
 	pBody->SetOnChangeCallback([this](int index, UiComboBoxItem* pItem) {
 		UiComboBoxHeaderDefault* pDefHead = dynamic_cast<UiComboBoxHeaderDefault*>(mComboHeader);
 		if (pDefHead)
@@ -49,6 +49,7 @@ void UiComboBox::Expand()
 	if (mBody->GetSelectedItem())
 	{
 		auto g = GetGeometry();
+		mBody->SetMinWidth(g.width);
 //		mBody->UpdateGeometry();
 		mBody->GetSelectedItem()->UpdateGeometry();
 		auto ig = mBody->GetSelectedItem()->GetGeometry();

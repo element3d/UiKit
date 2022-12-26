@@ -18,6 +18,16 @@
         positionType="Absolute">
     </Element>
 
+    <Element
+        element="mRipple"
+       width="150%"
+       aspectRatio="1"
+        positionType="Absolute"
+        opacity="0"
+        borderRadius="0.5"
+        backgroundColor="glm::vec4(255, 255, 255, 0.36 * 255)">
+    </Element>
+
     <Shadow
         blurSize="1"
         offset="x: 0, y: 1"

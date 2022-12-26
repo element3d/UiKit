@@ -50,7 +50,6 @@ ComboBoxPageBase::ComboBoxPageBase(e3::Element* pParent)
         pElement2->SetOrientation((e3::EOrientation)1);
                 UiComboBox* pCustomView4 = new UiComboBox();
         pElement2->AddElement(pCustomView4);
-        pCustomView4->SetWidth("200dp");
                 UiComboBoxHeaderDefault* pCustomView5 = new UiComboBoxHeaderDefault();
         pCustomView4->AddElement(pCustomView5);
                 UiComboBoxBody* pCustomView6 = new UiComboBoxBody();

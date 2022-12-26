@@ -3,6 +3,7 @@
 #define __UiSwitchBase_H__
 
 #include <e3/ViewFactory.h>
+#include "UiColor.h"
 
 
 class UiSwitchBase : public e3::Element
@@ -22,7 +23,9 @@ public:
 
  
 protected:
-	e3::Element* mCircle = nullptr;
+	e3::Element* mBG = nullptr;
+e3::Element* mCircle = nullptr;
+e3::Element* mHover = nullptr;
 
 
 };

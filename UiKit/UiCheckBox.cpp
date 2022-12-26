@@ -6,13 +6,24 @@ std::map<std::string, std::vector<UiCheckBox*>> UiCheckBox::sCheckBoxGroups;
 UiCheckBox::UiCheckBox(e3::Element* pParent)
 	: UiCheckBoxBase(pParent)
 {
-	UiKitOS os = UiKit::GetOS();
+	EUiKitDesign os = UiKit::GetDesign();
 
 	switch (os)
 	{
-	case UiKitOS::MacOS:
+	case EUiKitDesign::Apple:
 		_SetMacOSStyles();
+		break;
+	case EUiKitDesign::Material:
+	  mBG->SetBorderRadius(0);
+	  mBG->SetBorderSize("2dp");
+	  mBG->SetWidth("18dp");
+	  mBG->SetHeight("18dp");
+	  SetWidth("18dp");
+	  SetHeight("18dp");
+	  break;
 	default:
+		RemoveElement(mHover);
+		mHover = nullptr;
 		break;
 	}
 
@@ -45,33 +56,67 @@ std::string UiCheckBox::GetGroup()
 
 void UiCheckBox::_SetMacOSStyles()
 {
-	SetBackgroundColor(UiColor::White);
-	SetBorderColor(glm::vec4(0, 0, 0, 0.18 * 255));
+	mBG->SetBorderRadius(e3::Dim("3dp"));
+	mBG->SetBackgroundColor(UiColor::White);
+	mBG->SetBorderColor(glm::vec4(0, 0, 0, 0.18 * 255));
+	RemoveElement(mHover);
+	mHover = nullptr;
 }
 
 void UiCheckBox::Check()
 {
-	SetBackgroundColor(UiColor::Primary);
+	EUiKitDesign os = UiKit::GetDesign();
+
+	switch (os)
+	{
+	case EUiKitDesign::Apple:
+	  mBG->SetBackgroundLinearGradient(0, glm::vec4(75, 145, 247, 255), glm::vec4(54, 122, 246, 255));
+	  break;
+	default:
+	  mBG->SetBackgroundColor(UiColor::Primary);
+	  break;
+	}
 	mCheck->SetVisibility(e3::EVisibility::Visible);
-	SetBorderSize(0);
+	mBG->SetBorderSize(0);
 	mCheck->SetCharcode("E73E");
 	mState = EUiCheckBoxState::Checked;
 }
 
 void UiCheckBox::SemiCheck() 
 {
-	SetBackgroundColor(UiColor::Primary);
+  EUiKitDesign os = UiKit::GetDesign();
+  switch (os)
+  {
+  case EUiKitDesign::Apple:
+	mBG->SetBackgroundLinearGradient(0, glm::vec4(75, 145, 247, 255), glm::vec4(54, 122, 246, 255));
+	break;
+  default:
+	mBG->SetBackgroundColor(UiColor::Primary);
+	break;
+  }
 	mCheck->SetVisibility(e3::EVisibility::Visible);
-	SetBorderSize(0);
+	mBG->SetBorderSize(0);
 	mCheck->SetCharcode("E738");
 	mState = EUiCheckBoxState::SemiChecked;
 }
 
+void UiCheckBox::OnMouseEnter(e3::MouseEvent* e) 
+{
+  UiCheckBoxBase::OnMouseEnter(e);
+  if (mHover) mHover->SetOpacity(1);
+}
+
+void UiCheckBox::OnMouseLeave(e3::MouseEvent* e) 
+{
+  UiCheckBoxBase::OnMouseLeave(e);
+  if (mHover) mHover->SetOpacity(0);
+}
+
 void UiCheckBox::UnCheck()
 {
-	SetBackgroundColor(glm::vec4(0));
+  mBG->SetBackgroundColor(glm::vec4(0));
 	mCheck->SetVisibility(e3::EVisibility::Gone);
-	SetBorderSize("1dp");
+	mBG->SetBorderSize("1dp");
 	mState = EUiCheckBoxState::UnChecked;
 }
 

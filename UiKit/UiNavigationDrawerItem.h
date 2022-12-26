@@ -42,6 +42,7 @@ private:
 	e3::Connection mConn;
 	e3::Animation* mAnimation = nullptr;
 	float mChildContHeight = 0;
+	bool mSelected = false;
 	
 };
 

@@ -1,20 +1,60 @@
 #include "UiNavigationDrawerItem.h"
 #include "UiNavigationDrawer.h"
 #include <e3/Application.h>
+#include "UiKit.h"
 
 UiNavigationDrawerItem::UiNavigationDrawerItem(e3::Element* pParent)
 	: UiNavigationDrawerItemBase(pParent)
 {
+  EUiKitDesign os = UiKit::GetDesign();
+  switch (os)
+  {
+  case EUiKitDesign::Apple:
+	mHeader->SetBorderRadius(e3::Dim("6dp"));
+	mTitle->SetMarginLeft("10dp");
+	RemoveElement(mSelection);
+	mSelection = nullptr;
+	break;
+  case EUiKitDesign::Material:
+	//mHeader->SetBorderRadius(0);
+	mHeader->SetHeight("40dp");
+	RemoveElement(mSelection);
+	mSelection = nullptr;
+	break;
+  default:
+	// mHover->SetBackgroundColor(glm::vec4(0, 0, 0, 0.0373 * 255));
+	break;
+  }
+
 	mExpandIcon->SetVisibility(e3::EVisibility::Gone);
 	mChildCont->SetVisibility(e3::EVisibility::Hidden);
 
 	mHover->SignalOnMouseEnter.Connect([this](e3::MouseEvent* pE){
-			mHover->SetBackgroundColor(glm::vec4(0, 0, 0, 0.0373 * 255));
-			pE->Stop();
+	  EUiKitDesign os = UiKit::GetDesign();
+	  switch (os)
+	  {
+	  case EUiKitDesign::Apple:
+		mHover->SetBackgroundLinearGradient(0, glm::vec4(75, 145, 247, 255), glm::vec4(54, 122, 246, 255));
+		mTitle->SetTextColor(glm::vec4(255));
+		mIcon->SetColor(glm::vec4(255));
+		mExpandIcon->SetColor(glm::vec4(255));
+		break;
+	  default:
+		mHover->SetBackgroundColor(glm::vec4(0, 0, 0, 0.0373 * 255));
+		break;
+	  }
+	  
+	  pE->Stop();
 	});
 
 	mHover->SignalOnMouseLeave.Connect([this](e3::MouseEvent* pE){
 		mHover->SetBackgroundColor(glm::vec4(0, 0, 0, 0));
+		if (!mSelected) 
+		{
+		  mTitle->SetTextColor(glm::vec4(60, 60, 60, 255));
+		  mIcon->SetColor(glm::vec4(00, 0, 0, 255));
+		  mExpandIcon->SetColor(glm::vec4(00, 0, 0, 255));
+		}
 		pE->Stop();
 	});
 
@@ -129,9 +169,32 @@ UiNavigationDrawerItem::UiNavigationDrawerItem(e3::Element* pParent)
 
 void UiNavigationDrawerItem::Select()
 {
+  mSelected = true;
 	if (mDrawer && mDrawer->mSelectedItem) mDrawer->mSelectedItem->Unselect();
-	mSelection->SetVisibility(e3::EVisibility::Visible);
-	mHeader->SetBackgroundColor(glm::vec4(0, 0, 0, 8));
+	//mHeader->SetBackgroundColor(glm::vec4(0, 0, 0, 8));
+
+	EUiKitDesign os = UiKit::GetDesign();
+	switch (os)
+	{
+	case EUiKitDesign::Apple:
+	  mHeader->SetBackgroundColor(glm::vec4(255, 0, 0, 8));
+	//  mHeader->SetBackgroundLinearGradient(0, glm::vec4(75, 145, 247, 255), glm::vec4(54, 122, 246, 255));
+	  mTitle->SetTextColor(glm::vec4(255));
+	  mIcon->SetColor(glm::vec4(255));
+	  mExpandIcon->SetColor(glm::vec4(255));
+	  break;
+	case EUiKitDesign::Material:
+	  mHeader->SetBackgroundColor(glm::vec4(98, 0, 238, 0.08 * 255));
+	  mTitle->SetTextColor(UiColor::Primary);
+	  mIcon->SetColor(UiColor::Primary);
+	  mExpandIcon->SetColor(UiColor::Primary);
+	  break;
+	default:
+	  mHeader->SetBackgroundColor(glm::vec4(0, 0, 0, 0.0373 * 255));
+	  mSelection->SetVisibility(e3::EVisibility::Visible);
+	  break;
+	}
+
 
 	if (mDrawer) mDrawer->mSelectedItem = this;
 }
@@ -153,13 +216,18 @@ void UiNavigationDrawerItem::OnItemChildAdded()
 
 void UiNavigationDrawerItem::Unselect()
 {
-	mSelection->SetVisibility(e3::EVisibility::Gone);
+  mSelected = false;
+	if (mSelection) mSelection->SetVisibility(e3::EVisibility::Gone);
 	mHeader->SetBackgroundColor(glm::vec4(0, 0, 0, 0));
 	if (mDrawer->IsMinimized() && mMenu) 
 	{
 		GetApplication()->GetElement()->RemoveElement(mMenu, false);
 		mExpanded = false;
 	}
+
+	mTitle->SetTextColor(glm::vec4(60, 60, 60, 255));
+	mIcon->SetColor(glm::vec4(00, 0, 0, 255));
+	mExpandIcon->SetColor(glm::vec4(00, 0, 0, 255));
 }
 
 void UiNavigationDrawerItem::AddElement(e3::Element* pElement)

@@ -27,6 +27,7 @@ protected:
 	e3::Element* mBG = nullptr;
 e3::Element* mValue = nullptr;
 e3::Element* mCircle = nullptr;
+e3::Element* mHover = nullptr;
 e3::Element* mInnerCircle = nullptr;
 e3::Element* mInfo = nullptr;
 UiText* mInfoText = nullptr;

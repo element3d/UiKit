@@ -14,7 +14,8 @@ public:
 	void UnCheck();
 
 	bool OnClick(e3::MouseEvent* pEvent) override;
-
+	void OnMouseEnter(e3::MouseEvent*);
+	void OnMouseLeave(e3::MouseEvent*);
 private:
 	void _SetMacOSStyles();
 	bool mChecked = false;

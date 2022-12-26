@@ -22,7 +22,8 @@ public:
 
  
 protected:
-	e3::Element* mCircle = nullptr;
+	e3::Element* mHover = nullptr;
+e3::Element* mCircle = nullptr;
 
 
 };

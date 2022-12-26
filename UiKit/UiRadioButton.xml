@@ -7,6 +7,16 @@
     borderColor="glm::vec4(138, 138, 138, 255)">
 
     <Element
+        element="mHover"
+        width="36dp"
+        borderRadius="0.5"
+        height="36dp"
+        opacity="0"
+        backgroundColor="glm::vec4(98, 0, 238, 0.04 * 255)"
+        positionType="Absolute">
+    </Element>
+
+    <Element
         element="mCircle"
         aspectRatio="1"
         borderRadius="0.5"

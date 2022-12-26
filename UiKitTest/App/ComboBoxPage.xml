@@ -42,8 +42,7 @@
             alignItemsHor="Start"
             orientation="Vertical">
 
-            <UiComboBox
-                width="200dp">
+            <UiComboBox>
                 <UiComboBoxHeaderDefault>
                 </UiComboBoxHeaderDefault>
                 <UiComboBoxBody>

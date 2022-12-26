@@ -28,6 +28,16 @@
         borderRadius="0.5">
 
         <Element
+            element="mHover"
+            width="40dp"
+            borderRadius="0.5"
+            height="40dp"
+            opacity="0"
+            backgroundColor="glm::vec4(98, 0, 238, 0.04 * 255)"
+            positionType="Absolute">
+        </Element>
+
+        <Element
             element="mInnerCircle"
             width="12dp"
             aspectRatio="1"

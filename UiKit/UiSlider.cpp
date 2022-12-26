@@ -4,47 +4,60 @@
 UiSlider::UiSlider(e3::Element* pParent)
 	: UiSliderBase(pParent)
 {
-	UiKitOS os = UiKit::GetOS();
+	EUiKitDesign os = UiKit::GetDesign();
 
 	switch (os)
 	{
-	case UiKitOS::MacOS:
+	case EUiKitDesign::Apple:
 		_SetMacOSStyles();
+		break;
+	case EUiKitDesign::Material:
+	  mCircle->SetBackgroundColor(UiColor::Primary);
+	  mCircle->SetBorderSize(0);
+	  mCircle->SetWidth("20dp");
+	  mBG->SetBackgroundColor(glm::vec4(86, 0, 232, 0.38 * 255));
+	  RemoveElement(mInnerCircle);
+	  break;
 	default:
+
 		break;
 	}
 
-	mCircle->SignalOnMouseEnter.Connect([this](e3::MouseEvent* pEvent){
-			if (!mAnimation) mAnimation = new e3::Animation();
-			mAnimation->Start(0.1, 1, 1.3, [this](float v){
-				mInnerCircle->SetScale(glm::vec3(v), e3::ETransformAlignment::Center);
-			}, [this](){
-				mAnimation = nullptr;		
-			});
-	});
-
-	mCircle->SignalOnMouseLeave.Connect([this](e3::MouseEvent* pEvent){
+	if (os == EUiKitDesign::Windows)
+	{
+	  mCircle->SignalOnMouseEnter.Connect([this](e3::MouseEvent* pEvent) {
 		if (!mAnimation) mAnimation = new e3::Animation();
-			mAnimation->Start(0.1, 1.3, 1, [this](float v){
-				mInnerCircle->SetScale(glm::vec3(v), e3::ETransformAlignment::Center);
-			}, [this](){
-				mAnimation = nullptr;		
-			});
-	});
+		mAnimation->Start(0.1, 1, 1.3, [this](float v) {
+		  mInnerCircle->SetScale(glm::vec3(v), e3::ETransformAlignment::Center);
+		  }, [this]() {
+			mAnimation = nullptr;
+		  });
+		});
 
-	mCircle->SignalOnMouseDown.Connect([this](e3::MouseEvent* pEvent){
-			mInnerCircle->SetScale(glm::vec3(0.6), e3::ETransformAlignment::Center);
-	});
+	  mCircle->SignalOnMouseLeave.Connect([this](e3::MouseEvent* pEvent) {
+		if (!mAnimation) mAnimation = new e3::Animation();
+		mAnimation->Start(0.1, 1.3, 1, [this](float v) {
+		  mInnerCircle->SetScale(glm::vec3(v), e3::ETransformAlignment::Center);
+		  }, [this]() {
+			mAnimation = nullptr;
+		  });
+		});
 
-	mCircle->SignalOnMouseUp.Connect([this](e3::MouseEvent* pEvent){
+	  mCircle->SignalOnMouseDown.Connect([this](e3::MouseEvent* pEvent) {
+		mInnerCircle->SetScale(glm::vec3(0.6), e3::ETransformAlignment::Center);
+		});
+
+	  mCircle->SignalOnMouseUp.Connect([this](e3::MouseEvent* pEvent) {
 		mInnerCircle->SetScale(glm::vec3(1), e3::ETransformAlignment::Center);
-	});
+		});
+	}
 }
 
 void UiSlider::_SetMacOSStyles()
 {
 	mInnerCircle->SetVisibility(e3::EVisibility::Hidden);
 	mBG->SetBackgroundColor(glm::vec4(0, 0, 0, 255 * 0.18));
+	mValue->SetBackgroundColor(glm::vec4(0, 122, 255, 255));
 }
 
 bool UiSlider::OnMouseUp(e3::MouseEvent* pEvent)
@@ -106,3 +119,32 @@ void UiSlider::OnMouseMove(e3::MouseEvent* pEvent)
 	mNValue = (pEvent->GetX() - GetGeometry().x) / GetGeometry().width * 100;
 	mInfoText->SetText(std::to_string(int(mNValue)));
 }
+
+void UiSlider::OnMouseEnter(e3::MouseEvent* e)
+{
+  UiSliderBase::OnMouseEnter(e);
+  if (UiKit::GetDesign() != EUiKitDesign::Material) return;
+
+  if (!mAnimation) mAnimation = new e3::Animation();
+  mAnimation->Start(0.1, [this](float v) {
+	mHover->SetScale(glm::vec3(v, v, 1), e3::ETransformAlignment::Center);
+	}, [this]() {
+	  mAnimation = nullptr;
+	});
+  mHover->SetOpacity(1);
+}
+
+void UiSlider::OnMouseLeave(e3::MouseEvent* e)
+{
+  UiSliderBase::OnMouseLeave(e);
+  if (UiKit::GetDesign() != EUiKitDesign::Material) return;
+
+  if (!mAnimation) mAnimation = new e3::Animation();
+  mAnimation->Start(0.1, [this](float v) {
+	mHover->SetScale(glm::vec3(1- v, 1-v, 1), e3::ETransformAlignment::Center);
+	}, [this]() {
+	  mAnimation = nullptr;
+	  mHover->SetOpacity(0);
+	});
+}
+

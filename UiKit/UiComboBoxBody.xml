@@ -6,6 +6,7 @@
     padding="4dp"
     borderSize="1dp"
     filterBlur="100"
+    alignItemsHor="Start"
     borderColor="glm::vec4(220, 220, 220, 255)">
 
     <Shadow

@@ -13,6 +13,7 @@ UiComboBoxBodyBase::UiComboBoxBodyBase(e3::Element* pParent)
         this->SetPadding("4dp");
         this->SetBorderSize("1dp");
         this->SetFilterBlur(100);
+        this->SetAlignItemsHor((e3::EAlignment)0);
         this->SetBorderColor(glm::vec4(220, 220, 220, 255));
         e3::ShadowParams ShadowParams;
         ShadowParams.Color = glm::vec4(100, 100, 100, 255);
