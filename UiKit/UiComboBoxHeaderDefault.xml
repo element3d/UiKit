@@ -1,10 +1,10 @@
 <UiComboBoxHeader
-    height="34dp"
+    height="30dp"
     alignItemsHor="SpaceBetween"
     backgroundColor="glm::vec4(252, 252, 252, 255)"
-    borderRadius="4"
+    borderRadius="3"
     borderSize="1dp"
-    borderColor="glm::vec4(0, 0, 0, 0.1622 * 255)">
+    borderColor="glm::vec4(220, 220, 220, 255)">
     <include path="UiColor.h" />
 
     <UiText

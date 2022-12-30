@@ -6,8 +6,8 @@
 UiCheckBoxBase::UiCheckBoxBase(e3::Element* pParent)
 	: e3::Element(pParent)
 {
-        this->SetWidth("20dp");
-        this->SetHeight("20dp");
+        this->SetWidth("18dp");
+        this->SetHeight("18dp");
     mHover = e3::ViewFactory::CreateShape( e3::EOrientation::Horizontal);
     AddElement(mHover);
         mHover->SetWidth("36dp");
@@ -18,10 +18,10 @@ UiCheckBoxBase::UiCheckBoxBase(e3::Element* pParent)
         mHover->SetPositionType((e3::EPositionType)1);
     mBG = e3::ViewFactory::CreateShape( e3::EOrientation::Horizontal);
     AddElement(mBG);
-        mBG->SetWidth("20dp");
-        mBG->SetHeight("20dp");
+        mBG->SetWidth("18dp");
+        mBG->SetHeight("18dp");
         mBG->SetBorderSize("1dp");
-        mBG->SetBorderRadius(4);
+        mBG->SetBorderRadius(3);
         mBG->SetBorderColor(glm::vec4(150, 150, 150, 255));
         mBG->SetPositionType((e3::EPositionType)1);
         mCheck = new UiIcon();

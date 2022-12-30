@@ -8,5 +8,6 @@ UiButtonDefaultBase::UiButtonDefaultBase(e3::Element* pParent)
 {
         mText = new UiText();
         AddElement(mText);
+        mText->SetFontSize("14dp");
 
 }

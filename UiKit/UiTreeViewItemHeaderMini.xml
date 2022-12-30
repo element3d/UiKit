@@ -1,7 +1,7 @@
 <UiTreeViewItemHeader
     element="mHeader"
     width="100%"
-    height="30dp"
+    height="26dp"
     alignItemsHor="Start"
     overflow="Hidden">
     <include path="UiColor.h" />

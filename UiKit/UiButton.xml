@@ -4,6 +4,7 @@
     backgroundColor="glm::vec4(250, 250, 250, 255)"
     borderColor="glm::vec4(220, 220, 220, 255)"
     padding="14dp"
+    height="32dp"
     overflow="Hidden"
     paddingTop="7dp"
     paddingBottom="7dp"

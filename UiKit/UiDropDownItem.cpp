@@ -8,13 +8,14 @@ UiDropDownItem::UiDropDownItem(e3::Element* pParent)
   switch (os)
   {
   case EUiKitDesign::Apple:
-	SetHeight("24dp");
-	SetBorderRadius(e3::Dim("6dp"));
-	break;
+	  SetHeight("24dp");
+	  SetBorderRadius(e3::Dim("6dp"));
+	  break;
   case EUiKitDesign::Material:
-	SetBorderRadius(0);
-	SetMargin(0);
-	break;
+	  SetBorderRadius(0);
+    SetHeight("36dp");
+	  SetMargin(0);
+	  break;
   default:
 	break;
   }

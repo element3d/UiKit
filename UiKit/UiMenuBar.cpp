@@ -35,6 +35,7 @@ UiMenuBar::UiMenuBar(e3::Element* pParent)
 	  mFlyout->SetBorderRadius(0);
 	  mFlyout->SetPaddingLeft("0dp");
 	  mFlyout->SetPaddingRight("0dp");
+		mFlyout->SetBackgroundColor(glm::vec4(255));
 	  break;
 	default:
 	  break;

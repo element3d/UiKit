@@ -16,6 +16,12 @@ UiTreeViewItemHeaderMini::UiTreeViewItemHeaderMini(e3::Element* pParent)
 	  RemoveElement(mSelection);
 	  mSelection = nullptr;
 	  break;
+	case EUiKitDesign::Material:
+		SetHeight("36dp");
+		SetBorderRadius(0);
+		RemoveElement(mSelection);
+		mSelection = nullptr;
+		break;
 	default:
 	  break;
 	}
@@ -79,7 +85,7 @@ void UiTreeViewItemHeaderMini::Select()
 	SetBackgroundLinearGradient(0, glm::vec4(75, 145, 247, 255), glm::vec4(54, 122, 246, 255));
 	break;
   default:
-	mSelection->SetVisibility(e3::EVisibility::Visible);
+	if (mSelection) mSelection->SetVisibility(e3::EVisibility::Visible);
 	SetBackgroundColor(glm::vec4(0, 0, 0, 0.0373 * 255));
 	break;
   }

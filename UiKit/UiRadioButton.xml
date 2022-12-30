@@ -1,6 +1,6 @@
 <Element
-    width="22dp"
-    height="22dp"
+    width="18dp"
+    height="18dp"
     borderSize="1dp"
     borderRadius="0.5"
     backgroundColor="glm::vec4(244, 244, 244, 255)"

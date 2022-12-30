@@ -36,22 +36,12 @@ DialogPageBase::DialogPageBase(e3::Element* pParent)
         pCustomView3->SetText("A simple Switch");
         pCustomView3->SetFontSize("18dp");
         pCustomView3->SetFontStyle((e3::EFontStyle)16);
-    e3::Element* pElement2 = e3::ViewFactory::CreateShape( e3::EOrientation::Horizontal);
-    pElement1->AddElement(pElement2);
-        pElement2->SetWidth("100%");
-        pElement2->SetHeight("100dp");
-        pElement2->SetMarginTop("20dp");
-        pElement2->SetBorderSize("1dp");
-        pElement2->SetBackgroundColor(glm::vec4(240, 240, 240, 255));
-        pElement2->SetBorderColor(glm::vec4(220, 220, 220, 255));
-        pElement2->SetBorderRadius(10);
-        pElement2->SetPadding("20dp");
-        pElement2->SetAlignItemsHor((e3::EAlignment)0);
-        pElement2->SetOrientation((e3::EOrientation)1);
+                WidgetSection* pCustomView4 = new WidgetSection();
+        pElement1->AddElement(pCustomView4);
         mShowDialogButton = new UiButton();
-        pElement2->AddElement(mShowDialogButton);
-                UiText* pCustomView4 = new UiText();
-        mShowDialogButton->AddElement(pCustomView4);
-        pCustomView4->SetText("Show dialog");
+        pCustomView4->AddElement(mShowDialogButton);
+                UiText* pCustomView5 = new UiText();
+        mShowDialogButton->AddElement(pCustomView5);
+        pCustomView5->SetText("Show dialog");
 
 }

@@ -25,7 +25,7 @@ protected:
 
 private:
   e3::Animation* mAnimation = nullptr;
-
+	e3::Animation* mRippleAnimation = nullptr;
 };
 
 #endif // UiButton_H_

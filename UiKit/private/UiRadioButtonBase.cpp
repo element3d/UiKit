@@ -6,8 +6,8 @@
 UiRadioButtonBase::UiRadioButtonBase(e3::Element* pParent)
 	: e3::Element(pParent)
 {
-        this->SetWidth("22dp");
-        this->SetHeight("22dp");
+        this->SetWidth("18dp");
+        this->SetHeight("18dp");
         this->SetBorderSize("1dp");
         this->SetBorderRadius(0.5);
         this->SetBackgroundColor(glm::vec4(244, 244, 244, 255));

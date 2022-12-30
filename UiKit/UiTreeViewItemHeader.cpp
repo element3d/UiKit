@@ -1,11 +1,24 @@
 #include "UiTreeViewItemHeader.h"
 #include "UiTreeView.h"
-
+#include "UiKit.h"
 
 UiTreeViewItemHeader::UiTreeViewItemHeader(e3::Element* pParent)
 	: UiTreeViewItemHeaderBase(pParent)
 {
-	
+	auto des = UiKit::GetDesign();
+	switch (des)
+	{
+	case EUiKitDesign::Windows:
+		break;
+	case EUiKitDesign::Apple:
+		break;
+	case EUiKitDesign::Material:
+		SetHeight("36dp");
+		SetBorderRadius(0);
+		break;
+	default:
+		break;
+	}
 }
 
 void UiTreeViewItemHeader::Select()

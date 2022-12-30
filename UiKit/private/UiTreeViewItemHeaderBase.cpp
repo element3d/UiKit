@@ -7,6 +7,6 @@ UiTreeViewItemHeaderBase::UiTreeViewItemHeaderBase(e3::Element* pParent)
 	: UiHoverable(pParent)
 {
         this->SetWidth("100%");
-        this->SetBorderRadius(6);
+        this->SetBorderRadius(3);
 
 }

@@ -20,7 +20,7 @@
     </Element>
     <Element
         element="mCircle"
-        width="22dp"
+        width="20dp"
         aspectRatio="1"
         borderSize="1dp"
         borderColor="glm::vec4(220, 220, 220, 255)"
@@ -39,7 +39,7 @@
 
         <Element
             element="mInnerCircle"
-            width="12dp"
+            width="10dp"
             aspectRatio="1"
             backgroundColor="UiColor::Primary"
             borderRadius="0.5">

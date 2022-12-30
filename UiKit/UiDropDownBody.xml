@@ -2,10 +2,11 @@
     orientation="Vertical"
     paddingLeft="4dp"
     paddingRight="4dp"
-    borderRadius="8"
+    borderRadius="7"
     borderSize="1dp"
     borderColor="glm::vec4(220, 220, 220, 255)"
-    backgroundColor="glm::vec4(245, 245, 245, 255)">
+    backgroundColor="glm::vec4(252, 252, 252, 0.85 * 255)"
+    filterBlur="30">
     <Shadow
         blurSize="8"
         offset="x: 0, y: 2"

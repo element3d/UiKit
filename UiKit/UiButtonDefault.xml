@@ -1,6 +1,7 @@
 <UiButton
     >
     <UiText
-        element="mText">
+        element="mText"
+        fontSize="14dp">
     </UiText>
 </UiButton>

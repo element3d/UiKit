@@ -10,20 +10,21 @@ UiNavigationDrawerItem::UiNavigationDrawerItem(e3::Element* pParent)
   switch (os)
   {
   case EUiKitDesign::Apple:
-	mHeader->SetBorderRadius(e3::Dim("6dp"));
-	mTitle->SetMarginLeft("10dp");
-	RemoveElement(mSelection);
-	mSelection = nullptr;
-	break;
+		mHeader->SetBorderRadius(e3::Dim("6dp"));
+		mTitle->SetMarginLeft("10dp");
+		RemoveElement(mSelection);
+		mSelection = nullptr;
+		break;
   case EUiKitDesign::Material:
-	//mHeader->SetBorderRadius(0);
-	mHeader->SetHeight("40dp");
-	RemoveElement(mSelection);
-	mSelection = nullptr;
-	break;
+		mHeader->SetBorderRadius(0);
+		mHeader->SetMarginBottom(0);
+		mHeader->SetHeight("40dp");
+		RemoveElement(mSelection);
+		mSelection = nullptr;
+		break;
   default:
-	// mHover->SetBackgroundColor(glm::vec4(0, 0, 0, 0.0373 * 255));
-	break;
+		// mHover->SetBackgroundColor(glm::vec4(0, 0, 0, 0.0373 * 255));
+		break;
   }
 
 	mExpandIcon->SetVisibility(e3::EVisibility::Gone);
@@ -185,6 +186,7 @@ void UiNavigationDrawerItem::Select()
 	  break;
 	case EUiKitDesign::Material:
 	  mHeader->SetBackgroundColor(glm::vec4(98, 0, 238, 0.08 * 255));
+		
 	  mTitle->SetTextColor(UiColor::Primary);
 	  mIcon->SetColor(UiColor::Primary);
 	  mExpandIcon->SetColor(UiColor::Primary);
@@ -377,8 +379,9 @@ void UiNavigationDrawerItem::_AnimatedExpand()
 	auto h = mChildCont->GetGeometry().height;
 	if (mChildContHeight == 0) mChildContHeight = h;
 	else h = mChildContHeight;
-	mAnimation->Start(0.2, [this, h](float v){
+	mAnimation->Start(6.2, [this, h](float v){
 		mChildCont->SetHeight(v * h);
+		mChildCont->SetBackgroundColor(glm::vec4(255, 0, 0, 255));
 		mExpandIcon->SetRotation(180 * v, glm::vec3(0, 0, 1), e3::ETransformAlignment::Center);
 	}, [this](){
 	});

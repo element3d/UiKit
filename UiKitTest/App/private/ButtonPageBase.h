@@ -4,6 +4,7 @@
 
 #include <e3/ViewFactory.h>
 #include <UiText.h>
+#include <WidgetSection.h>
 #include <UiButtonDefault.h>
 #include <UiButton.h>
 #include "Page.h"

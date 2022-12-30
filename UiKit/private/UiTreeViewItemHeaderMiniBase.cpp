@@ -7,7 +7,7 @@ UiTreeViewItemHeaderMiniBase::UiTreeViewItemHeaderMiniBase(e3::Element* pParent)
 	: UiTreeViewItemHeader(pParent)
 {
         this->SetWidth("100%");
-        this->SetHeight("30dp");
+        this->SetHeight("26dp");
         this->SetAlignItemsHor((e3::EAlignment)0);
         this->SetOverflow((e3::EOverflow)0);
     mSelection = e3::ViewFactory::CreateShape( e3::EOrientation::Horizontal);

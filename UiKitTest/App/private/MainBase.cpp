@@ -45,7 +45,8 @@ MainBase::MainBase(e3::Element* pParent)
     mSearchInput = e3::ViewFactory::CreateShape( e3::EOrientation::Horizontal);
     pElement4->AddElement(mSearchInput);
         mSearchInput->SetWidth("100%");
-        mSearchInput->SetHeight("40dp");
+        mSearchInput->SetPaddingTop("4dp");
+        mSearchInput->SetPaddingBottom("4dp");
         mSearchInput->SetAlignItemsHor((e3::EAlignment)0);
                 UiInput* pCustomView2 = new UiInput();
         mSearchInput->AddElement(pCustomView2);

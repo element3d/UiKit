@@ -14,6 +14,12 @@ UiTreeViewItemHeaderDefault::UiTreeViewItemHeaderDefault(e3::Element* pParent)
 	  SetHeight("24dp");
 	  SetBorderRadius(e3::Dim("6dp"));
 	  break;
+	case EUiKitDesign::Material:
+		SetBorderRadius(0);
+		SetHeight("36dp");
+		RemoveElement(mSelection);
+		mSelection = nullptr;
+		break;
 	default:
 	  break;
 	}

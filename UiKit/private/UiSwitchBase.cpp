@@ -6,8 +6,8 @@
 UiSwitchBase::UiSwitchBase(e3::Element* pParent)
 	: e3::Element(pParent)
 {
-        this->SetWidth("44dp");
-        this->SetHeight("22dp");
+        this->SetWidth("38dp");
+        this->SetHeight("18dp");
         this->SetPadding("4dp");
         this->SetBorderSize("1dp");
         this->SetBorderRadius(0.5);

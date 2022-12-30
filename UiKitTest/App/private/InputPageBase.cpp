@@ -36,19 +36,9 @@ InputPageBase::InputPageBase(e3::Element* pParent)
         pCustomView3->SetText("A ComboBox with items defined inline and its width set.");
         pCustomView3->SetFontStyle((e3::EFontStyle)16);
         pCustomView3->SetFontSize("18dp");
-    e3::Element* pElement2 = e3::ViewFactory::CreateShape( e3::EOrientation::Horizontal);
-    pElement1->AddElement(pElement2);
-        pElement2->SetWidth("100%");
-        pElement2->SetMinHeight("100dp");
-        pElement2->SetMarginTop("20dp");
-        pElement2->SetBorderSize("1dp");
-        pElement2->SetBackgroundColor(glm::vec4(240, 240, 240, 255));
-        pElement2->SetBorderColor(glm::vec4(220, 220, 220, 255));
-        pElement2->SetBorderRadius(10);
-        pElement2->SetPadding("20dp");
-        pElement2->SetAlignItemsVer((e3::EAlignment)0);
-        pElement2->SetAlignItemsHor((e3::EAlignment)0);
-                UiInput* pCustomView4 = new UiInput();
-        pElement2->AddElement(pCustomView4);
+                WidgetSection* pCustomView4 = new WidgetSection();
+        pElement1->AddElement(pCustomView4);
+                UiInput* pCustomView5 = new UiInput();
+        pCustomView4->AddElement(pCustomView5);
 
 }

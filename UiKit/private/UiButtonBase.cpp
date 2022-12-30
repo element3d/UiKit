@@ -11,6 +11,7 @@ UiButtonBase::UiButtonBase(e3::Element* pParent)
         this->SetBackgroundColor(glm::vec4(250, 250, 250, 255));
         this->SetBorderColor(glm::vec4(220, 220, 220, 255));
         this->SetPadding("14dp");
+        this->SetHeight("32dp");
         this->SetOverflow((e3::EOverflow)0);
         this->SetPaddingTop("7dp");
         this->SetPaddingBottom("7dp");

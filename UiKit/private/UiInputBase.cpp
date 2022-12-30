@@ -17,13 +17,13 @@ UiInputBase::UiInputBase(e3::Element* pParent)
         this->SetBorderSize("1dp");
         this->SetBorderColor(glm::vec4(220, 220, 220, 255));
         this->SetOverflow((e3::EOverflow)0);
-    e3::Element* pElement1 = e3::ViewFactory::CreateShape( e3::EOrientation::Horizontal);
-    AddElement(pElement1);
-        pElement1->SetWidth("100%");
-        pElement1->SetHeight("1dp");
-        pElement1->SetBackgroundColor(UiColor::Primary);
-        pElement1->SetPositionType((e3::EPositionType)1);
-        pElement1->SetBottom(0);
-        pElement1->SetLeft(0);
+    mUnderline = e3::ViewFactory::CreateShape( e3::EOrientation::Horizontal);
+    AddElement(mUnderline);
+        mUnderline->SetHeight("1dp");
+        mUnderline->SetBackgroundColor(UiColor::Primary);
+        mUnderline->SetPositionType((e3::EPositionType)1);
+        mUnderline->SetBottom(0);
+        mUnderline->SetLeft(0);
+        mUnderline->SetRight(0);
 
 }

@@ -41,7 +41,8 @@
                 <Element
                     element="mSearchInput"
                     width="100%"
-                    height="40dp"
+                    paddingTop="4dp"
+                    paddingBottom="4dp"
                     alignItemsHor="Start">
                     <UiInput
                         width="100%"

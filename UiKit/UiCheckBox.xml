@@ -1,6 +1,6 @@
 <Element
-    width="20dp"
-    height="20dp">
+    width="18dp"
+    height="18dp">
     <include path="UiColor.h" />
 
     <Element
@@ -15,10 +15,10 @@
  
     <Element
         element="mBG"
-        width="20dp"
-        height="20dp"
+        width="18dp"
+        height="18dp"
         borderSize="1dp"
-        borderRadius="4"
+        borderRadius="3"
         borderColor="glm::vec4(150, 150, 150, 255)"
         positionType="Absolute">
     </Element>

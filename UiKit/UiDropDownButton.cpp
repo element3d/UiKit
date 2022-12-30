@@ -16,6 +16,7 @@ UiDropDownButton::UiDropDownButton(e3::Element* pParent)
 		SetBorderSize(0);
 		SetBackgroundColor("#f5f5f5");
 		mIconCont->SetBackgroundColor(glm::vec4(0));
+		SetHeight("36dp");
 		break;
   default:
 		RemoveElement(mUnderline);

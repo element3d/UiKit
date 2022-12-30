@@ -24,7 +24,7 @@ UiSliderBase::UiSliderBase(e3::Element* pParent)
         mValue->SetPositionType((e3::EPositionType)1);
     mCircle = e3::ViewFactory::CreateShape( e3::EOrientation::Horizontal);
     AddElement(mCircle);
-        mCircle->SetWidth("22dp");
+        mCircle->SetWidth("20dp");
         mCircle->SetAspectRatio(1.000000);
         mCircle->SetBorderSize("1dp");
         mCircle->SetBorderColor(glm::vec4(220, 220, 220, 255));
@@ -40,7 +40,7 @@ UiSliderBase::UiSliderBase(e3::Element* pParent)
         mHover->SetPositionType((e3::EPositionType)1);
     mInnerCircle = e3::ViewFactory::CreateShape( e3::EOrientation::Horizontal);
     mCircle->AddElement(mInnerCircle);
-        mInnerCircle->SetWidth("12dp");
+        mInnerCircle->SetWidth("10dp");
         mInnerCircle->SetAspectRatio(1.000000);
         mInnerCircle->SetBackgroundColor(UiColor::Primary);
         mInnerCircle->SetBorderRadius(0.5);

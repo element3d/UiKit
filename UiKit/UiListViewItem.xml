@@ -1,8 +1,8 @@
 <UiHoverable
   width="100%"
-  height="36dp"
+  height="34dp"
   alignItemsHor="Start"
-  borderRadius="4"
+  borderRadius="3"
   marginBottom="2dp"
   overflow="Hidden">
   <include path="UiColor.h" />

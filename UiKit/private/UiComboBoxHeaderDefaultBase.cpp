@@ -6,12 +6,12 @@
 UiComboBoxHeaderDefaultBase::UiComboBoxHeaderDefaultBase(e3::Element* pParent)
 	: UiComboBoxHeader(pParent)
 {
-        this->SetHeight("34dp");
+        this->SetHeight("30dp");
         this->SetAlignItemsHor((e3::EAlignment)3);
         this->SetBackgroundColor(glm::vec4(252, 252, 252, 255));
-        this->SetBorderRadius(4);
+        this->SetBorderRadius(3);
         this->SetBorderSize("1dp");
-        this->SetBorderColor(glm::vec4(0, 0, 0, 0.1622 * 255));
+        this->SetBorderColor(glm::vec4(220, 220, 220, 255));
         mText = new UiText();
         AddElement(mText);
         mText->SetMarginLeft("10dp");

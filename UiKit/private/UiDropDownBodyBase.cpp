@@ -9,10 +9,11 @@ UiDropDownBodyBase::UiDropDownBodyBase(e3::Element* pParent)
         this->SetOrientation((e3::EOrientation)1);
         this->SetPaddingLeft("4dp");
         this->SetPaddingRight("4dp");
-        this->SetBorderRadius(8);
+        this->SetBorderRadius(7);
         this->SetBorderSize("1dp");
         this->SetBorderColor(glm::vec4(220, 220, 220, 255));
-        this->SetBackgroundColor(glm::vec4(245, 245, 245, 255));
+        this->SetBackgroundColor(glm::vec4(252, 252, 252, 0.85 * 255));
+        this->SetFilterBlur(30);
         e3::ShadowParams ShadowParams;
         ShadowParams.Color = glm::vec4(150, 150, 150, 255);
         ShadowParams.BlurSize = 8;

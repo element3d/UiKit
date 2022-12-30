@@ -30,22 +30,13 @@
             fontStyle="SemiBold"
             fontSize="18dp">
         </UiText>
-        <Element
-            width="100%"
-            height="100dp"
-            marginTop="20dp"
-            borderSize="1dp"
-            backgroundColor="glm::vec4(240, 240, 240, 255)"
-            borderColor="glm::vec4(220, 220, 220, 255)"
-            borderRadius="10"
-            padding="20dp"
-            alignItemsHor="Start">
+        <WidgetSection>
 
             <UiCheckBox>
                
             </UiCheckBox>
 
-        </Element>
+        </WidgetSection>
 
         <UiText
             marginTop="30dp"
@@ -53,15 +44,7 @@
             fontStyle="SemiBold"
             fontSize="18dp">
         </UiText>
-        <Element
-            width="100%"
-            marginTop="20dp"
-            borderSize="1dp"
-            backgroundColor="glm::vec4(240, 240, 240, 255)"
-            borderColor="glm::vec4(220, 220, 220, 255)"
-            borderRadius="10"
-            padding="20dp"
-            alignItemsHor="Start">
+        <WidgetSection>
 
             <Element
                 orientation="Vertical"
@@ -111,7 +94,7 @@
                 </Element>
             </Element>
 
-        </Element>
+        </WidgetSection>
 
     </Element>
 

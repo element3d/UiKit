@@ -13,6 +13,7 @@ UiComboBoxItem::UiComboBoxItem(e3::Element* pParent)
   case EUiKitDesign::Material:
 	SetBorderRadius(0);
 	RemoveElement(mSelection);
+	SetHeight("36dp");
 	mSelection = nullptr;
 	// SetMarginTop(0);
 	// SetMarginBottom(0);

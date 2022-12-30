@@ -8,15 +8,15 @@ UiDropDownBody::UiDropDownBody(e3::Element* pParent)
   switch (design)
   {
   case EUiKitDesign::Windows:
-	break;
+		break;
   case EUiKitDesign::Apple:
-	break;
+		break;
   case EUiKitDesign::Material:
-	SetBorderRadius(0);
-	SetPadding(0);
-	SetBorderSize(0);
-	SetBackgroundColor(glm::vec4(255));
-	break;
+		SetBorderRadius(0);
+		SetPadding(0);
+		SetBorderSize(0);
+		SetBackgroundColor(glm::vec4(255));
+		break;
   default:
 	break;
   }

@@ -8,6 +8,11 @@ UiButton::UiButton(e3::Element* pParent)
 	auto des = UiKit::GetDesign();
 	if (des == EUiKitDesign::Material)
 	{
+		e3::ShadowParams s;
+		s.BlurSize = 0;
+		SetShadow(s);
+		SetBackgroundColor(glm::vec4(0));
+		SetBorderSize(0);
 		if (mStyle == UiDefault) mRipple->SetBackgroundColor(glm::vec4(98, 0, 238, 0.06 * 255));
 		else mRipple->SetBackgroundColor(glm::vec4(255, 255, 255, 0.36 * 255));
 	}
@@ -29,12 +34,12 @@ bool UiButton::OnMouseDown(e3::MouseEvent* pE)
 	  SetShadow(s);
 	  mRipple->SetOpacity(1);
 
-	  if (!mAnimation) mAnimation = new e3::Animation();
+	  if (!mRippleAnimation) mRippleAnimation = new e3::Animation();
 	  
-	  mAnimation->Start(0.1, [this](float v) {
-		mRipple->SetScale(glm::vec3(v), e3::ETransformAlignment::Center);
+	  mRippleAnimation->Start(0.3, 0, 1, [this](float v) {
+		mRipple->SetScale(glm::vec3(v, v, 1), e3::ETransformAlignment::Center);
 		}, [this]() {
-		  mAnimation = nullptr;
+		  mRippleAnimation = nullptr;
 		});
 	}
 	else

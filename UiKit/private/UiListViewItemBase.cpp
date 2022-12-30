@@ -7,9 +7,9 @@ UiListViewItemBase::UiListViewItemBase(e3::Element* pParent)
 	: UiHoverable(pParent)
 {
         this->SetWidth("100%");
-        this->SetHeight("36dp");
+        this->SetHeight("34dp");
         this->SetAlignItemsHor((e3::EAlignment)0);
-        this->SetBorderRadius(4);
+        this->SetBorderRadius(3);
         this->SetMarginBottom("2dp");
         this->SetOverflow((e3::EOverflow)0);
     mSelection = e3::ViewFactory::CreateShape( e3::EOrientation::Horizontal);

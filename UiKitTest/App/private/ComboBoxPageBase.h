@@ -4,6 +4,7 @@
 
 #include <e3/ViewFactory.h>
 #include <UiText.h>
+#include <WidgetSection.h>
 #include <UiComboBox.h>
 #include <UiComboBoxHeaderDefault.h>
 #include <UiComboBoxBody.h>

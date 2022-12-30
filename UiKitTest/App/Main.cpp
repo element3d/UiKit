@@ -26,11 +26,16 @@
 #include "CalendarDatePickerPage.h"
 #include "DialogsAndFlyoutsPage.h"
 #include "DialogPage.h"
+#include "UiKit.h"
 
 Main::Main(e3::Element* pParent)
 	: MainBase(pParent)
 {
-
+	if (UiKit::GetDesign() == EUiKitDesign::Material) 
+	{
+		SetBackgroundColor(glm::vec4(255));
+		mDrawer->SetPadding(0);
+	}
 
 	mMenus = 
 	{

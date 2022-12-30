@@ -15,6 +15,7 @@ UiComboBoxHeaderDefault::UiComboBoxHeaderDefault(e3::Element* pParent)
 	SetMargin(0);
 	SetBackgroundColor(glm::vec4(255));
 	SetBorderSize(0);
+	SetHeight("36dp");
 	// break;
   default:
 	mIconCont->SetBackgroundColor(glm::vec4(0));

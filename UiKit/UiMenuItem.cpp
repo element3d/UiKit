@@ -8,11 +8,15 @@ UiMenuItem::UiMenuItem(e3::Element* pParent)
   switch (os)
   {
   case EUiKitDesign::Apple:
-	SetHeight("24dp");
-	SetBorderRadius(e3::Dim("6dp"));
-	SetMarginTop(0);
-	SetMarginBottom(0);
-	break;
+	  SetHeight("24dp");
+	  SetBorderRadius(e3::Dim("6dp"));
+	  SetMarginTop(0);
+	  SetMarginBottom(0);
+	  break;
+  case EUiKitDesign::Material:
+    SetHeight("36dp");
+    SetMarginTop(0);
+    SetMarginBottom(0);
   default:
 	break;
   }

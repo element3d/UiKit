@@ -9,10 +9,10 @@ MainNavDrawerItem::MainNavDrawerItem(e3::Element* pParent)
 
 void MainNavDrawerItem::SetIcon(const std::string charcode)
 {
-	mIcon->SetCharcode(charcode);
+	// mIcon->SetCharcode(charcode);
 }
 
 void MainNavDrawerItem::SetTitle(const std::string title)
 {
-	mTitle->SetText(title);
+//	mTitle->SetText(title);
 }

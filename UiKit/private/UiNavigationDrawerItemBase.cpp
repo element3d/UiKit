@@ -19,8 +19,10 @@ UiNavigationDrawerItemBase::UiNavigationDrawerItemBase(e3::Element* pParent)
     mHover = e3::ViewFactory::CreateShape( e3::EOrientation::Horizontal);
     mHeader->AddElement(mHover);
         mHover->SetPositionType((e3::EPositionType)1);
-        mHover->SetWidth("100%");
-        mHover->SetHeight("100%");
+        mHover->SetTop(0);
+        mHover->SetBottom(0);
+        mHover->SetRight(0);
+        mHover->SetLeft(0);
     mSelection = e3::ViewFactory::CreateShape( e3::EOrientation::Horizontal);
     mHeader->AddElement(mSelection);
         mSelection->SetWidth("3dp");
@@ -55,7 +57,7 @@ UiNavigationDrawerItemBase::UiNavigationDrawerItemBase(e3::Element* pParent)
         mExpandIcon->SetCharcode(59149);
     mChildCont = e3::ViewFactory::CreateShape( e3::EOrientation::Horizontal);
     AddElement(mChildCont);
-        mChildCont->SetAlignItemsVer((e3::EAlignment)1);
+        mChildCont->SetAlignItemsVer((e3::EAlignment)0);
         mChildCont->SetOverflow((e3::EOverflow)0);
         mChildCont->SetOrientation((e3::EOrientation)1);
         mChildCont->SetWidth("100%");

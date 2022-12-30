@@ -15,11 +15,12 @@ UiListViewItem::UiListViewItem(e3::Element* pParent)
 	mSelection = nullptr;
 	break;
   case EUiKitDesign::Material:
-	SetBorderRadius(0);
-	SetMargin(0);
-	RemoveElement(mSelection);
-	mSelection = nullptr;
-	break;
+		SetBorderRadius(0);
+		SetMargin(0);
+		RemoveElement(mSelection);
+		mSelection = nullptr;
+		SetHeight("36dp");
+		break;
   default:
 	mSelection->SetVisibility(e3::EVisibility::Gone);
 	break;

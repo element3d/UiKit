@@ -8,11 +8,12 @@ UiComboBoxHeader::UiComboBoxHeader(e3::Element* pParent)
   switch (os)
   {
   case EUiKitDesign::Material:
-	SetBorderSize(0);
-	break;
+		SetBorderSize(0);
+		SetHeight("36dp");
+		break;
   default:
-	mHover->SetBackgroundColor(glm::vec4(0, 0, 0, 0.0373 * 255));
-	break;
+		mHover->SetBackgroundColor(glm::vec4(0, 0, 0, 0.0373 * 255));
+		break;
   }
 }
 

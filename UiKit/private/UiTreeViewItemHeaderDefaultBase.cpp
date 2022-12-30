@@ -7,7 +7,7 @@ UiTreeViewItemHeaderDefaultBase::UiTreeViewItemHeaderDefaultBase(e3::Element* pP
 	: UiTreeViewItemHeaderMini(pParent)
 {
         this->SetWidth("100%");
-        this->SetHeight("30dp");
+        this->SetHeight("26dp");
         this->SetAlignItemsHor((e3::EAlignment)0);
         mText = new UiText();
         AddElement(mText);

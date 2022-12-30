@@ -7,7 +7,7 @@ UiComboBoxBodyBase::UiComboBoxBodyBase(e3::Element* pParent)
 	: e3::DropdownBody(pParent)
 {
         this->SetOrientation((e3::EOrientation)1);
-        this->SetBackgroundColor(glm::vec4(248, 248, 248, 0.85 * 255));
+        this->SetBackgroundColor(glm::vec4(252, 252, 252, 0.85 * 255));
         this->SetBorderSize(1);
         this->SetBorderRadius(7);
         this->SetPadding("4dp");

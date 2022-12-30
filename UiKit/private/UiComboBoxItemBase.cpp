@@ -7,7 +7,7 @@ UiComboBoxItemBase::UiComboBoxItemBase(e3::Element* pParent)
 	: e3::Element(pParent)
 {
         this->SetMinWidth("100%");
-        this->SetHeight("34dp");
+        this->SetHeight("30dp");
         this->SetAlignItemsHor((e3::EAlignment)0);
         this->SetBorderRadius(4);
         this->SetMarginTop("2dp");
