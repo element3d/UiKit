@@ -46,7 +46,6 @@ UiNavigationDrawerItemBase::UiNavigationDrawerItemBase(e3::Element* pParent)
         mTitle = new UiText();
         mContainer->AddElement(mTitle);
         mTitle->SetMarginLeft("20dp");
-        mTitle->SetText("Title");
         mExpandIcon = new UiIcon();
         mHeader->AddElement(mExpandIcon);
         mExpandIcon->SetMarginLeft("16dp");

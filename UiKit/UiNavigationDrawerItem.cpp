@@ -379,9 +379,8 @@ void UiNavigationDrawerItem::_AnimatedExpand()
 	auto h = mChildCont->GetGeometry().height;
 	if (mChildContHeight == 0) mChildContHeight = h;
 	else h = mChildContHeight;
-	mAnimation->Start(6.2, [this, h](float v){
+	mAnimation->Start(0.2, [this, h](float v){
 		mChildCont->SetHeight(v * h);
-		mChildCont->SetBackgroundColor(glm::vec4(255, 0, 0, 255));
 		mExpandIcon->SetRotation(180 * v, glm::vec3(0, 0, 1), e3::ETransformAlignment::Center);
 	}, [this](){
 	});

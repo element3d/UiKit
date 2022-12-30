@@ -42,8 +42,7 @@
             </UiIcon>
             <UiText
                 element="mTitle"
-                marginLeft="20dp"
-                text="Title">
+                marginLeft="20dp">
             </UiText>
         </Element>
         <UiIcon
